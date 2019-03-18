@@ -1,2 +1,5 @@
-# JavaScript-Software-University
-JavaScript Developer program in Software University. Module - JS Core.
+JavaScript-SoftUni
+Software University
+JavaScript Developer
+JS CORE
+Courses: JavaScript Fundamentals, JavaScript Advanced
