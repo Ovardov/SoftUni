@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Cards Generator</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Functions and Logic Flow</p>
+                <p id="problem-name">06. Cards Generator</p>
+            </div>
+            <img id="logo-img" src="images/SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+               <label for="from">From</label>
+                <input type="text" id="from"/>
+                <label for="from">To</label>
+                <input type="text" id="to"/>
+                <select>
+                    <option>Hearts &hearts;</option>
+                    <option>Spades &spades;</option>
+                    <option>Diamonds &diamond;</option>
+                    <option>Clubs &clubs;</option>
+                </select>
+                <button>Get my cards</button>
+                <section id="cards"></section>
+            </div>
+            <img id="softUni-person-img" src="images/cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+    </div>
+    <script src="solution.js"></script>
+    <script>
+        solve();
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Crossword</title>
+</head>
+
+<body onload="solve()">
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">JS CORE Fundamentals Exam</p>
+                <p id="problem-name">02. Crossword</p>
+            </div>
+            <img id="logo-img" src="./images/logo.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <section>
+                    <label for="input">Input: </label>
+                    <input id=input type="text" />
+                    <fieldset id="filter">
+                        <legend>Filter:</legend>
+                        <div>
+                            <label for="filterSecondaryCmd">Secondary Command: </label>
+                            <select id="filterSecondaryCmd">
+                                <option selected></option>
+                                <option value="uppercase">UPPERCASE</option>
+                                <option value="lowercase">LOWERCASE</option>
+                                <option value="nums">NUMS</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="filterPosition">Position: </label>
+                            <input type="number" min="1" id="filterPosition" />
+                        </div>
+                        <button>Filter</button>
+                    </fieldset>
+                    <fieldset id="sort">
+                        <legend>Sort:</legend>
+                        <div>
+                            <label for="sortSecondaryCmd">Secondary Command: </label>
+                            <select id="sortSecondaryCmd">
+                                <option selected></option>
+                                <option value="A">A</option>
+                                <option value="Z">Z</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="sortPosition">Position: </label>
+                            <input type="number" min="1" id="sortPosition" />
+                        </div>
+                        <button>Sort</button>
+                    </fieldset>
+                    <fieldset id="rotate">
+                        <legend>Rotate:</legend>
+                        <div>
+                            <label for="rotateSecondaryCmd">Secondary Command: </label>
+                            <input id="rotateSecondaryCmd" type="number" min="1" />
+                        </div>
+                        <div>
+                            <label for="rotatePosition">Position: </label>
+                            <input type="number" min="1" id="rotatePosition" />
+                        </div>
+                        <button>Rotate</button>
+                    </fieldset>
+                    <fieldset id="get">
+                        <legend>Get:</legend>
+                        <div>
+                            <label for="getPosition">Position: </label>
+                            <input type="number" min="1" id="getPosition" />
+                        </div>
+                        <button>Get</button>
+                    </fieldset>
+                </section>
+                <div id="output">
+                    <p></p>
+                </div>
+            </div>
+            <img id="softUni-person-img" src="./images/wizard.png" alt="softUni-person">
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="solution.js"></script>
+</body>
+
+</html>

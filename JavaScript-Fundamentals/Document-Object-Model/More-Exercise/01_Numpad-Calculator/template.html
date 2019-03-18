@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="template.css">
+	<script src="solution.js"></script>
+	<title>Numpad Calculator</title>
+</head>
+
+<body>
+	<div id="container">
+		<nav id="navigation">
+			<div id="navigation-text">
+				<p id="lecture-name">Intro to DOM</p>
+				<p id="problem-name">Numpad Calculator</p>
+			</div>
+			<img id="logo-img" src="images/logo.png" alt="logo">
+		</nav>
+		<main id="main">
+			<div id="exercise">
+				<form>
+					<table>
+						<thead>
+							<tr>
+								<th colspan="4">
+									<div class="fields">
+										<p class="expression">EXPRESSION</p>
+										<p id="expressionOutput"></p>
+									</div>
+								</th>
+							</tr>
+							<tr>
+								<th colspan="4">
+									<div class="fields">
+										<p class="result">RESULT</p>
+										<p id="resultOutput"></p>
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tr>
+							<td>
+								<button type="button" value="Clear">Clear</button>
+							</td>
+							<td>
+								<button type="button" value="/">/</button>
+							</td>
+							<td>
+								<button type="button" value="*">*</button>
+							</td>
+							<td>
+								<button type="button" value="-">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type="button" value="7">7</button>
+							</td>
+							<td>
+								<button type="button" value="8">8</button>
+							</td>
+							<td>
+								<button type="button" value="9">9</button>
+							</td>
+							<td rowspan="2">
+								<button type="button" value="+">+</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type="button" value="4">4</button>
+							</td>
+							<td>
+								<button type="button" value="5">5</button>
+							</td>
+							<td>
+								<button type="button" value="6">6</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type="button" value="1">1</button>
+							</td>
+							<td>
+								<button type="button" value="2">2</button>
+							</td>
+							<td>
+								<button type="button" value="3">3</button>
+							</td>
+							<td rowspan="2">
+								<button type="button" value="=">=</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button type="button" value="0">0</button>
+							</td>
+							<td>
+								<button type="button" value=".">.</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<img id="softUni-person-img" src="images/wizard.png" alt="softUni-person">
+		</main>
+
+	</div>
+	<script>
+		solve()
+	</script>
+</body>
+
+</html>

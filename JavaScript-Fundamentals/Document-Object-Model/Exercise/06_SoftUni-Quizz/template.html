@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="./solution.js" ></script>
+</head>
+
+<body>
+<div id="container">
+    <nav id="navigation">
+        <div id="navigation-text">
+            <p id="lecture-name">Intro to DOM</p>
+            <p id="problem-name">Softuni Quiz</p>
+        </div>
+        <img id="logo-img" src="images/logo.png" alt="logo">
+    </nav>
+    <main id="main">
+        <div id="exercise">
+			 <section>
+        <h1>When SoftUni was created?</h1>
+            <input type="radio" name="softUniYear" value="2012">
+            <label>2012</label><br>
+            <input type="radio" name="softUniYear" value="2013">
+            <label>2013</label><br>
+            <input type="radio" name="softUniYear" value="2014">
+            <label>2014</label><br>
+            <input type="radio" name="softUniYear" value="2015">
+            <label>2015</label><br>
+            <button>Next question</button>
+    </section>
+    <section class="hidden">
+        <h1>Which is the most popular name in the SoftUni?</h1>
+        <input type="radio" name="popularName" value="Pencho">
+        <label>Pencho</label><br>
+        <input type="radio" name="popularName" value="Pako">
+        <label>Pako</label><br>
+        <input type="radio" name="popularName" value="Pesho">
+        <label>Pesho</label><br>
+        <input type="radio" name="popularName" value="Penka">
+        <label>Penka</label><br>
+        <button>Next question</button>
+    </section>
+    <section class="hidden">
+        <h1>Which of the following names is the founder of the SoftUni?</h1>
+        <input type="radio" name="softUniFounder" value="Pesho">
+        <label>Pesho</label><br>
+        <input type="radio" name="softUniFounder" value="Stamat">
+        <label>Stamat</label><br>
+        <input type="radio" name="softUniFounder" value="Gosho">
+        <label>Gosho</label><br>
+        <input type="radio" name="softUniFounder" value="Nakov">
+        <label>Nakov</label><br>
+        <button>Get the results</button>
+        <div id="result"></div>
+    </section>
+        </div>
+        <img id="softUni-person-img" src="images/wizard.png" alt="softUni-person">
+    </main>
+
+</div>
+<script>
+	solve();
+</script>
+</body>
+
+</html>

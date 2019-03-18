@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+ul {
+    padding: 0;
+}
+
+body {
+    width: 40%;
+    margin: 20px auto;
+    font-family: 'Raleway',sans-serif;
+}
+
+h2{
+    margin: 0;
+    padding: 10px 20px;
+    background:#DDDDDD;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#items{
+    margin:0;
+    height: 100px;
+    padding: 20px 20px;
+    background:#808080;
+}
+
+button{
+    background: #DDDDDD;
+    position: relative;
+    bottom: 60px;
+    margin-left:20px;
+    padding: 10px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: #808080;
+    text-transform: uppercase;
+    border: 1px solid #AAA;
+}
+
+button:hover {
+    color: white;
+    background: #DDDDDD;
+    cursor: pointer;
+}
+
+#selectedTowns{
+    margin-left: 20px;
+    color: #808080;
+}

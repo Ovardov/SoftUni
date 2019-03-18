@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Forum</title>
+</head>
+
+<body onload="solve()">
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Objects and JSON. DOM Events</p>
+                <p id="problem-name">03. Forum</p>
+            </div>
+            <img id="logo-img" src="images/logo.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div class="user-info">
+                        <label>Username</label>
+                        <input type="text" placeholder="username">
+                        <label>Password</label>
+                        <input type="password" placeholder="password">
+                        <label>Email</label>
+                        <input type="text" placeholder="email">
+                    </div>
+                    <div class="topics">
+                        <label>Topics: </label>
+                        <label>science</label>
+                        <input type="checkbox" value="science">
+                        <label>cooking</label>
+                        <input type="checkbox" value="cooking">
+                        <label>art</label>
+                        <input type="checkbox" value="art">
+                        <label>sport</label>
+                        <input type="checkbox" value="sport">
+                    </div>
+                    <button>Submit</button>
+                </form>
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Userame</th>
+                            <th>Email</th>
+                            <th>Topics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <img id="softUni-person-img" src="images/wizard.png" alt="softUni-person">
+        </main>
+    </div>
+    <script src="solution.js"></script>
+</body>
+
+</html>

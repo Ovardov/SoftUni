@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Focus</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <style>.error {
+        border: 2px solid red;
+    }</style>
+</head>
+<body onload="validate()">
+
+<label for="email">Enter email:</label>
+<input id="email" type="text"/>
+
+<script>
+    function validate() {
+        let email = $('#email');
+        email.change(checkEmail);
+
+        let pattern = /^[a-z]+@[a-z]+\.[a-z]+$/g;
+
+
+        function checkEmail(e) {
+            let inputEmail = $(e.target).val();
+
+            if (inputEmail.match(pattern)) {
+                email.removeClass('error');
+            } else {
+                email.addClass('error');
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <title>Stopwatch</title>
+</head>
+<body>
+<div id="time" style="border:3px solid blue; text-align:center; font-size:2em; margin-bottom:10px">00:00</div>
+<button id="startBtn">Start</button>
+<button id="stopBtn" disabled="true">Stop</button>
+<script>
+    window.onload = function stopWatch() {
+        stopwatch();
+    };
+
+    function stopwatch() {
+        let time;
+        let seconds = 0;
+        let minutes = 0;
+
+        let startButton = $('#startBtn');
+        startButton.click(startTimer);
+
+        let stopButton = $('#stopBtn');
+        stopButton.click(stopTimer);
+
+
+        function startTimer() {
+            $('#time').text('00:00');
+            seconds = 0;
+            minutes = 0;
+
+            startButton.prop('disabled', true);
+            stopButton.prop('disabled', false);
+
+            time = setInterval(clockTicking, 1000);
+        }
+
+
+        function clockTicking() {
+            seconds++;
+
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+            }
+
+            timeValidationAndSetTime(minutes, seconds);
+
+
+        }
+
+        function timeValidationAndSetTime(minutes, seconds) {
+            minutes = `0${minutes}`.slice(-2);
+            seconds = `0${seconds}`.slice(-2);
+
+            $('#time').text(`${minutes}:${seconds}`);
+        }
+
+
+        function stopTimer() {
+            startButton.prop('disabled', false);
+            stopButton.prop('disabled', true);
+
+            clearInterval(time);
+        }
+    }
+
+</script>
+
+</body>
+</html>

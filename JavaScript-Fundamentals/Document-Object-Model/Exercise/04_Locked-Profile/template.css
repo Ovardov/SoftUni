@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "PT sans", sans-serif;
+    font-size: 24px;
+    color: #234465;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+#main{   
+    background: url(images/background.png) no-repeat center center;
+    height: 100vh;
+}
+#navigation{
+    background: #234465;
+    display: inline-block;
+    padding: 0.5rem;
+	width: 100%;
+}
+#navigation-text{
+    display: inline-block;
+}
+#lecture-name, #problem-name{
+    font-family: "Lato", sans-serif;
+    color: white;
+    font-weight: bold;
+}
+#lecture-name{    
+    font-size: 28px;    
+    margin-bottom: 0.8rem;    
+}
+#problem-name{    
+    font-size: 22px;
+    color: white;    
+}
+#logo-img{
+    width: 17%;
+    float: right;
+    padding: 0.5rem 0.5rem 0 0;
+}
+#softUni-person-img{
+    width: 30%;
+    padding: 0;
+    float: left;    
+}
+#exercise{   
+    width: 70%;
+    float: left;
+    padding: 1rem 0 1rem 1rem;
+}
+main:after{
+    display: block;
+    content:'';
+    clear: both;
+}
+
+input[type="button"], button{
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7em;
+    margin: 1rem 0 1rem 0;
+    border: none;
+    color: white;
+    background: #234465;
+    border-radius: 5px;
+    outline: none;
+}
+
+.profile{
+    border:2px solid black;
+    display: inline-block;
+    margin-left: 5%;
+    width: 23%;
+    vertical-align: top;
+}
+
+.userIcon{
+    background-image: url("images/iconProfile2.png");
+    background-repeat: no-repeat;
+    width: 99%;
+    height: 30vh;
+    border:1px solid grey;
+    margin: 0 auto;
+}
+
+input[name="user3Username"], input[name="user2Username"], input[name="user1Username"]{
+    display: inline-block;
+    width: 100%;
+}
+
+#user1HiddenFields input, #user2HiddenFields input, #user3HiddenFields input{
+	width: 100%;
+}
+
+#user1HiddenFields, #user2HiddenFields, #user3HiddenFields{
+    display: none;
+}
+

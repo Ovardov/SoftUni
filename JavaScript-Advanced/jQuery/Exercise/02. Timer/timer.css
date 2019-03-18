@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+body{
+    font-family: 'Abril+Fatface',cursive;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#timer {
+    background:#afb6d3;
+    font-size: 5em;
+    padding: 20px;
+    text-align: center;
+    margin-top: 35px;
+    border-radius: 74px;
+    color: #5b679d;
+    font-weight: bold;
+    border: 1px solid #5b679d ;
+}
+
+#start-timer {
+    background: #76c9ca;
+    border: 1px solid #3698a3;
+    padding: 7px 25px;
+    margin: 20px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 40px;
+    color: #3698a3;
+    outline: none;
+}
+
+#start-timer:hover {
+    cursor: pointer;
+    outline: none;
+    background: #3698a3;
+    border: 1px solid #76c9ca ;
+    color: #76c9ca;
+}
+
+#stop-timer {
+    background: #f47b84;
+    border: 1px solid #e04f5c;
+    padding: 7px 25px;
+    margin: 20px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 40px;
+    color: #e04f5c;
+    outline: none;
+}
+
+#stop-timer:hover {
+    cursor: pointer;
+    outline: none;
+    background: #e04f5c;
+    border: 1px solid #f47b84;
+    color: #f47b84;
+}

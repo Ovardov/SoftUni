@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style/template.css">
+    <title>Rent</title>
+</head>
+
+<body>
+<div id="container">
+    <nav id="navigation">
+        <div id="navigation-text">
+            <p id="lecture-name">Objects, JSON and DOM Events</p>
+            <p id="problem-name">03. Rent</p>
+        </div>
+        <img id="logo-img" src="./images/SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+    </nav>
+    <main>
+        <div id="exercise">
+            <form>
+                <label>Flat Numbers</label>
+                <input type="text" id="flats">
+                <label>Families</label>
+                <input type="text" id="families">
+                <label>Rents</label>
+                <input type="text" id="rents">
+                <div class="center">
+                    <input type="submit" id="button" onclick="calculateRents()" value="Calculate Rent">
+                </div>
+            </form>
+            <label>Result</label>
+            <textarea readonly rows="10" cols="50" id="result"></textarea>
+        </div>
+        <img id="softUni-person-img" src="./images/cw_2_New_Logo.png" alt="softUni-person">
+    </main>
+    <footer>
+        <p id="footer-text">Check your solution here: <span id="check-judge">Link to judge</span>
+        </p>
+    </footer>
+</div>
+<script>
+    document.getElementById("button").addEventListener("click", function (event) {
+        event.preventDefault()
+    });
+
+    function calculateRents() {
+        let flats = document.getElementById('flats').value.split(', ');
+        let families = document.getElementById('families').value.split(', ');
+        let rents = document.getElementById('rents').value.split(', ');
+        let resultElement = document.getElementById('result');
+
+        let bills = families.map((familyName, index) => {
+            return {
+                family: familyName,
+                flat: flats[index],
+                rent: rents[index]
+            };
+        });
+
+        for (let currentFamilyBill of bills) {
+            resultElement.value += `In flat ${currentFamilyBill.flat} family ${currentFamilyBill.family} has to pay ${currentFamilyBill.rent}\n`;
+        }
+
+        let totalPaid = bills
+            .map(currentBill => Number(currentBill.rent))
+            .reduce((a, b) => a + b, 0);
+
+        resultElement.value += `Total rent paid: ${totalPaid}`;
+
+
+        let sorted = bills.sort((a, b) => {
+            return Number(b.rent) - Number(a.rent) || a.family.localeCompare(b.family)
+        });
+
+        console.log(sorted);
+    }
+</script>
+</body>
+
+</html>

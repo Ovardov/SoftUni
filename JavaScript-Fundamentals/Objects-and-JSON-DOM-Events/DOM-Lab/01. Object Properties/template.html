@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style/template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+<div id="container">
+    <nav id="navigation">
+        <div id="navigation-text">
+            <p id="lecture-name">Objects, JSON and DOM Events</p>
+            <p id="problem-name">01. Object Properties</p>
+        </div>
+        <img id="logo-img" src="./images/SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+    </nav>
+    <main>
+        <div id="exercise">
+            <form>
+                <label>Key</label>
+                <input type="text" id="key"></input>
+                <label>Value</label>
+                <input type="text" id="value"></input>
+                <div class="center">
+                    <input type="submit" id="button" onclick="addProperty()" value="Submit"></input>
+                </div>
+            </form>
+            <label>Result</label>
+            <textarea readonly rows="10" cols="50" id="result"></textarea>
+        </div>
+        <img id="softUni-person-img" src="./images/cw_2_New_Logo.png" alt="softUni-person">
+    </main>
+    <footer>
+        <p id="footer-text">Check your solution here: <span id="check-judge">Link to judge</span>
+        </p>
+    </footer>
+</div>
+<script>
+    document.getElementById("button").addEventListener("click", function (event) {
+        event.preventDefault()
+    });
+
+    let obj = {};
+
+    function addProperty() {
+        let objectKey = document.getElementById('key').value;
+        let objectValue = document.getElementById('value').value;
+        let resultElement = document.getElementById('result');
+
+        obj[objectKey] = objectValue;
+
+        resultElement.textContent = JSON.stringify(obj);
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+	<title>Locked Profile</title>
+	<script src="./solution.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <nav id="navigation">
+
+        <div id="navigation-text">
+            <p id="lecture-name">Intro to DOM</p>
+            <p id="problem-name">Locked Profile</p>
+        </div>
+        <img id="logo-img" src="images/logo.png" alt="logo">
+    </nav>
+    <main id="main">
+        <div id="exercise">
+			<div class="profile">
+				<div class="userIcon"></div>
+				<label>Lock</label>
+				<input type="radio" name="user1Locked" value="lock" checked>
+				<label>Unlock</label>
+				<input type="radio" name="user1Locked" value="unlock"><br>
+				<hr>
+				<label>Username</label>
+				<input type="text" name="user1Username" value="First User" disabled />
+				<div id="user1HiddenFields">
+				<hr>
+				<label>Email:</label>
+				<input type="email" name="user1Email" value="first@users.bg"  disabled/>
+				<label>Age:</label>
+				<input type="email" name="user1Age" value="18"  disabled/>
+				</div>
+				<button>Show more</button>
+			</div>
+
+			<div class="profile">
+				<div class="userIcon"></div>
+				<label>Lock</label>
+				<input type="radio" name="user2Locked" value="lock" checked>
+				<label>Unlock</label>
+				<input type="radio" name="user2Locked" value="unlock"><br>
+				<hr>
+				<label>Username</label>
+				<input type="text" name="user2Username" value="Second User" disabled />
+				<div id="user2HiddenFields">
+					<hr>
+					<label>Email:</label>
+					<input type="email" name="user2Email" value="second@users.bg"  disabled/>
+					<label>Age:</label>
+					<input type="email" name="user2Age" value="25"  disabled/>
+				</div>
+				<button>Show more</button>
+			</div>
+
+			<div class="profile">
+				<div class="userIcon"></div>
+				<label>Lock</label>
+				<input type="radio" name="user3Locked" value="lock" checked>
+				<label>Unlock</label>
+				<input type="radio" name="user3Locked" value="unlock"><br>
+				<hr>
+				<label>Username</label>
+				<input type="text" name="user3Username" value="Third User" disabled readonly/>
+				<div id="user3HiddenFields">
+					<hr>
+					<label>Email:</label>
+					<input type="email" name="user3Email" value="third@users.bg" disabled readonly/>
+					<label>Age:</label>
+					<input type="email" name="user3Age" value="23" disabled readonly/>
+				</div>
+				<button>Show more</button>
+			</div>
+        </div>
+        <img id="softUni-person-img" src="images/wizard.png" alt="softUni-person">
+    </main>
+</div>
+<script>
+	solve();
+</script>
+</body>
+
+</html>

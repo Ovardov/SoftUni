@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "PT sans", sans-serif;
+    font-size: 24px;
+    color: #234465;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+#main{
+    background: url(images/background.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+#navigation{
+    background: #234465;
+    display: inline-block;
+    padding: 0.5rem;
+    width: 100%;
+}
+#navigation-text{
+    display: inline-block;
+}
+#lecture-name, #problem-name{
+    font-family: "Lato", sans-serif;
+    color: white;
+    font-weight: bold;
+}
+#lecture-name{
+    font-size: 28px;
+    margin-bottom: 0.8rem;
+}
+#problem-name{
+    font-size: 22px;
+    color: white;
+}
+#logo-img{
+    width: 17%;
+    float: right;
+    padding: 0.5rem 0.5rem 0 0;
+}
+#softUni-person-img{
+    width: 30%;
+    padding: 0;
+    float: left;
+}
+#exercise{
+    width: 70%;
+    float: left;
+    padding: 1rem 0 1rem 1rem;
+}
+main:after{
+    display: block;
+    content:'';
+    clear: both;
+}
+
+fieldset{
+    width: 60%;
+}
+fieldset input{
+    font-size: 24px;
+}
+fieldset button{
+    font-size: 21px;
+    background: #234465;
+    color: white;
+    border: none;
+    padding: 1%;
+    border-radius: 10px;
+}
+#response{
+    font-weight: bold;
+    text-decoration: underline;
+}

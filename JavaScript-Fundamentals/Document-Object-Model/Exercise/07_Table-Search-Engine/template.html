@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Table - Search Engine</title>
+    <script src="./solution.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <nav id="navigation">
+        <div id="navigation-text">
+            <p id="lecture-name">Intro to DOM</p>
+            <p id="problem-name">Table - Search Engine</p>
+        </div>
+        <img id="logo-img" src="images/logo.png" alt="logo">
+    </nav>
+    <main id="main">
+        <div id="exercise">
+			<table>
+            <thead>
+                <tr>
+                    <th>Student name</th>
+                    <th>Student email</th>
+                    <th>Student course</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <input type="text" id="searchField" />
+                        <button type="button" id="searchBtn">Search</button>
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Pesho Peshov</td>
+                    <td>pesho.peshov@softuni.bg</td>
+                    <td>JSCORE</td>
+                </tr>
+                <tr>
+                    <td>Gosho Goshov</td>
+                    <td>gosho.goshov@softuni.bg</td>
+                    <td>JSCORE</td>
+                </tr>
+                <tr>
+                    <td>Dabest Dabestov</td>
+                    <td>dabest.dabestov@softuni.bg</td>
+                    <td>JS Web Baby</td>
+                </tr>
+                <tr>
+                    <td>Test Testov</td>
+                    <td>test.testov@softuni.bg</td>
+                    <td>JSCORE</td>
+                </tr>
+                <tr>
+                    <td>Unisofter Unisofterov</td>
+                    <td>unisofterov@softuni.bg</td>
+                    <td>All possible courses</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="result"></div>
+        </div>
+        <img id="softUni-person-img" src="images/wizard.png" alt="softUni-person">
+    </main>
+   
+</div>
+<script>
+	solve();
+</script>
+</body>
+
+</html>

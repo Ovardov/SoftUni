@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Trucks</title>
+</head>
+
+<body onload="solve()">
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">JS CORE Fundamentals Exam</p>
+                <p id="problem-name">04. Trucks</p>
+            </div>
+            <img id="logo-img" src="./images/logo.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <section>
+                    <fieldset>
+                        <legend>NEWTRUCK</legend>
+                        <div>
+                            <label for="newTruckPlateNumber">Plate number</label>
+                            <input id="newTruckPlateNumber" type="text" />
+                        </div>
+                        <div>
+                            <label for="newTruckTiresCondition">Tires Condition</label>
+                            <input id="newTruckTiresCondition" type="text" />
+                        </div>
+                        <button>Add new truck</button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>NEWTIRES</legend>
+                        <div>
+                            <label for="newTiresCondition">Tires Condition</label>
+                            <input id="newTiresCondition" type="text" />
+                        </div>
+                        <button>Add new tires</button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>WORK</legend>
+                        <div>
+                            <label for="workPlateNumber">Plate number</label>
+                            <input id="workPlateNumber" type="text" />
+                        </div>
+                        <div>
+                            <label for="distance">Distance</label>
+                            <input id="distance" type="number" min="1" />
+                        </div>
+                        <button>Go to work</button>
+                    </fieldset>
+                    <button>End of the shift</button>
+                </section>
+                <section>
+                    <fieldset>
+                        <legend>Backup tires sets</legend>
+                        <div></div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Trucks</legend>
+                        <div></div>
+                    </fieldset>
+                    <textarea placeholder="REPORT..." disabled="true"></textarea>
+                </section>
+            </div>
+            <img id="softUni-person-img" src="./images/wizard.png" alt="softUni-person">
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="solution.js"></script>
+</body>
+
+</html>

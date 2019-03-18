@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<title>Dart</title>
+	<link type="text/css" rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	 crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+</head>
+
+<body onload="dart()">
+	<section id="playBoard">
+		<h1>Dartboard</h1>
+		<div id="firstLayer">
+			<div id="secondLayer">
+				<div id="thirdLayer">
+					<div id="fourthLayer">
+						<div id="fifthLayer">
+							<div id="sixthLayer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="scoreBoard">
+		<h1>Scoreboard</h1>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">Score Legend</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Green</td>
+					<td>100 points</td>
+				</tr>
+				<tr>
+					<td>Yellow</td>
+					<td>2 points</td>
+				</tr>
+				<tr>
+					<td>Orange</td>
+					<td>3 points</td>
+				</tr>
+				<tr>
+					<td>Red</td>
+					<td>4 points</td>
+				</tr>
+				<tr>
+					<td>Purple</td>
+					<td>5 points</td>
+				</tr>
+				<tr>
+					<td>Blue</td>
+					<td>6 points</td>
+				</tr>
+			</tbody>
+		</table>
+		<section id="points">
+			<div id="Home">
+				<p>0</p>
+				<p>Home</p>
+			</div>
+			<div id="Away">
+				<p>0</p>
+				<p>Away</p>
+			</div>
+			<div id="turns">
+				<p>Turn on Home</p>
+				<p>Next is Away</p>
+			</div>
+		</section>
+	</section>
+</body>
+
+</html>

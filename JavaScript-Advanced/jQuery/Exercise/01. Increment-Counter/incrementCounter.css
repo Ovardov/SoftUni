@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+body {
+    font-family: 'Abril+Fatface', cursive;
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+textarea.counter {
+    background: #afb6d3;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 25px;
+    color: #5b679d;
+    font-weight: bold;
+    border: 1px solid #5b679d;
+    cursor: no-drop;
+    display: block;
+    margin: 14px auto;
+}
+
+div {
+    text-align: center;
+}
+
+#incrementBtn {
+    background: #76c9ca;
+    border: 1px solid #3698a3;
+    padding: 10px 25px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: #3698a3;
+    outline: none;
+}
+
+#incrementBtn:hover {
+    cursor: pointer;
+    outline: none;
+    background: #3698a3;
+    border: 1px solid #76c9ca;
+    color: #76c9ca;
+}
+
+#addBtn {
+    background: #c5a3b3;
+    border: 1px solid #9e6786;
+    padding: 10px 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: #9e6786;
+    outline: none;
+}
+
+#addBtn:hover {
+    cursor: pointer;
+    outline: none;
+    background: #9e6786;
+    border: 1px solid #c5a3b3;
+    color: #c5a3b3;
+}
+
+.results {
+    text-align: left;
+    margin-left: 26%;
+}

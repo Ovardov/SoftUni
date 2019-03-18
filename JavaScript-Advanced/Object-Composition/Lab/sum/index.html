@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="sum.js"></script>
+    <title>Title</title>
+
+</head>
+<body>
+    <input type="text" id="num1"/>
+    <input type="text" id="num2"/>
+    <input type="text" id="result" readonly/>
+    <br>
+    <button id="sumButton">Sum</button>
+    <button id="subtractButton">Subtract</button>
+
+    <script>
+        let domManipulator = (function () {
+            let firstElement;
+            let secondElement;
+            let resultElement;
+
+            return {
+                init: function (selector1, selector2, resultSelector) {
+                    firstElement = document.querySelector(selector1);
+                    secondElement = document.querySelector(selector2);
+                    resultElement = document.querySelector(resultSelector)
+
+                },
+                add: function () {
+                    resultElement.value = Number(firstElement.value) + Number(secondElement.value);
+                },
+                subtract: function () {
+                    resultElement.value = Number(firstElement.value) - Number(secondElement.value);
+                }
+            };
+        })();
+
+        domManipulator.init('#num1', '#num2', '#result');
+
+        let sumButton = document.querySelector('#sumButton');
+        sumButton.addEventListener('click', domManipulator.add);
+
+        let subtractButton = document.querySelector('#subtractButton');
+        subtractButton.addEventListener('click', domManipulator.subtract);
+    </script>
+</body>
+</html>

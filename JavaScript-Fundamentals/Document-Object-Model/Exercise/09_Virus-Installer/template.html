@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Virus Installer</title>
+    <script src="./solution.js" ></script>
+</head>
+
+<body>
+<div id="container">
+    <nav id="navigation">
+        <div id="navigation-text">
+            <p id="lecture-name">Intro to DOM</p>
+            <p id="problem-name">Virus Installer</p>
+        </div>
+        <img id="logo-img" src="images/logo.png" alt="logo">
+    </nav>
+    <main id="main">
+        <div id="exercise">
+			 <section>
+        <h1>Installing SoftUni Virus</h1>
+        <div id="content">
+            <div id="firstStep">
+                <h2>License agreement</h2>
+                <label>I Agree</label>
+                <input type="radio" value="agree" name="license"/><br>
+                <label>I Disagree</label>
+                <input type="radio" value="disagree" name="license" checked />
+				<p>By agreeing to our terms of use of the virus, you agree to give us access to all your personal data.Click ->  I Agree to continue...</p>
+            </div>
+            <div id="secondStep">
+                <h2>Wait a 3 seconds, until the virus infect all files on your PC.</h2>
+            </div>
+            <div id="thirdStep">
+				<h2>Everything finished successfully!</h2>
+				<p>Now your PC is completely infected with SoftUni Virus. ENJOY!</p>
+            </div>
+        </div>
+        <div id="buttons">
+            <button>Next</button>
+            <button>Cancel</button>
+        </div>
+    </section>
+        </div>
+        <img id="softUni-person-img" src="images/wizard.png" alt="softUni-person">
+    </main>
+    
+</div>
+<script>
+	solve();
+</script>
+</body>
+
+</html>

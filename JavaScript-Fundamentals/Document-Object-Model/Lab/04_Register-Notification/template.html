@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <script src="solution.js"></script>
+    <title>Register notification</title>
+</head>
+
+<body>
+<div id="container">
+    <nav id="navigation">
+        <div id="navigation-text">
+            <p id="lecture-name">Intro to DOM</p>
+            <p id="problem-name">Register Notification</p>
+        </div>
+        <img id="logo-img" src="images/logo.png" alt="logo">
+    </nav>
+    <main id="main">
+        <div id="exercise">
+			<form>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="Pesho..." />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="pesho.peshev@ood.bg..." />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="*****" />
+        <br>
+        <button type="button" id="registerBtn" onclick="register()">Register</button>
+    </form>
+	
+	<section id="result"></section>
+        </div>
+        <img id="softUni-person-img" src="images/wizard.png" alt="softUni-person">
+    </main>
+
+</div>
+
+</body>
+
+</html>

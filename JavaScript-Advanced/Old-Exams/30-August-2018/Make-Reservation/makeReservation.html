@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make Reservation</title>
+    <style>
+        #wrapper {
+            margin: auto;
+            width: 70%;
+            color: rgb(138, 43, 226);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+            background-color: rgb(247, 247, 247);
+            border: 2px solid rgb(138, 43, 226);
+        }
+
+        #container {
+            height: 250px;
+            text-align: center;
+        }
+
+        #extraDetails {
+            margin-top: 10px;
+            margin-left: 20%;
+            width: 50%;
+        }
+
+        .block {
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+            background-color: white;
+            margin-top: 5px;
+        }
+
+        button:disabled {
+            background-color: rgb(221, 221, 221);
+            color: white;
+        }
+
+        h1, h4, h2 {
+            text-align: center;
+        }
+
+        input {
+            float: right;
+            margin-left: 5px;
+        }
+
+        ul {
+            display: inline;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        .buttonMargined {
+            margin-left: 140px;
+        }
+
+        .inputLabel {
+            text-align: right;
+        }
+
+        .preview {
+            display: inline-block;
+            height: 150px;
+            width: 70%;
+        }
+
+        .custom-select {
+            display: block;
+            margin: 0 auto;
+        }
+
+        input, button, .preview, .custom-select, p {
+            padding: 5px 15px;
+            border: 1px solid rgb(138, 43, 226);
+            font-size: inherit;
+            color: rgb(138, 43, 226);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <h1>Make Reservation</h1>
+    <h4>Please fill in the following information in order to proceed with your reservation:</h4>
+    <div class="block">
+        <div class="inputLabel">Full Name<input id="fullName"></div>
+        <br>
+        <div class="inputLabel">E-mail<input id="email"></div>
+        <br>
+        <div class="inputLabel">Phone Number<input id="phoneNumber"></div>
+        <br>
+        <div class="inputLabel">Address<input id="address"></div>
+        <br>
+        <div class="inputLabel">Postal Code<input id="postalCode"></div>
+        <button class="buttonMargined" id="submit">Submit</button>
+    </div>
+    <div class="block">
+        <label style="font-size: inherit;">Preview your information:</label><br>
+        <div class="preview">
+            <ul id="infoPreview">
+            </ul>
+        </div>
+        <button class="buttonMargined" id="edit" disabled>Edit</button>
+        <button id="continue" disabled>Continue</button>
+    </div>
+    <div id="container">
+    </div>
+</div>
+<script src="solution.js"></script>
+<script>
+    makeReservation('#container');
+</script>
+</body>
+</html>

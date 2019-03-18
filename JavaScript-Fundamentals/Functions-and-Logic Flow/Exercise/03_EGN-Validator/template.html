@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>EGN Generator</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Functions and Logic Flow</p>
+                <p id="problem-name">04. EGN Generator</p>
+            </div>
+            <img id="logo-img" src="images/SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">EGN GENERATOR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="year">Year</label>
+                            </td>
+                            <td>
+                                <input id="year" type="number" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Month</td>
+                            <td>
+                                <select id="month">
+                                    <option selected>Select a month</option>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                            <td>
+                                <input id="date" type="number" min="1" max="31">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>
+                                <label for="male">Male</label>
+                                <input id="male" type="radio" name="gender" value="Male" />
+                                <label for="female">Female</label>
+                                <input id="female" type="radio" name="gender" value="Female" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Regional Code</td>
+                            <td>
+                                <input id="region" type="number" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <button>GET MY EGN</button>
+                    <p id="egn"></p>
+                </div>
+            </div>
+            <img id="softUni-person-img" src="images/cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+    </div>
+    <script src="solution.js"></script>
+    <script>
+        validate();
+    </script>
+</body>
+</html>

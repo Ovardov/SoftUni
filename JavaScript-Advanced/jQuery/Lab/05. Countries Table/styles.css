@@ -1,0 +1,49 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+td, th {
+    background: #DDD;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+input[type='text'] {
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid #aca;
+    outline: none;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    margin-left: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    /*opacity: 0.6;*/
+    position: relative;
+    transition: opacity 0.2s ease-in-out 0s;
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    z-index: 10;
+    background-color: #aca;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out 0s;
+}
+
+a:hover:before {
+    transform: scaleX(1);
+}
+
+a:hover {
+    cursor: pointer;
+    opacity: 1;
+}

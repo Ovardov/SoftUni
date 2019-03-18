@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <title>And / Delete</title>
+</head>
+<body>
+<h1>List of Items</h1>
+<ul id="items"></ul>
+<input type="text" id="newText"/>
+<input type="button" value="Add"
+       onclick="addItem()">
+
+<script>
+    function addItem() {
+        let inputTextElement = $('#newText');
+
+        let deleteLink = $('<a href="#">')
+            .text('[Delete]');
+
+        deleteLink.on('click', deleteItem);
+
+        let liElement = $('<li>')
+            .text(inputTextElement.val())
+            .append(deleteLink)
+            .appendTo($('#items'));
+
+        inputTextElement.val('');
+
+        function deleteItem(e) {
+            let button = $(e.target);
+            button.parent().remove();
+        }
+    }
+</script>
+
+</body>
+</html>

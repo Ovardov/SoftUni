@@ -1,0 +1,80 @@
+#wrapper {
+    margin: 10% auto;
+    width: 67%;
+    font-family: "Arial", sans-serif;
+    font-size: 13px;
+}
+
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form {
+    box-sizing: border-box;
+    background: white;
+    width: 55%;
+    border-radius: 17px;
+    padding: 15px;
+}
+
+#userInfo, form, #companyInfo {
+    border: 2px solid darkblue;
+}
+
+.pairContainer {
+    width: 95%;
+    display: table;
+    margin: 10px 0;
+}
+
+input {
+    float: right;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid darkblue;
+    padding: 3px;
+    outline: none;
+}
+
+label, legend {
+    color: darkblue;
+    font-weight: bold;
+    padding-top: 14px;
+}
+
+#submit {
+    box-sizing: border-box;
+    font-weight: bold;
+    color: white;
+    width: 32%;
+    border: none;
+    display: block;
+    background: darkblue;
+    padding: 7px;
+    margin: 15px auto;
+    outline: none;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    color: white;
+    background: #0000ee;
+}
+
+#valid {
+    margin-top: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 55%;
+    padding: 5px;
+    color: white;
+    border: 2px solid lime;
+    background: lime;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+

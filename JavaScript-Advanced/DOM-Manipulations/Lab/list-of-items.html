@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Items</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>List of Items</h1>
+<ul id="items">
+    <li>First</li>
+    <li>Second</li>
+</ul>
+<input type="text" id="newItemText"/>
+<input type="button" value="Add" onclick="addItem()">
+
+<script>
+    function addItem() {
+        let inputTextElement = $('#newItemText');
+
+        let liElement = $('<li>')
+            .text(inputTextElement.val())
+            .appendTo($('#items'));
+
+        inputTextElement.val('')
+    }
+</script>
+
+
+</body>
+</html>
