@@ -1,4 +1,4 @@
-# JavaScript-SoftUni
+# JavaScript-Software-University
 
 ## Software University
 ### JavaScript Developer 
