@@ -1,4 +1,5 @@
 Resources/
 node_modules/
 demo.js*
+demo.html*
 *.idea
