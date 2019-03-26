@@ -6,4 +6,5 @@
 ## JS CORE
 Courses:
 JavaScript Fundamentals,
-JavaScript Advanced
+JavaScript Advanced,
+JavaScript Applications
