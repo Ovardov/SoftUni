@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XmlHttpRequest Example</title>
+    <script src="xhr.js"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        body {
+            font-family: "Open Sans", serif;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<button onclick="loadRepos()">Load Repos</button>
+<div id="res"></div>
+</body>
+</html>

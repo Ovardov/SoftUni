@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus Schedule</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="scripts/schedule.js"></script>
+</head>
+<body>
+<div id="schedule">
+    <div id="info"><span class="info">Not Connected</span></div>
+    <div id="controls">
+        <input id="depart" value="Depart" type="button" onclick="result.depart()">
+        <input id="arrive" value="Arrive" type="button" onclick="result.arrive()" disabled="true">
+    </div>
+</div>
+<script>
+    let result = solve();
+</script>
+</body>
+</html>
