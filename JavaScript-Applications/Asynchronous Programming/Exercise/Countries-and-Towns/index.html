@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<table id="results">
+    <tr>
+        <th>Country</th>
+    </tr>
+</table>
+
+
+<fieldset id="addCountry">
+    <legend>Add Country</legend>
+    <label for="countryName">Country Name</label>
+    <input type="text" id="countryName" placeholder="Bulgaria">
+    <button>Create</button>
+</fieldset>
+
+<fieldset id="addTown">
+    <legend>Add Town</legend>
+    <label for="townName">Town Name</label>
+    <input type="text" id="townName" placeholder="Plovdiv">
+    <label for="countryForTown">Country Name</label>
+    <input type="text" id="countryForTown" placeholder="Bulgaria">
+    <button>Create</button>
+</fieldset>
+
+<fieldset id="editCountry">
+    <legend>Edit Country</legend>
+    <label for="oldCountryName">Old Country Name</label>
+    <input type="text" id="oldCountryName" readonly>
+    <label for="newCountryName">New Country Name</label>
+    <input type="text" id="newCountryName">
+    <button>Edit</button>
+</fieldset>
+
+<script src="scripts/countriesAndTowns.js"></script>
+<script>
+    attachEvents();
+</script>
+</body>
+</html>

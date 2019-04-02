@@ -1,0 +1,23 @@
+canvas {
+    cursor: none;
+}
+
+.player {
+    display: inline-table;
+    border: 2px solid darkblue;
+    padding: 5px;
+}
+
+.play, .delete {
+    width: 95%;
+    padding: 0 5px 0 5px;
+}
+
+button {
+    padding: 5px;
+}
+
+fieldset {
+    box-sizing: border-box;
+    width: 800px;
+}

@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+}
+
+input {
+    display: block;
+}
+
+div {
+    border: 1px solid black;
+    padding: 5px;
+    display: inline-table;
+    width: 24%;
+}
+
+div#aside {
+    margin-top: 8px;
+    width: 15%;
+    border: 2px solid grey;
+}
+
+div#catches {
+    width: auto;
+}
+
+button {
+    display: inline-table;
+    margin: 5% 0 5% 5%;
+    width: 39%;
+}
+
+button.add {
+    width: 90%;
+}
+
+button.load {
+    width: 90%;
+    padding: 10px;
+}
+
+button.load {
+    vertical-align: top;
+}
+
+fieldset {
+    display: inline-table;
+    vertical-align: top;
+}
+
+fieldset#main {
+    width: 70%;
+}

@@ -1,0 +1,46 @@
+#content {
+    width: 400px;
+}
+
+#request {
+    text-align: center;
+}
+
+.bl {
+    width: 300px;
+}
+
+#current {
+    text-align: center;
+    font-size: 2em;
+}
+
+#upcoming {
+    text-align: center;
+}
+
+.condition {
+    text-align: left;
+    display: inline-block;
+}
+
+.symbol {
+    font-size: 4em;
+    display: inline-block;
+}
+
+.forecast-data {
+    display: block;
+}
+
+.upcoming {
+    display: inline-block;
+    margin: 1.5em;
+}
+
+.label {
+    margin-top: 1em;
+    font-size: 1.5em;
+    background-color: aquamarine;
+    font-weight: 400;
+}
