@@ -1,8 +1,7 @@
 function attachEvents() {
     let confirmationButton = $('#confirmation');
     let yesButton = $('#confirm-collapse');
-
-
+    
     confirmationButton.on('show.bs.modal', showCollapse);
     yesButton.click(applyCourse);
 
@@ -15,11 +14,6 @@ function attachEvents() {
 
         modal.find('.modal-title').text(`Apply for the ${course} course`);
         modal.find('.modal-body').text(`Are you sure you want to apply for the ${course} course?`);
-    }
-
-
-    function applyCourse() {
-        window.location.href='#'
     }
 }
 
