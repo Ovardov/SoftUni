@@ -3,7 +3,6 @@ function attachEvents() {
     let yesButton = $('#confirm-collapse');
     
     confirmationButton.on('show.bs.modal', showCollapse);
-    yesButton.click(applyCourse);
 
     function showCollapse(event) {
         let button = $(event.relatedTarget);
