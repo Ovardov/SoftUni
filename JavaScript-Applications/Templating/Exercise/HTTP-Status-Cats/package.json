@@ -1,0 +1,7 @@
+{
+  "name": "HTTP-Status-Cats",
+  "version": "1.0.0",
+  "dependencies": {
+    "handlebars": "^4.1.1"
+  }
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Sniglet');
+
+body {
+  margin: 20px;
+  font-family: 'Sniglet',
+  cursive;
+}
+
+input {
+  padding: 5px;
+  border: 2px solid rgb(208, 208, 208);
+  border-radius: 8px;
+  font-family: 'Sniglet',
+  cursive;
+  outline:none;
+}
+
+button {
+  padding: 5px;
+  border-radius: 8px;
+  border: 2px solid rgb(208, 208, 208);
+  font-weight: bold;
+  outline: none;
+  font-family: 'Sniglet',
+  cursive;
+}
+
+button:hover {
+  background: rgb(243, 243, 243);
+}
+
+#root {
+  margin: 10px 0px;
+  width: 25%;
+  border-radius: 8px;
+  border: 2px dotted rgb(144, 144, 144);
+  background: rgb(208, 208, 208);
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style-type: none;
+  background: rgb(243, 243, 243);
+  margin: 5px 0px;
+  padding: 5px 15px;
+}
