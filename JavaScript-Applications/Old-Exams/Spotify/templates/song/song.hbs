@@ -1,0 +1,22 @@
+<div class="song" id="{{id}}">
+    <h5>Title: {{title}}</h5>
+    <h5>Artist: {{artist}}</h5>
+    <img class="cover" src="{{imageURL}}"/>
+
+    {{#if isCreator}}
+        <p>Likes: {{likeCounter}}; Listened {{listenCounter}} times</p>
+
+        <a href="#/remove/{{_id}}">
+            <button type="button" class="btn btn-danger mt-4">Remove</button>
+        </a>
+        <a href="#/listen/{{_id}}">
+            <button type="button" class="btn btn-success mt-4">Listen</button>
+        </a>
+    {{else}}
+        <p>Likes: {{likeCounter}}</p>
+
+        <a href="#/like/{{_id}}">
+            <button type="button" class="btn btn-primary mt-4">Like</button>
+        </a>
+    {{/if}}
+</div>

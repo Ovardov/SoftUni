@@ -1,0 +1,16 @@
+{{> header}}
+<section id="allSongsView">
+    <div class="background-spotify">
+        <div class="song-container">
+            <h1>All Songs</h1>
+            <a href="#/createSong">
+                <button type="button" class="btn-lg btn-block new-song-btn">Add a new song</button>
+            </a>
+
+            {{#each songs}}
+                {{> song}}
+            {{/each}}
+        </div>
+    </div>
+</section>
+{{> footer}}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skeleton</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/site.css">
+    <link rel="stylesheet" href="./styles/notifications.css">
+
+    <!-- node modules scripts -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="./node_modules/sammy/lib/sammy.js"></script>
+    <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+    <!-- default scripts -->
+    <script src="./scripts/kinvey.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/notify.js"></script>
+
+    <!-- services -->
+    <script src="./scripts/services/user-service.js"></script>
+    <script src="./scripts/services/song-service.js"></script>
+
+    <!-- handlers -->
+    <script src="./scripts/handlers/user-handler.js"></script>
+    <script src="./scripts/handlers/home-handler.js"></script>
+    <script src="./scripts/handlers/song-handler.js"></script>
+
+</head>
+
+<body>
+
+<div id="container"></div>
+
+<div id="notifications">
+    <div id="loadingBox" class="notification">
+        <span>Loading …</span>
+    </div>
+    <div id="infoBox" class="notification">
+        <span>Info</span>
+    </div>
+    <div id="errorBox" class="notification">
+        <span>Error</span>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{{> header}}
+<section id="createSongView">
+    <div class="background-spotify">
+        <div class="song-container">
+            <h1>Create new song</h1>
+            <form action="#/createSong" method="POST">
+                <div class="form-group">
+                    <label for="title" class="white-labels">Title</label>
+                    <input id="title" type="text" name="title" class="form-control" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label for="artist" class="white-labels">Artist</label>
+                    <input id="artist" type="text" name="artist" class="form-control" placeholder="Artist">
+                </div>
+                <div class="form-group">
+                    <label for="imageURL" class="white-labels">imageURL</label>
+                    <input id="imageURL" type="text" name="imageURL" class="form-control" placeholder="imageURL">
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+</section>
+{{> footer}}

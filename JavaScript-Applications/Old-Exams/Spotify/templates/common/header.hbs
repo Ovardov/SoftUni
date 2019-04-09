@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<div class="collapse navbar-collapse" id="navbarText">
+
+    {{#if isAuth}}
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/allSongs">All Songs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#/mySongs">My Songs</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Welcome, {{username}}!</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/logout">Logout</a>
+            </li>
+        </ul>
+
+    {{else}}
+        <ul class="navbar-nav mr-auto"></ul>
+
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/register">Register</a>
+            </li>
+        </ul>
+    </div>
+    {{/if}}
+</nav>
