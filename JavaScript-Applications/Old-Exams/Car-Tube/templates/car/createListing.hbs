@@ -1,0 +1,39 @@
+{{> header}}
+<div id="create-listing">
+    <form action="#/createListing" method="POST">
+        <div class="container">
+            <h1>Create Car Listing</h1>
+            <p>Please fill in this form to create an listing.</p>
+            <hr>
+
+            <p>Title</p>
+            <input type="text" placeholder="Enter Title" name="title">
+
+            <p>Description</p>
+            <input type="text" placeholder="Enter Description" name="description">
+
+            <p>Car Brand</p>
+            <input type="text" placeholder="Enter Car Brand" name="brand">
+
+            <p>Car Model</p>
+            <input type="text" placeholder="Enter Car Model" name="model">
+
+            <p>Car Year</p>
+            <input type="number" placeholder="Enter Car Year" name="year">
+
+            <p>Car Image</p>
+            <input type="text" placeholder="Enter Car Image" name="imageUrl">
+
+            <p>Car Fuel Type</p>
+            <input type="text" placeholder="Enter Car Fuel Type" name="fuel">
+
+            <p>Car Price</p>
+            <input type="number" placeholder="Enter Car Price" name="price">
+
+            <hr>
+            <button type="submit" class="registerbtn">Create Listing</button>
+        </div>
+    </form>
+</div>
+
+{{> footer}}

@@ -1,0 +1,24 @@
+{{> header}}
+<div class="listing-details">
+    <div class="my-listing-details">
+        <p id="auto-title">{{title}}</p>
+        <img src="{{imageUrl}}">
+        <div class="listing-props">
+            <h2>Brand: {{brand}}</h2>
+            <h3>Model: {{model}}</h3>
+            <h3>Year: {{year}}</h3>
+            <h3>Fuel: {{fuel}}</h3>
+            <h3>Price: {{price}}$</h3>
+        </div>
+        {{#if isCreator}}
+            <div class="listings-buttons">
+                <a href="#/edit/{{params.id}}" class="button-list">Edit</a>
+                <a href="#/delete/{{params.id}}" class="button-list">Delete</a>
+            </div>
+        {{/if}}
+        <p id="description-title">Description:</p>
+        <p id="description-para">{{description}}</p>
+
+    </div>
+</div>
+{{> footer}}

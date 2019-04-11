@@ -1,0 +1,40 @@
+{{> header}}
+<div id="edit-listing">
+    <form action="#/edit" method="POST">
+
+        <div class="container">
+            <h1>Edit Car Listing</h1>
+            <p>Please fill in this form to edit an listing.</p>
+            <hr>
+            <input type="hidden" name="carId" value="{{params.id}}"/>
+
+            <p>Title</p>
+            <input type="text" placeholder="Enter Title" name="title" value="{{title}}">
+
+            <p>Description</p>
+            <input type="text" placeholder="Enter Description" name="description" value="{{description}}">
+
+            <p>Car Brand</p>
+            <input type="text" placeholder="Enter Car Brand" name="brand" value="{{brand}}">
+
+            <p>Car Model</p>
+            <input type="text" placeholder="Enter Car Model" name="model" value="{{model}}">
+
+            <p>Car Year</p>
+            <input type="number" placeholder="Enter Car Year" name="year" value="{{year}}">
+
+            <p>Car Image</p>
+            <input type="text" placeholder="Enter Car Image" name="imageUrl" value="{{imageUrl}}">
+
+            <p>Car Fuel Type</p>
+            <input type="text" placeholder="Enter Car Fuel Type" name="fuel" value="{{fuel}}">
+
+            <p>Car Price</p>
+            <input type="number" placeholder="Enter Car Price" name="price" value="{{price}}">
+
+            <hr>
+            <button type="submit" class="registerbtn">Edit Listing</button>
+        </div>
+    </form>
+</div>
+{{> footer}}

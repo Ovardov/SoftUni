@@ -1,0 +1,30 @@
+#container > div.listing-details > div > img {
+    height: 455px;
+    width: 800px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.listings-buttons {
+    width: 31%;
+    margin: auto;
+    margin-top: 34px;
+}
+
+.button-list {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    margin: 10px 8px;
+    padding: 11px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#description-para {
+    width: 39.8em;
+}

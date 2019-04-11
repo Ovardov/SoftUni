@@ -1,0 +1,44 @@
+{{> header}}
+<div id="car-listings">
+    <h1>Car Listings</h1>
+
+    <div id="listings">
+
+        {{#each cars}}
+
+            <div class="listing">
+                <p>{{title}}</p>
+                <img src="{{imageUrl}}">
+                <h2>Brand: {{brand}}</h2>
+                <div class="info">
+                    <div id="data-info">
+                        <h3>Seller: {{seller}}</h3>
+                        <h3>Fuel: {{fuel}}</h3>
+                        <h3>Year: {{year}}</h3>
+                        <h3>Price: {{price}} $</h3>
+                    </div>
+                    <div id="data-buttons">
+                        <ul>
+                            <li class="action">
+                                <a href="#/details/{{_id}}" class="button-carDetails">Details</a>
+                            </li>
+                            {{#if isCreator}}
+                                <li class="action">
+                                    <a href="#/edit/{{_id}}" class="button-carDetails">edit</a>
+                                </li>
+                                <li class="action">
+                                    <a href="#/delete/{{_id}}" class="button-carDetails">delete</a>
+                                </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <p class="no-cars">No cars in database.</p>
+        {{/each}}
+
+    </div>
+</div>
+
+{{> footer}}
