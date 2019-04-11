@@ -1,0 +1,22 @@
+{{> header}}
+<section id="viewFlightDetails">
+    <div class="ticket-area">
+        <div class="ticket-area-left">
+            <img src="{{img}}" alt="">
+        </div>
+        <div class="ticket-area-right">
+            <h3>{{destination}}</h3>
+            <div>from {{origin}}</div>
+            <div class="data-and-time">
+                {{departureDate}} {{departureTime}}
+                {{#if isCreator}}
+                    <a href="#/edit/{{params.id}}" class="edit-flight-detail"></a>
+                {{/if}}
+            </div>
+            <div>
+                {{seats}} Seats ({{cost}} per seat)
+            </div>
+        </div>
+    </div>
+</section>
+{{> footer}}
