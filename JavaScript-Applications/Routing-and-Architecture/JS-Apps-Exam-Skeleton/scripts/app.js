@@ -19,5 +19,5 @@ $(() => {
     // ADD YOUR ROUTES HERE
   });
 
-  app.run();
+  app.run('#/home');
 });
