@@ -1,0 +1,28 @@
+<header id="site-header">
+    <nav class="navbar">
+
+        {{#if isAuth}}
+
+            <section class="navbar-dashboard">
+                <div class="first-bar">
+                    <a href="#/dashboard">Dashboard</a>
+                    <a class="button" href="#/myPets">My Pets</a>
+                    <a class="button" href="#/createPet">Add Pet</a>
+                </div>
+                <div class="second-bar">
+                    <ul>
+                        <li>Welcome, {{username}}!</li>
+                        <li><a href="#/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </section>
+        {{else}}
+            <section class="navbar-anonymous">
+                <ul>
+                    <li><a href="#/register"><i class="fas fa-user-plus"></i> Register</a></li>
+                    <li><a href="#/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                </ul>
+            </section>
+        {{/if}}
+    </nav>
+</header>
