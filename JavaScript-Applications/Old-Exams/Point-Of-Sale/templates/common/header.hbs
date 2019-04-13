@@ -1,0 +1,64 @@
+{{#if isAuth}}
+    <header class="clearfix" id="profile">
+        <div id="cashier">
+            <span>Cashier: </span>
+            <a href="#">{{username}}</a>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li>
+                    <a href="#/editor">Editor</a>
+                </li>
+                <li>
+                    <a href="#/overview">Overview</a>
+                </li>
+                <li>
+                    <a href="#/logout" class="logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+{{else}}
+    <section class="clearfix" id="welcome-section">
+        <div class="welcome-text">
+            <h1>What is Lorem Ipsum?</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic
+                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset
+                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="welcome-forms">
+            <div class="welcome-login-form">
+                <h1>Sign in</h1>
+                <form id="login-form" action="#/login" method="POST">
+                    <label for="username-login">Username</label>
+                    <input type="text" name="username-login" id="username-login" placeholder="Username">
+                    <label for="password-login">Password</label>
+                    <input type="password" name="password-login" id="password-login" placeholder="Password">
+                    <input id="loginBtn" type="submit" value="Login"/>
+                </form>
+            </div>
+            <div class="welcome-rigister-form">
+                <h1>Register</h1>
+                <form id="register-form" action="#/register" method="POST">
+                    <label for="username-register">Username</label>
+                    <input type="text" name="username-register" id="username-register" placeholder="Username">
+                    <label for="password-register">Password</label>
+                    <input type="password" name="password-register" id="password-register" placeholder="Password">
+                    <label for="password-register-check">Password check</label>
+                    <input type="password" name="password-register-check" id="password-register-check"
+                           placeholder="Repeat password">
+                    <input id="registerBtn" type="submit" value="Register"/>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{{/if}}
+

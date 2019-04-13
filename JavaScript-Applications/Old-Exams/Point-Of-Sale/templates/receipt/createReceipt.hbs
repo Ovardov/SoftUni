@@ -1,0 +1,62 @@
+{{> header}}
+<section id="create-receipt-view">
+    <h1>Create Receipt</h1>
+    <div class="table">
+        <div class="table-head">
+            <div class="col wide">Product Name</div>
+            <div class="col wide">Quantity</div>
+            <div class="col wide">Price per Unit</div>
+            <div class="col">Sub-total</div>
+            <div class="col">Action</div>
+        </div>
+        <div id="active-entries">
+            {{#each entries}}
+
+                <div class="row">
+                    <div class="col wide">{{type}}</div>
+                    <div class="col wide">{{qty}}</div>
+                    <div class="col wide">{{price}}</div>
+                    <div class="col">{{subTotal}}</div>
+                    <div class="col right">
+                        <a href="#/editor/deleteEntry/{{_id}}">&#10006;</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        <div class="row">
+            <form id="create-entry-form" method="post" action="#/editor/addEntry">
+                <div class="col wide">
+                    <input name="type" placeholder="Product name">
+                </div>
+                <div class="col wide">
+                    <input name="qty" placeholder="Quantity" onkeyup="makeRealTimeSumQuantity()">
+                </div>
+                <div class="col wide">
+                    <input name="price" placeholder="Price per Unit" onkeyup="makeRealTimeSumPrice()">
+                </div>
+                <div class="col"></div>
+                <div class="col">
+                    <input id="addItemBtn" type="submit" value="Add"/>
+                </div>
+            </form>
+        </div>
+        <div class="table-foot">
+            <form id="create-receipt-form" method="POST" action="#/editor/checkout">
+                <div class="col wide">
+                </div>
+                <div class="col wide">
+                </div>
+                <div class="col wide right">Total:</div>
+                <div class="col">{{total}}</div>
+                <div class="col">
+                    <input id="checkoutBtn" type="submit" value="Checkout"/>
+                </div>
+                <input type="hidden" name="receiptId" value="{{receiptId}}"/>
+                <input type="hidden" name="productCount" value="{{productCount}}"/>
+                <input type="hidden" name="total" value="{{total}}"/>
+            </form>
+        </div>
+    </div>
+</section>
+
+{{> footer}}
