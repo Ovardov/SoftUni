@@ -1,0 +1,43 @@
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
+
+html {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button {
+    margin: 0 1em;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0.7em 1.7em;
+    background: rgb(251, 251, 251);
+    border: 3px solid rgb(51, 51, 51);
+    border-radius: 3rem;
+    color: rgb(51, 51, 51);
+}
+
+.button.fill {
+    background: rgb(51, 51, 51);
+    color: rgb(251, 251, 251);
+}
+
+.button:hover {
+    background: rgb(251, 251, 251);
+    border: 3px solid rgb(0, 102, 0);
+    color: rgb(0, 102, 0);
+}
+
+.button.fill.hover:hover {
+    background: rgb(0, 102, 0);
+    color: rgb(251, 251, 251);
+}
