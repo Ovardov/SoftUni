@@ -1,0 +1,39 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    max-width: 60%;
+    margin: 3rem auto;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    border: 0.4rem solid #000000;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 0.5em 1.5rem 0.5rem;
+    width: 30%;
+
+}
+
+li img:before {
+    display: block;
+    content: '';
+    padding-top: 56.25%;
+}
+
+li img {
+    display: block;
+    padding: 0.5em;
+    width: 100%;
+    height: auto;
+}

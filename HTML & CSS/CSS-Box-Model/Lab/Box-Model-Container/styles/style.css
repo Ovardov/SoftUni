@@ -1,0 +1,12 @@
+@import "typography.css";
+
+p {
+    margin: 5rem auto;
+    padding: 1.5rem;
+    width: 310px;
+    height: auto;
+    background: rgb(64, 224, 208);
+    color: #000000;
+    border: 5px solid #000000;
+    border-radius: 1rem;
+}

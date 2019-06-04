@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+/* Reset css */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Box sizing */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font: 16px/1.5 PT Sans, Helvetica, Verdana, sans-serif;
+}
+
+body, input, textarea, option, select, table, form {
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Playfair Display, Helvetica, sans-serif;
+    line-height: 1.1;
+    padding-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.1em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.45em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+p, ul, ol, blockquote {
+    padding-bottom: 1.5em;
+}
+
+ul, ol {
+    padding-left: 2.5em;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+blockquote {
+    padding-left: 2em;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+blockquote p:last-child {
+    padding-bottom: 0;
+}

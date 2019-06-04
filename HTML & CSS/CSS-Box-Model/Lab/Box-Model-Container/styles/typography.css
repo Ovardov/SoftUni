@@ -1,0 +1,19 @@
+/* Reset css */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Box sizing */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Typography */
+html {
+    font: 16px/1.5 Verdana, sans-serif;
+}

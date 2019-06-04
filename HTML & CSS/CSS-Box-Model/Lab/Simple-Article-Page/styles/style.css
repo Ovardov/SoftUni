@@ -1,0 +1,15 @@
+@import "typography.css";
+
+body {
+    background: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+    max-width: 60%;
+    margin: 2rem auto;
+}
+
+article section img {
+    display: block;
+    margin-bottom: 1.5em;
+    max-width: 60%;
+    height: auto;
+}
