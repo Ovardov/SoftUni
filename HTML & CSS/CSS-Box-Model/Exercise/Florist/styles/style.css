@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700|Pacifico&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font: 16px/1.5 'PT Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', serif;
+    padding-bottom: 1em;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+p, ul, ol {
+    padding-bottom: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-header {
+    background: #F1F5F8;
+    padding: 0.3rem 0.8rem;
+}
+
+.header-title {
+    font-size: 1.9rem;
+    color: #FF7F50;
+    font-family: 'Pacifico', serif;
+    width: 95rem;
+}
+
+.header-title, .site-header nav, .site-header nav ul li {
+    display: inline-block;
+}
+
+.site-header nav ul li {
+    background: #FF7F50;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.site-header nav ul li:not(:last-child) {
+    margin-right: 0.8rem;
+}
+
+.site-header nav ul li a:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f015';
+    display: inline-block;
+    font-weight: 900;
+    padding-right: 0.4rem;
+}
+
+.site-header nav ul li:nth-child(2) > a:before {
+    content: '\f500';
+}
+
+.site-header nav ul li:nth-child(3) > a:before {
+    content: '\f2b9';
+}
+
+.site-header nav ul li:nth-child(4) > a:before {
+    content: '\f781';
+}
+
+.site-header nav ul li:nth-child(5) > a:before {
+    content: '\f2bb';
+}
+
+.site-header nav ul li a {
+    color: #FFFFFF;
+}
+
+.main-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../images/header-flowers.jpg");
+    background-size: cover;
+    padding: 18.5rem 0;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.main-image h1, .main-image p {
+    margin: 0 auto;
+    width: 40%;
+    height: auto;
+}
+
+.main-image h1 {
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #26100A;
+}
+
+main p {
+    font-size: 1.25rem;
+}
+
+main > section {
+    padding: 2.5rem 0;
+}
+
+.site-info {
+    background: #FF7F50;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.site-info h3 {
+    text-transform: uppercase;
+}
+
+.site-info p {
+    margin: 0 auto;
+    width: 40%;
+    height: auto;
+}
+
+.site-info button {
+    padding: 0.6rem 0.8rem;
+    background: #FFFFFF;
+    color: #FF7F50;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0.3rem;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+    outline: none;
+}
+
+.site-info button:hover {
+    background: #FF7F50;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.site-works {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.site-works ul li {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    vertical-align: top;
+}
+
+.site-works ul li:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.site-works ul li img {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 0.4rem;
+}
+
+.gallery {
+    text-align: center;
+    background: rgba(255, 127, 80, 0.2);
+}
+
+.gallery ul li {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #FFFFFF;
+    width: 24%;
+    height: auto;
+    border: 5px solid #000000;
+    vertical-align: middle;
+}
+
+.gallery li:not(:nth-child(3n + 3)) {
+    margin-right: 2rem;
+}
+
+.gallery ul li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.site-footer {
+    background: #FF7F50;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.site-footer ul, .site-footer li, .site-footer p {
+    display: inline-block;
+}
+
+.site-footer p {
+    padding: 2rem;
+}
+
+.site-footer ul li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+
+}
+
+.site-footer ul li a {
+    vertical-align: middle;
+}
+
+.site-footer ul li a:after {
+    font-family: 'Font Awesome 5 Brands';
+    display: inline-block;
+    content: '\f09a';
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.site-footer li:nth-of-type(2) > a:after {
+    content: '\f081';
+}
+
+.site-footer li:nth-of-type(3) > a:after {
+    content: '\f09b';
+}
