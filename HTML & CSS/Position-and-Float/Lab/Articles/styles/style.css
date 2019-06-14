@@ -1,0 +1,38 @@
+@import "typography.css";
+
+body {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+body > header {
+    border-bottom: 2px solid #000000;
+}
+
+.site-title {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main article .align-right {
+    float: right;
+    margin-left: 1.5rem;
+}
+
+main article .align-left {
+    float: left;
+    margin-right: 1.5rem;
+}
+
+main article img {
+    border: 3px solid #000000;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+}
+
+blockquote {
+    width: 50%;
+}
