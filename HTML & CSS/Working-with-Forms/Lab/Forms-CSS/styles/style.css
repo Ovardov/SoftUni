@@ -1,0 +1,101 @@
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font: 16px/1.5 Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body, form, input, label {
+    font: inherit;
+}
+
+body {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+form, fieldset, legend, label, input {
+    display: block;
+}
+
+form {
+    width: 35rem;
+}
+
+form fieldset {
+    position: relative;
+    padding: 3rem 2rem 1rem 2rem;
+    border-radius: 0.3em;
+    border: 1px solid #000000;
+    background: #F9F9F9;
+}
+
+form fieldset legend {
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    margin-left: -2rem;
+    border-radius: 0.3em;
+    border: 1px solid #000000;
+    background: #F9F9F9;
+    position: absolute;
+    top: -1.3rem;
+    left: 1.94rem;
+}
+
+form fieldset p {
+    padding-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+form fieldset label {
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+form fieldset input {
+    outline: none;
+}
+
+form fieldset input[type="text"],
+form fieldset input[type="password"] {
+    width: 100%;
+    border-radius: 0.3em;
+    border: 1px solid #999999;
+    padding: 0.4rem 0.7rem 0.4rem 3rem;
+}
+
+form fieldset input[type="text"]:focus,
+form fieldset input[type="password"]:focus,
+form fieldset input[type="text"]:hover,
+form fieldset input[type="password"]:hover {
+    border-color: #009900;
+}
+
+form fieldset input[type="submit"] {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.3em;
+}
+
+form fieldset i {
+    position: absolute;
+    top: 0.7rem;
+    left: 7rem;
+}
+
+form fieldset input:focus + i,
+form fieldset input:hover + i {
+    color: #009900;
+}

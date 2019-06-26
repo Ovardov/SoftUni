@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form, fieldset, legend, label, input {
+    display: block;
+}
+
+form input, select, textarea {
+    padding: 0.5rem
+}
+
+h1, ul, p {
+    padding-bottom: 1.5em;
+}
+
+form {
+    background: rgb(173, 216, 230);
+    padding: 2rem 3rem;
+    border-radius: 0.3em;
+    text-align: center;
+    width: 42rem;
+    color: #234465;
+}
+
+form p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5rem;
+}
+
+p.message {
+    align-items: flex-start;
+}
+
+form ul {
+    display: flex;
+}
+
+form li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+ul.gender li:first-child {
+    margin-right: 3.8rem;
+}
+
+ul.gender label {
+    width: 3.5rem;
+}
+
+ul.gender input {
+    margin-right: 0.5rem;
+}
+
+form label {
+    width: 12rem;
+    text-align: left;
+}
+
+label[for="terms"] {
+    width: 30rem;
+}
+
+select,
+textarea,
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+    width: 100%;
+    margin-right: 3.9rem;
+}
+
+form input[type="checkbox"] {
+    margin-right: 0.2rem;
+}
+
+form input[type="submit"] {
+    padding: 1rem 3rem;
+    color: #FFFFFF;
+    background: #234465;
+    display: inline-block;
+    border: none;
+    border-radius: 0.3em;
+}
