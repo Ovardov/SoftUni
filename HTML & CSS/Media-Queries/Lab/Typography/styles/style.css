@@ -1,0 +1,78 @@
+@import "typography.css";
+
+body {
+    background: rgb(238, 238, 238);
+    width: 60%;
+    margin: 2rem auto;
+}
+
+body > header {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page > header {
+    width: 100%;
+    border-bottom: 2px solid #000000;
+}
+
+.site-title {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main {
+    width: 75%;
+}
+
+.align-right {
+    float: right;
+    margin-left: 1.5rem;
+}
+
+.align-left {
+    float: left;
+    margin-right: 1.5rem;
+}
+
+main article img {
+    border: 3px solid #000000;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.25);
+    background: rgb(255, 255, 255);
+    padding: 0.5rem;
+}
+
+main article blockquote {
+    font-family: Georgia, serif;
+    width: 50%;
+}
+
+aside {
+    margin-left: 3rem;
+    width: 20%;
+}
+
+aside li {
+    list-style: square;
+    margin-left: 3rem;
+}
+
+aside li a {
+    color: rgb(0, 153, 0);
+    font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+
+    img {
+        margin-bottom: 1em;
+    }
+
+}

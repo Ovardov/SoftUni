@@ -1,0 +1,41 @@
+@import "typography.css";
+
+body {
+    padding: 2em;
+}
+
+section {
+    display: flex;
+}
+
+section span {
+    margin-right: 0.2em;
+}
+
+section:after {
+    color: green;
+}
+
+@media (min-width: 600px) {
+
+    .mq-width:after {
+        content: 'Viewport width is larger than 600px';
+    }
+
+}
+
+@media (min-height: 600px) {
+
+    .mq-height:after {
+        content: 'Viewport height is larger than 600px';
+    }
+
+}
+
+@media (min-aspect-ratio: 8/5) {
+
+    .mq-ar:after {
+        content: 'Aspect Ratio is larger than 8/5';
+    }
+
+}
