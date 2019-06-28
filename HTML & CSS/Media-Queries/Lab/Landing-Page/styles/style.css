@@ -1,0 +1,10 @@
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
+
+@import "typography.css";
+@import "navigation.css";
+@import "layout.css";
+@import "footer.css";
+
+body {
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/papyrus.png");
+}

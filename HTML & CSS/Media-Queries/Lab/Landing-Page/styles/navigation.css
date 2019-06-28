@@ -1,0 +1,130 @@
+header {
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.site-title-heading {
+    margin-bottom: 0;
+}
+
+.site-title-heading a {
+    color: #68347B;
+    text-decoration: none;
+}
+
+.site-title-description {
+    font-size: 0.75em;
+}
+
+header .main-nav {
+    margin-left: auto;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    list-style: none outside;
+    padding: 0 0.3em;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 0.5em 0.7em;
+    border-radius: 0.3em;
+    outline: none;
+}
+
+.main-nav ul li a:focus,
+.main-nav ul li a:hover {
+    background: #68347B;
+    color: #FFFFFF;
+}
+
+.main-nav-toggle {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.main-nav-toggle-button {
+    display: none;
+}
+
+.main-nav-toggle-button i {
+    margin-right: 0.5em;
+}
+
+/* Phones and Tablets */
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 2em;
+        max-width: 100%;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .main-nav ul {
+        display: block;
+    }
+
+    .main-nav ul li {
+        display: block;
+    }
+
+    .main-nav-toggle-button {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    .main-nav-toggle-button .open {
+        display: block;
+        text-align: center;
+    }
+
+    .main-nav-toggle-button .close {
+        display: none;
+    }
+
+    .main-nav-toggle:checked + header {
+        display: block;
+    }
+
+    .main-nav-toggle:checked + header .main-nav-toggle-button .open {
+        display: none;
+    }
+
+    .main-nav-toggle:checked + header .main-nav-toggle-button .close {
+        display: block;
+        margin: 1em 0 0.5em 0;
+    }
+
+    .main-nav-toggle:checked + header .main-nav {
+        display: block;
+    }
+
+    .main-nav-toggle:checked + header .main-nav ul {
+        display: block;
+    }
+
+    .main-nav-toggle:checked + header .main-nav ul li {
+        background: #68347B;
+        margin-bottom: 0.2em;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+
+    .main-nav-toggle:checked + header .main-nav ul li a {
+        color: #FFFFFF;
+        display: block;
+    }
+
+}
