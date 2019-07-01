@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+@import "typography.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    border-radius: 0.3em;
+    width: 41em;
+}
+
+.media img {
+    width: 100%;
+    display: block;
+}
+
+.media, .calculator {
+    flex: 0 0 50%;
+}
+
+.calculator {
+    padding: 1em;
+    text-align: center;
+}
+
+.calculator select, .calculator input, .calculator button {
+    border-radius: 0.3em;
+}
+
+.calculator .fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.calculator p:not(.units) {
+    text-align: left;
+}
+
+.calculator .units {
+    flex-basis: 50%;
+    padding: 0.2em;
+}
+
+.calculator .units a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.calculator .units:first-of-type {
+    background: #EFE562;
+}
+
+.calculator .units:nth-of-type(2) {
+    background: #CCCCCC;
+}
+
+.calculator p {
+    flex: 0 0 47%;
+    margin-bottom: 1.5em;
+}
+
+.calculator p input {
+    border: 1px solid #CCCCCC;
+    padding: 0.2em;
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+.calculator p select:focus,
+.calculator p select:hover,
+.calculator p input:focus,
+.calculator p input:hover {
+    border-color: #05A2D3;
+}
+
+.calculator p select {
+    display: block;
+    width: 100%;
+    padding: 0.3em;
+    border: 1px solid #CCCCCC;
+    outline: none;
+}
+
+.calculator .weight {
+    flex-basis: 100%;
+}
+
+.calculator button {
+    width: 100%;
+    border: 2px solid #05A2D3;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    background: #05A2D3;
+    font-size: 1.1em;
+    outline: none;
+    cursor: pointer;
+}
+
+.calculator button:focus,
+.calculator button:hover {
+    background: #FFFFFF;
+    color: #05A2D3;
+}

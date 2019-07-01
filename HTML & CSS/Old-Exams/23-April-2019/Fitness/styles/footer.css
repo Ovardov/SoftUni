@@ -1,0 +1,11 @@
+footer {
+    background: #D01919;
+    color: black;
+    padding: 0.5em 2em;
+    text-align: center;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}

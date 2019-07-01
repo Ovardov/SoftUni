@@ -1,0 +1,85 @@
+/* Welcome */
+main .welcome .wrapper {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+main .welcome h2:after, main .coaches h2:after {
+    display: block;
+    content: '';
+    width: 2em;
+    height: 4px;
+    background: #D01919;
+    position: absolute;
+    left: 48%;
+    margin-top: 0.5em;
+}
+
+main .welcome h2, main .coaches h2 {
+    margin-bottom: 0;
+    padding-bottom: 1.3em;
+    text-align: center;
+}
+
+main .welcome .welcome-cards-list, main .coaches .coaches-cards-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome-cards-list section, .coaches-cards-list section {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-cards-list section img {
+    width: 20%;
+    padding-bottom: 1em;
+}
+
+.welcome-cards-list h4, .coaches-cards-list .sport {
+    color: #D01919;
+}
+
+/* Coaches */
+main .coaches {
+    background: #EEEEEE;
+}
+
+main .coaches .wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+}
+
+.coaches-cards-list .media {
+    position: relative;
+    width: 15em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    border-radius: 0.5em;
+}
+
+.coaches-cards-list .media:before {
+    display: block;
+    content: '';
+    padding-top: 56.25%;
+}
+
+.coaches-cards-list .media img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coaches-cards-list h5 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}

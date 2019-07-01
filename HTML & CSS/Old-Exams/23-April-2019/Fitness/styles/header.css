@@ -1,0 +1,115 @@
+header {
+    color: #FFFFFF;
+}
+
+header .top {
+    background: #D01919;
+    padding: 0.5em 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .top p {
+    flex: 1 0 32%;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+header .top .start {
+    justify-content: flex-start;
+}
+
+header .top .middle {
+    justify-content: center;
+}
+
+header .top .end {
+    justify-content: flex-end;
+}
+
+header .top a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+header .top i {
+    margin-right: 1em;
+}
+
+header .main {
+    background: url("../images/fitness-main.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 95vh;
+}
+
+header .main .main-header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .main .main-header p {
+    opacity: 0;
+    pointer-events: none;
+}
+
+header .main nav {
+    flex: 0 0 55%;
+}
+
+header .main nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .main nav ul li {
+    flex: 1 1 15%;
+    list-style: none;
+}
+
+header .main nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 0.5em 0.8em;
+    border-radius: 0.3em;
+}
+
+header .main nav ul li a:hover {
+    background: #D01919;
+}
+
+header .main .content {
+    margin-top: 10em;
+}
+
+header .main .content h1 {
+    letter-spacing: 0.08em;
+}
+
+header .main button {
+    border: 2px solid #D01919;
+    background: #D01919;
+    padding: 0.5em 1em;
+    color: #FFFFFF;
+    border-radius: 0.3em;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+header .main button:hover {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    background: transparent;
+}
+
+@media (max-width: 1500px) {
+
+    header .main nav {
+        flex-basis: 70%;
+    }
+
+}
