@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+@import "typography.css";
+
+.wrapper {
+    max-width: 70%;
+    margin: 2em auto;
+}
+
+.wrapper h1:after {
+    display: block;
+    content: '';
+    width: 2.5em;
+    height: 4px;
+    background: #1996A9;
+}
+
+.wrapper > p {
+    padding: 0 0 1.5em 0;
+}
+
+
+.cards-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards-list section {
+    text-align: center;
+    flex: 0 0 30%;
+    border: 1px solid #CCCCCC;
+}
+
+.cards-list section p:not(:first-of-type) {
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+.basic, .business {
+    background: #333333;
+}
+
+.professional {
+    background: #1996A9;
+}
+
+.cards-list h2 {
+    color: #FFFFFF;
+    margin-bottom: 0;
+    padding: 0.2em;
+}
+
+.cards-list .price {
+    background: #F6F6F6;
+    font-size: 1.4em;
+}
+
+.cards-list .description {
+    color: #CCCCCC;
+    font-size: 0.8em;
+}
+
+.cards-list button {
+    color: #FFFFFF;
+    padding: 0.8em 2em;
+    background: #008CBA;
+    border: 2px solid #008CBA;
+    border-radius: 0.3em;
+    margin: 1em 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.cards-list button:focus,
+.cards-list button:hover {
+    background: #FFFFFF;
+    color: #008CBA;
+}

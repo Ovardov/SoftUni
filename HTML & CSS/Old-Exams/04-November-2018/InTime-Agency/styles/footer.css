@@ -1,0 +1,15 @@
+footer {
+    padding: 0.8em 0;
+    text-align: center;
+    background: #262B2F;
+    color: #FFFFFF;
+}
+
+footer p {
+    padding-bottom: 0;
+}
+
+footer a {
+    color: #008CBA;
+    text-decoration: none;
+}
