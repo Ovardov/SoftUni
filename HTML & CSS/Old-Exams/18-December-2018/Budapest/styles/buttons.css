@@ -1,0 +1,17 @@
+button {
+    border: 2px solid #FFFFFF;
+    padding: 0.4em 1em;
+    color: #FFFFFF;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+button.orange-text {
+    color: #CDA939;
+}
+
+button:hover {
+    background: #FFFFFF;
+    color: #CDA939;
+}

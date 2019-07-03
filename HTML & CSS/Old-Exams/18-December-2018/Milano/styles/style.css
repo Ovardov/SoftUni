@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+@import "typography.css";
+
+.card {
+    max-width: 1200px;
+    margin: 2em auto;
+    text-align: center;
+    border: 1px solid #000000;
+    color: #4C4C4C;
+}
+
+.card h4 {
+    background: #ECECEC;
+    padding: 0.5em 0;
+}
+
+.card h4:before {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f07a';
+    margin-right: 0.5em;
+}
+
+div.wrapper {
+    display: flex;
+    padding: 0 0.6em;
+}
+
+div.media {
+    flex: 0 0 30%;
+    border-right: 1px solid #000000;
+}
+
+div.media img {
+    width: 350px;
+    margin-bottom: 1em;
+}
+
+div.media p:first-of-type {
+    font-weight: bold;
+}
+
+div.media p:last-of-type {
+    text-align: left;
+    margin-bottom: 0.5em;
+    padding-bottom: 0;
+}
+
+div.form {
+    flex: 0 0 70%;
+    padding: 1em;
+}
+
+form select, form input {
+    border: 1px solid #ECECEC;
+    border-radius: 0.7em;
+    outline: none;
+}
+
+form select {
+    padding: 0.3em 0;
+    width: 100%;
+    margin-bottom: 1.5em;
+    text-align-last: center;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 2em;
+}
+
+.input-wrapper p {
+    flex: 0 0 50%;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form .input-wrapper label {
+    margin-right: 0.5em;
+    flex: 0 0 15%;
+}
+
+form .input-wrapper input {
+    padding: 0.2em 0.5em;
+    width: 70%;
+}
+
+form input[type="submit"] {
+    background: #E34B4A;
+    border: 2px solid #E34B4A;
+    color: #FFFFFF;
+    padding: 0.2em 1em;
+    cursor: pointer;
+}
+
+form select:focus,
+form select:hover,
+form input:focus,
+form input:hover {
+    border-color: #CD2F3D;
+}
+
+form input[type="submit"]:focus,
+form input[type="submit"]:hover {
+    background: #CD2F3D;
+}
