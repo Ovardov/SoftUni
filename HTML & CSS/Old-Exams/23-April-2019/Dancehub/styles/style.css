@@ -54,7 +54,7 @@ nav ul li a {
 }
 
 header div {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("../../2. Dancehub/Requirements-and-Resources/image/dancing-girl.png") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("../images/dancing-girl.png") no-repeat center center;
   background-size: cover;
   color: white;
   padding: 9em 0 9em 3em;
