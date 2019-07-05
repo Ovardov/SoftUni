@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+@import "typography.css";
+
+body {
+    background: url("../images/background.jpg");
+    background-size: cover;
+}
+
+.wrapper {
+    max-width: 600px;
+    height: auto;
+    margin: 2em auto;
+    border-radius: 0.3em;
+    background: #FFFFFF;
+    text-align: center;
+    padding: 2em;
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.wrapper p {
+    position: relative;
+}
+
+p.description {
+    color: #F41412;
+    text-align: left;
+    padding-bottom: 1em;
+    font-weight: bold;
+}
+
+p:nth-child(5) {
+    margin-top: 1em;
+}
+
+.pay-method {
+    display: flex;
+    text-align: center;
+}
+
+.pay-method p {
+    flex: 0 0 50%;
+}
+
+.pay-method i {
+    position: absolute;
+    top: 0.8em;
+    left: 3em;
+    border: none;
+    padding: 0;
+}
+
+.pay-method input {
+    text-align: right;
+    padding: 0.5em 3em;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.pay-method p:first-of-type input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.pay-method p:last-of-type input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0.5em 4em;
+}
+
+.pay-method p:last-of-type input + i {
+    left: 4em;
+}
+
+p i {
+    position: absolute;
+    top: 0.8em;
+    left: 1em;
+    border-right: 1px solid #CCCCCC;
+    padding-right: 0.5em;
+    color: #CCCCCC;
+}
+
+p input {
+    width: 100%;
+    background: #F9F9F9;
+    border-radius: 0.3em;
+    padding: 0.5em 3em;
+    border: 1px solid #CCCCCC;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.5em 0;
+    border-radius: 0.3em;
+    border: 2px solid #F41412;
+    background: #F41412;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    outline: none;
+}
+
+input:focus,
+input:hover {
+    border-color: #F41412;
+}
+
+input:focus + i,
+input:hover + i {
+    border-color: #F41412;
+    color: #F41412;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    background: #FFFFFF;
+    color: #F41412;
+}
+
+.pay-method input:focus,
+.pay-method input:hover {
+    background: #F41412;
+    border-color: #F41412;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.pay-method input:focus + i,
+.pay-method input:hover + i {
+    color: #FFFFFF;
+    opacity: 1;
+}

@@ -1,0 +1,149 @@
+section.sports {
+    background: #EFEFEF;
+}
+
+main .sports-wrapper .cards-list {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-list section {
+    flex: 0 0 50%;
+}
+
+.cards-list section.content {
+    padding: 2em;
+    text-align: center;
+    color: #000000;
+    font-weight: 300;
+    background: #FFFFFF;
+}
+
+.cards-list section.content h3 {
+    width: 50%;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.cards-list section.content p {
+    padding: 1em 0 0 0;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.cards-list section.content button {
+    margin: 2em 0;
+}
+
+.cards-list section.img, .cards-list section.img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.cards-list section.img img:after {
+    padding-top: 100%;
+    content: '';
+    display: block;
+}
+
+.cards-list section.img img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section.clients {
+    background: #FFFFFF;
+}
+
+.clients-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2em;
+    font-weight: 300;
+}
+
+.clients-wrapper h2 {
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.clients-card-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.clients-card-list .card {
+    flex: 0 0 30%;
+}
+
+.clients-card-list .card img {
+    border-radius: 50%;
+    width: 40%;
+}
+
+.clients-card-list .card p:last-child {
+    text-align: left;
+}
+
+.clients-card-list .card p.name {
+    font-weight: bold;
+}
+
+section.contact-us {
+    background: #4C4C4C;
+    text-align: center;
+}
+
+.contact-us-wrapper {
+    padding: 2em 0 0.5em 0;
+    width: 70%;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+.contact-us-wrapper h2 {
+    font-weight: 300;
+}
+
+.contact-us-wrapper > p {
+    font-weight: 300;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts form, .contacts div {
+    flex: 0 0 49%;
+}
+
+.contacts form {
+    text-align: left;
+}
+
+.contacts form label, .contacts form textarea {
+    display: block;
+}
+
+.contacts form label {
+    font-weight: bold;
+}
+
+.contacts form textarea {
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    margin: 0.2em 0 1em 0;
+    resize: none;
+}

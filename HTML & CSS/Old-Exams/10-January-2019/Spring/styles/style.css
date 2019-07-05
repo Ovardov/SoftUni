@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+@import "typography.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../images/background.png");
+}
+
+.wrapper {
+    max-width: 60%;
+}
+
+.wrapper header img {
+    width: 100%;
+    border-radius: 4em;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.links .orange {
+    color: #FFDD00;
+}
+
+.links p {
+    padding-top: 1.5em;
+}
+
+.links p span.orange a {
+    color: #FFDD00;
+    text-decoration: none;
+}
+
+.links p span:first-of-type:after {
+    display: inline-block;
+    content: '----------';
+    margin-left: 0.2em;
+    color: #CCCCCC;
+}
+
+.links p span:last-of-type:after {
+    display: inline-block;
+    content: '\f063';
+    margin-left: 0.3em;
+    color: #FFDD00;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.cards-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 0 0 22%;
+    padding: 0.5em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background: #FFFFFF;
+}
+
+.card .media {
+    margin-bottom: 1.3em;
+}
+
+.card .media img {
+    width: 100%;
+    height: auto;
+}
+
+.card .description p:first-of-type {
+    padding-bottom: 1em;
+}
+
+.card .description p.price {
+    color: #7D02AD;
+    padding-bottom: 0.5em;
+}
