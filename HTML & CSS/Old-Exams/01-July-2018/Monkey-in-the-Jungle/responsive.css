@@ -1,0 +1,61 @@
+@media (max-width: 480px) {
+
+    body {
+        background-size: contain;
+        background-position: top;
+    }
+
+    header > .logo {
+        margin-bottom: 2em;
+    }
+
+    .wrapper > header.special {
+        padding: 2.5em;
+    }
+
+    .wrapper > header h2 {
+        margin-top: 0;
+    }
+
+    .wrapper > header h2:after {
+        width: 60%;
+    }
+
+    .wrapper.style1 .content {
+        padding: 1.5em;
+    }
+
+
+    section.wrapper.style2 {
+        padding: 1.5em;
+    }
+
+    section.gallery {
+        flex-direction: column;
+    }
+
+    section.gallery > div {
+        width: 100%;
+    }
+
+    section.wrapper > div.spotlight {
+        display: block;
+        width: 100%;
+    }
+
+    div.spotlight > * {
+        width: 100%;
+
+    }
+
+    div.spotlight div.inner {
+        padding: 1.5em;
+        text-align: center;
+    }
+
+    div.spotlight div.inner h3 {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+
+}

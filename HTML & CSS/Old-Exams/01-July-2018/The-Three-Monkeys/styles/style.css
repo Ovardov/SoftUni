@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+@import "typography.css";
+
+body {
+    background: #FAEBC8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 0.5em;
+
+    box-shadow: 0 0 1rem 0 rgb(150, 90, 80);
+    background: #FFFFFF;
+}
+
+section.cards-list {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 2em auto;
+}
+
+.card {
+    flex: 0 0 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.card h3 {
+    margin: 0.6em 0;
+}
+
+.card p {
+    text-align: left;
+}
+
+.card p:first-of-type {
+    flex-grow: 1;
+}
+
+.card p.name {
+    color: #965A50;
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 1em;
+    text-shadow: 1.3em 1em 0.1em rgba(0, 0, 0, 0.4);
+}

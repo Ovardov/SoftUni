@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+@import "typography.css";
+
+body {
+    background: linear-gradient(to right, #A0685C, #F1DEBE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.wrapper {
+    padding: 4em 6em;
+    width: 65%;
+    background: #FFFFFF;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper > section {
+    flex: 0 0 48%;
+}
+
+.wrapper a {
+    color: #000000;
+}
+
+section.login {
+    position: relative;
+}
+
+.wrapper section.login h3 {
+    margin-bottom: 2em;
+}
+
+.wrapper p {
+    position: relative;
+}
+
+.wrapper .interest {
+    padding-bottom: 0.5em;
+}
+
+.wrapper ul {
+    padding-left: 1.5em;
+}
+
+.wrapper ul li {
+    list-style: none;
+}
+
+.wrapper input {
+    padding: 0.5em 3em;
+    border-radius: 1.5em;
+    outline: none;
+}
+
+.wrapper p input + i {
+    position: absolute;
+    top: 0.9em;
+    left: 1.5em;
+    color: #777777;
+}
+
+input[type=radio]:checked + label {
+    color: #8E6B52;
+}
+
+input[type="email"],
+input[type="password"] {
+    background: #E6E6E6;
+    border: 2px solid #E6E6E6;
+    width: 100%;
+    outline: none;
+}
+
+input[type="email"]:focus,
+input[type="email"]:hover,
+input[type="password"]:focus,
+input[type="password"]:hover {
+    border-color: #8E6B52;
+    color: #8E6B52;
+}
+
+input[type="email"]:focus + i,
+input[type="email"]:hover + i,
+input[type="password"]:focus + i,
+input[type="password"]:hover + i {
+    color: #8E6B52;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background: #8E6B52;
+    color: #FFFFFF;
+    border: 2px solid #8E6B52;
+    margin: 1.5em 0 0.5em 0;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    background: #5E4736;
+    border-color: #5E4736;
+}
+
+p.position-absolute {
+    position: absolute;
+    bottom: -4em;
+    left: 7em;
+}

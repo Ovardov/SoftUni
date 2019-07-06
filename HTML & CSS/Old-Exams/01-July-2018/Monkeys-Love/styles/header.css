@@ -1,0 +1,55 @@
+header nav {
+    padding: 0.8em 0;
+    background: #FFFFFF;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li:not(:last-of-type) {
+    margin-right: 2em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #F05F40;
+    font-weight: bold;
+}
+
+section.info {
+    background: url("../images/header.png");
+    background-size: cover;
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-wrapper {
+    width: 50%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.info-wrapper h3 {
+    position: relative;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+}
+
+.info-wrapper h3:after {
+    display: block;
+    content: '';
+    height: 4px;
+    width: 2em;
+    background: #F05F40;
+    position: absolute;
+    left: 46%;
+    margin-top: 0.75em;
+}
