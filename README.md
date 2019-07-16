@@ -5,4 +5,4 @@
 
 ## Front-End
 Courses:
-HTML & CSS
+HTML & CSS, CSS Advanced
