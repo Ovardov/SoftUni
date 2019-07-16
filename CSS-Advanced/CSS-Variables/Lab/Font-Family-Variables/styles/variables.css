@@ -1,0 +1,13 @@
+:root {
+    --font-size-body: 14px;
+    --font-size-body-larger: 16px;
+    --font-size-body-big: 18px;
+
+    --layout-main-width: 70%;
+
+    --font-family-content: 'PT Sans', sans-serif;
+    --font-family-headings: 'PT Serif', serif;
+
+    --color-body-background: #FFFFFF;
+    --color-body-text: #000000;
+}

@@ -1,0 +1,15 @@
+:root {
+    --font-size-body: 14px;
+    --font-size-body-big: 16px;
+    --font-size-body-larger: 18px;
+    --font-size-body-huge: 20px;
+
+    --font-size-h1: 30px;
+    --font-size-h3: 20px;
+    --font-size-p: 16px;
+
+    --body-main-width: 40%;
+
+    --color-body-background: #FFFFFF;
+    --color-body-text: #000000;
+}

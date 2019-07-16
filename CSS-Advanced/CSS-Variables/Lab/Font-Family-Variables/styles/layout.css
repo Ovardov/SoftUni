@@ -1,0 +1,8 @@
+body {
+    width: var(--layout-main-width);
+    margin: 2em auto;
+}
+
+article header {
+    text-align: center;
+}
