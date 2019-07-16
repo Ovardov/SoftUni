@@ -1,0 +1,129 @@
+.wrapper {
+    display: flex;
+}
+
+main {
+    padding: 3em;
+    background: #F2F0F3;
+    width: 70%;
+    position: relative;
+}
+
+main h2 {
+    text-transform: uppercase;
+}
+
+main li, aside li {
+    list-style: none;
+}
+
+.our-services ul li {
+    padding-bottom: 1em;
+}
+
+.our-services ul li span {
+    font-weight: bold;
+}
+
+.our-services ul li span:before {
+    display: inline-block;
+    content: '\f0a9';
+    color: #000000;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 0.7em;
+}
+
+.contact {
+    margin-top: 4em;
+}
+
+.contact h2:after {
+    margin-top: 0.2em;
+    height: 2px;
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    background: #808080;
+    left: 0;
+}
+
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact ul li {
+    margin-right: 1em;
+    padding-bottom: 0.5em;
+}
+
+.contact ul li:first-letter {
+    font-weight: bold;
+    font-style: italic;
+}
+
+form {
+    margin-top: 2em;
+}
+
+form p {
+    display: flex;
+    padding-bottom: 0;
+}
+
+form input {
+    padding: 0.5em 1em;
+    background: #BAB1AD;
+    color: #FFFFFF;
+    border-radius: 0.3em;
+    border: 2px solid #BAB1AD;
+}
+
+form input:first-of-type {
+    margin-right: 0.5em;
+}
+
+form input:first-of-type::placeholder {
+    color: #FFFFFF;
+}
+
+form input[type="submit"] {
+    background: #67784D;
+    cursor: pointer;
+    border-color: #67784D;
+}
+
+aside {
+    width: 30%;
+    background: #BAB1AD;
+    padding: 3em 1em;
+    display: flex;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside ul li {
+    flex: 0 0 29%
+}
+
+aside p {
+    color: #000000;
+    font-weight: 300;
+}
+
+aside .price {
+    color: #FFFFFF;
+    font-size: 3em;
+    padding-bottom: 0;
+}
+
+aside ul li p:last-child {
+    margin-top: -1em;
+    text-transform: uppercase;
+}

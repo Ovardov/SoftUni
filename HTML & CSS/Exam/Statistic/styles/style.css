@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+@import "typography.css";
+
+.wrapper {
+    width: 70%;
+    margin: 6em auto;
+    background: url("../images/image.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #06214D;
+    opacity: 0.8;
+}
+
+.wrapper > i {
+    z-index: 5;
+    position: absolute;
+    color: #FFFFFF;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.cards-list {
+    z-index: 5;
+    padding: 6em 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card {
+    flex: 0 0 22%;
+    color: #FFFFFF;
+}
+
+.card i {
+    color: #EC8421;
+    font-size: 1.8em;
+    padding-bottom: 0.7em;
+}
+
+.card p.number {
+    font-weight: bold;
+    padding-bottom: 0;
+}
+
+.card p:last-of-type {
+    padding-bottom: 0;
+    font-weight: 300;
+}
