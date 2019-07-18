@@ -1,0 +1,77 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font: 16px/1.5 'Verdana', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    opacity: 0;
+    padding-bottom: 0.5em;
+    list-style: none outside;
+    animation: fadeIn 0.3s ease-in;
+    animation-fill-mode: forwards;
+}
+
+ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+ul li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+ul li:nth-child(5) {
+    animation-delay: 1s;
+}
+
+ul li:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+ul li:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+ul li a i {
+    color: #000000;
+    width: 2.5em;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(-2em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
