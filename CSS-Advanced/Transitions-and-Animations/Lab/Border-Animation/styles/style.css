@@ -1,0 +1,36 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font: 20px/1.5 'Verdana', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #E8EAEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    background: #FFFFFF;
+    outline: 5px solid #203F5D;
+    padding: 0.7em 1.2em;
+    transition: outline-width 0.5s linear;
+}
+
+.buttons a:first-child {
+    margin-right: 0.7em;
+}
+
+.buttons a:hover {
+    outline-width: 13px;
+}
