@@ -1,0 +1,29 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 6em);
+    grid-template-rows: repeat(5, 6em);
+    grid-gap: 0.6em;
+    justify-content: center;
+    align-content: center;
+}
+
+.box {
+    background: #000000;
+    border: 1px solid #000000;
+    border-radius: 0.6em;
+}
+
+.box:nth-child(even) {
+    background: #FFFFFF;
+}
