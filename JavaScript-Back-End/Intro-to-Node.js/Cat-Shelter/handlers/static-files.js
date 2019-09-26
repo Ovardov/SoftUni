@@ -60,7 +60,6 @@ function getStaticFile(req, res) {
                     res.end();
 
                 } else {
-
                     res.writeHead(200, {
                         'Content-Type': getContentType(contentPath)
                     });

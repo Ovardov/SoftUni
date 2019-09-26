@@ -19,16 +19,16 @@
         </nav>
         <h1>Cat Shelter</h1>
     </header>
-        <form action="#" class="cat-form">
+        <form action="/cats-find-new-home/{{id}}" method="POST" class="cat-form">
             <h2>Shelter the cat</h2>
-            <img src="https://cdn.pixabay.com/photo/2015/03/27/13/16/cat-694730_1280.jpg" alt="">
+            <img src="../content/images/{{image}}" alt="${name}">
             <label for="name">Name</label>
-            <input type="text" id="name" value="Pretty Kitty" disabled>
+            <input type="text" id="name" value="{{name}}" disabled>
             <label for="description">Description</label>
-            <textarea id="description" disabled>Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho.</textarea>
+            <textarea id="description" disabled>{{description}}</textarea>
             <label for="group">Breed</label>
             <select id="group" disabled>
-                <option value="Fluffy Cat">Fluffy Cat</option>
+                <option value="">{{breed}}</option>
             </select>
             <button>SHELTER THE CAT</button>
         </form>
