@@ -1,0 +1,33 @@
+{
+  "lastIndex": 6,
+  "entities": [
+    {
+      "id": 1,
+      "name": "Rubik",
+      "description": "This is rubik's cube",
+      "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+      "difficultyLevel": 3
+    },
+    {
+      "id": 4,
+      "name": "Rubik",
+      "description": "This is new cube.",
+      "imageUrl": "https://www.vermontcountrystore.com/ccstore/v1/images/?source=/file/v2382438315417247454/products/56423.main.png&height=500&width=500&quality=0.88",
+      "difficultyLevel": "3"
+    },
+    {
+      "id": 5,
+      "name": "Test",
+      "description": "This is a test",
+      "imageUrl": "https://www.rubiks.com/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/r/u/rubiks-retro-3x3-cube-solved-3_1.jpg",
+      "difficultyLevel": "5"
+    },
+    {
+      "id": 6,
+      "name": "Another test",
+      "description": "Another Test",
+      "imageUrl": "https://www.rubiks.com/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/r/u/rubiks-retro-3x3-cube-solved-3_1.jpg",
+      "difficultyLevel": "6"
+    }
+  ]
+}
