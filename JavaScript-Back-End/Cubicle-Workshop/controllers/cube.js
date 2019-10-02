@@ -29,21 +29,31 @@ function getHome(req, res, next) {
         .catch(next);
 }
 
-function getDetails(req, res, next) {
+async function getDetails(req, res, next) {
     const id = +req.params.id;
+    try {
+        const cube = await cubeModel.getOne(id);
 
-    cubeModel.getOne(id)
-        .then((cube) => {
-            if (!cube) {
-                res.redirect('/not-found');
-                return;
-            }
+        if (!cube) {
+            res.redirect('/not-found');
+            return;
+        }
 
-            cube = cube[0];
+        res.render('details', {cube});
+    } catch (e) {
+        next(e);
+    }
 
-            res.render('details', {cube});
-        })
-        .catch(next);
+    // cubeModel.getOne(id)
+    //     .then((cube) => {
+    //         if (!cube) {
+    //             res.redirect('/not-found');
+    //             return;
+    //         }
+    //
+    //         res.render('details', {cube});
+    //     })
+    //     .catch(next);
 }
 
 function getAbout(req, res) {

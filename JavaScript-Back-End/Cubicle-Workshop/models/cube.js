@@ -70,7 +70,8 @@ class CubeModel {
     }
 
     getOne(cubeId) {
-        return this.find(({id}) => id === cubeId);
+        return this.find(({id}) => id === cubeId)
+            .then((result) => result[0] || null);
     }
 
     getAll() {
