@@ -1,77 +1,72 @@
-const cubeModel = require('../models/cube');
+const {cubeModel, accessoryModel} = require('../models/index');
 
 function getHome(req, res, next) {
     const {from, to, search} = req.query;
-    const findCubes = (item) => {
-        let result = true;
+    let query = {};
 
-        if (search) {
-            result = item.name
-                .toLowerCase()
-                .includes(search);
-        }
+    if (search) {
+        query = {...query, name: {$regex: search}};
+    }
 
-        if (result && from) {
-            result = +item.difficultyLevel >= +from;
-        }
+    if (from) {
+        query = {...query, difficultyLevel: {$gte: +from}};
+    }
 
-        if (result && to) {
-            result = +item.difficultyLevel <= +to;
-        }
+    if (to) {
+        query = {...query, difficultyLevel: {...query.difficultyLevel, $lte: +to}}
+    }
 
-        return result;
-    };
-
-    cubeModel.find(findCubes)
+    cubeModel.find(query)
         .then((cubes) => {
-            res.render('index', {cubes, search, from, to});
+            res.render('index', {
+                cubes,
+                search,
+                from,
+                to
+            });
         })
         .catch(next);
 }
 
 async function getDetails(req, res, next) {
-    const id = +req.params.id;
+    const id = req.params.id;
+
     try {
-        const cube = await cubeModel.getOne(id);
+        const cube = await cubeModel.findById(id).populate('accessories');
 
         if (!cube) {
             res.redirect('/not-found');
             return;
         }
 
-        res.render('details', {cube});
+        res.render('cubes/details', {cube});
     } catch (e) {
         next(e);
     }
-
-    // cubeModel.getOne(id)
-    //     .then((cube) => {
-    //         if (!cube) {
-    //             res.redirect('/not-found');
-    //             return;
-    //         }
-    //
-    //         res.render('details', {cube});
-    //     })
-    //     .catch(next);
 }
 
 function getAbout(req, res) {
-    res.render('about');
+    res.render('cubes/about');
 }
 
 function getCreate(req, res) {
-    res.render('create');
+    res.render('cubes/create');
 }
 
-function createCube(req, res) {
+function createCube(req, res, next) {
     const {name, description, imageUrl, difficultyLevel} = req.body;
-    const newCube = cubeModel.create(name, description, imageUrl, difficultyLevel);
+    const newCube = {
+        name,
+        description,
+        imageUrl,
+        difficultyLevel
+    };
 
-    cubeModel.insert(newCube)
+    cubeModel.create(newCube)
         .then(() => {
             res.redirect('/');
-        });
+        })
+        .catch(next);
 }
 
 function getNotFound(req, res) {
