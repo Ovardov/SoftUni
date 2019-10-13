@@ -144,7 +144,7 @@ function getDelete(req, res, next) {
                 { title: '6 - Hardcore', selected: 6 === cube.difficultyLevel }
             ];
 
-            res.render('cubes/delete', { cube, options, });
+            res.render('cubes/delete', { cube, options, user });
         })
         .catch(next)
 }
