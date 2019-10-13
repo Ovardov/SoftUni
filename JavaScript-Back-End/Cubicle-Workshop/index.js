@@ -8,6 +8,11 @@ dbConnector().then(() => {
     require('./config/express')(app);
     require('./config/routes')(app);
 
+    app.use(function(err, req, res, next) {
+        console.error(err);
+        res.render('500', { errorMessage: err.message })
+    });
+
     app.listen(config.port, console.log(`Listening on port ${config.port}! Now its up to you...`));
 }).catch((err) => console.error(err));
 

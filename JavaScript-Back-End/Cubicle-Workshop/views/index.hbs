@@ -1,45 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Cubicle</title>
-    <link href="/css/site.css" type="text/css" rel="stylesheet">
-    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png'/>
-</head>
-
-<body>
-    <div class="container">
-        <header>
-            <ul>
-                <li><img class="logo" src="/images/logo.png"></li>
-                <li><a href="/">Browse</a></li>
-                <li><a href="/create">Add a Cube</a></li>
-                <li><a href="/create/accessory">Add Accessory</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </header>
-        <main>
-            <h1>Browser</h1>
-            <form action="" method="">
-                <input type="text" class="search" name="search" placeholder="Search..." value="{{search}}">
-                <input type="number" name="from" class="difficulty" placeholder="Difficulty from..." value="{{from}}">
-                <span>-</span>
-                <input type="number" name="to" class="difficulty" placeholder="Difficulty to..." value="{{to}}">
-                <input type="submit" value="search">
-            </form>
-            {{#each cubes}}
-                <div class="cube">
-                    <img class="cube" src="{{this.imageUrl}}">
-                    <p class="name">{{this.name}}</p>
-                    <p><span>Difficulty level:</span> {{this.difficultyLevel}}</p>
-                    <a class="btn" href="/details/{{this.id}}">Details</a>
-                    <a class="btn" href="/attach/accessory/{{this.id}}">Attach Accessory</a>
-                </div>
-            {{/each}}
-        </main>
+<main>
+    <h1>Browser</h1>
+    <form action="" method="">
+        <input type="text" class="search" name="search" placeholder="Search..." value="{{search}}">
+        <input type="number" name="from" class="difficulty" placeholder="Difficulty from..." value="{{from}}">
+        <span>-</span>
+        <input type="number" name="to" class="difficulty" placeholder="Difficulty to..." value="{{to}}">
+        <input type="submit" value="search">
+    </form>
+    {{#each cubes}}
+    <div class="cube">
+        <img class="cube" src="{{this.imageUrl}}">
+        <p class="name">{{this.name}}</p>
+        <p><span>Difficulty level:</span> {{this.difficultyLevel}}</p>
+        <a class="btn" href="/details/{{this.id}}">Details</a>
+        <a class="btn" href="/attach/accessory/{{this.id}}">Attach Accessory</a>
     </div>
-    <footer>@Cubicle: Exercise for Express.js and Handlebars</footer>
-</body>
-
-</html>
+    {{/each}}
+</main>

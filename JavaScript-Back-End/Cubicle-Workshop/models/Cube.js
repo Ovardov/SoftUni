@@ -1,4 +1,4 @@
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const cubeSchema = new Schema({
     name: {
@@ -30,7 +30,12 @@ const cubeSchema = new Schema({
     accessories: [{
         type: Schema.Types.ObjectId,
         ref: 'Accessory'
-    }]
+    }],
+    creatorId: {
+        type:  Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    }
 });
 
 module.exports = model('Cube', cubeSchema);

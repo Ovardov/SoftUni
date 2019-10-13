@@ -1,7 +1,9 @@
 const {cubeModel, accessoryModel} = require('../models/index');
 
 function getCreate(req, res) {
-    res.render('accessories/createAccessory');
+    const user = req.user;
+
+    res.render('accessories/createAccessory', { user });
 }
 
 function createAccessory(req, res, next) {
@@ -21,6 +23,7 @@ function createAccessory(req, res, next) {
 
 function getAttachAccessory(req, res, next) {
     const cubeId = req.params.id;
+    const user = req.user;
 
     cubeModel.findById(cubeId)
         .then((cube) => {
@@ -28,7 +31,8 @@ function getAttachAccessory(req, res, next) {
                 .then(([cube, accessories]) => {
                     res.render('accessories/attachAccessory', {
                         cube,
-                        accessories: accessories.length > 0 ? accessories : null
+                        accessories: accessories.length > 0 ? accessories : null,
+                        user
                     });
                 });
         })
