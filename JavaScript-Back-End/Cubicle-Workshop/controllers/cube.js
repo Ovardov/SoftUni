@@ -1,4 +1,5 @@
 const { cubeModel, accessoryModel, userModel } = require('../models/index');
+const { handleError } = require('../utils/index')
 
 function getHome(req, res, next) {
     const { from, to, search } = req.query;
@@ -85,7 +86,19 @@ function createCube(req, res, next) {
         .then(() => {
             res.redirect('/');
         })
-        .catch(next);
+        .catch(err => {
+            handleError(res, err);
+            const options = [
+                { title: '1 - Very Easy', selected: 1 == difficultyLevel },
+                { title: '2 - Easy', selected: 2 == difficultyLevel },
+                { title: '3 - Medium (Standard 3x3)', selected: 3 == difficultyLevel },
+                { title: '4 - Intermediate', selected: 4 == difficultyLevel },
+                { title: '5 - Expert', selected: 5 == difficultyLevel },
+                { title: '6 - Hardcore', selected: 6 == difficultyLevel }
+            ];
+
+            res.render('cubes/create', { cube: newCube, options, user });
+        });
 }
 
 function getEdit(req, res, next) {
@@ -110,6 +123,8 @@ function getEdit(req, res, next) {
 
 function editCube(req, res, next) {
     const id = req.params.id;
+    const user = req.user;
+
     let { name, description, imageUrl, difficultyLevel } = req.body;
 
     difficultyLevel = (Number(difficultyLevel) + 1).toString();
@@ -121,12 +136,26 @@ function editCube(req, res, next) {
         difficultyLevel,
     };
 
-    cubeModel.updateOne({ _id: id }, newCube)
+    cubeModel.updateOne({ _id: id }, newCube, { runValidators: true })
         .then(() => {
             res.redirect('/');
         })
-        .catch(next);
+        .catch(err => {
+            handleError(res, err);
 
+            const options = [
+                { title: '1 - Very Easy', selected: 1 == difficultyLevel },
+                { title: '2 - Easy', selected: 2 == difficultyLevel },
+                { title: '3 - Medium (Standard 3x3)', selected: 3 == difficultyLevel },
+                { title: '4 - Intermediate', selected: 4 == difficultyLevel },
+                { title: '5 - Expert', selected: 5 == difficultyLevel },
+                { title: '6 - Hardcore', selected: 6 == difficultyLevel }
+            ];
+
+            newCube._id = id;
+
+            res.render('cubes/edit', { cube: newCube, options, user });
+        });
 }
 
 function getDelete(req, res, next) {

@@ -1,24 +1,30 @@
 const { Schema, model } = require('mongoose');
 
-const accessorySchema = new Schema ({
+const accessorySchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        minlength: [5, 'Name should be at least 5 characters!'],
+        validate: {
+            validator: (value) => /^[A-Za-z0-9\s]+$/.test(value),
+            message: 'Name should consist only with English letters, digits and whitespaces!'
+        }
     },
     description: {
         type: String,
         required: true,
+        minlength: [20, 'Description should be at least 20 characters!'],
         validate: {
-            validator: (value) => value.length < 50,
-            message: 'Description length should be less than 50 symbols'
+            validator: (value) => /^[A-Za-z0-9\s]+$/.test(value),
+            message: 'Description should consist only with English letters, digits and whitespaces!'
         }
     },
     imageUrl: {
         type: String,
         required: true,
         validate: {
-            validator: (value) => value.startsWith('http'),
-            message: 'imageUrl should start with http or https'
+            validator: (value) => value.startsWith('http://') || value.startsWith('https://'),
+            message: 'Image URL should start with http:// or https://'
         }
     },
     cubes: [{

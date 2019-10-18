@@ -26,6 +26,14 @@
             </ul>
         </header>
 
+        {{#if globalError}}
+        <div id="notifications">
+            {{#each globalError}}
+            <p id="notification-message">{{this}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+
         {{{body}}}
     </div>
 

@@ -1,36 +1,37 @@
 const { userModel, tokenBlacklistModel } = require('../models/index');
-const { jwt, auth } = require('../utils/index');
+const { jwt, auth, handleError } = require('../utils/index');
 const { authCookieName } = require('../appConfig');
 
 function getLogin(req, res) {
     res.render('users/login');
 }
 
-function login(req, res, next) {
+async function login(req, res, next) {
     const { username, password } = req.body;
 
-    userModel.findOne({ username })
-        .then((user) => {
-            if (!user) {
-                res.render('500', { errorMessage: 'Wrong password or username' });
-                return;
-            }
+    try {
+        const user = await userModel.findOne({ username });
 
-            return Promise.all([user, user.matchPassword(password)])
-        })
-        .then(([user, match]) => {
-            if (!match) {
-                res.render('500', { errorMessage: 'Wrong password or username' });
-                return;
-            }
+        if (!user) {
+            handleError(res, 'auth', 'Wrong username or password!');
+            res.render('users/login', { username, password });
+            return;
+        }
 
-            const token = jwt.createToken({ id: user._id });
+        const isMatched = await user.matchPassword(password);
 
-            res.cookie(authCookieName, token).redirect('/');
-        })
-        .catch((err) => {
-            console.error(err);
-        })
+        if (!isMatched) {
+            handleError(res, 'auth', 'Wrong username or password!');
+            res.render('users/login', { username, password });
+            return;
+        }
+
+        const token = jwt.createToken({ id: user._id });
+        res.cookie(authCookieName, token).redirect('/');
+    } catch (e) {
+        handleError(res, 'auth', 'Wrong username or password!');
+        res.render('users/login', { username, password });
+    }
 }
 
 function getRegister(req, res) {
@@ -41,11 +42,9 @@ function register(req, res, next) {
     const { username, password, repeatPassword } = req.body;
 
     if (password !== repeatPassword) {
-        res.render('users/register', {
-            errors: {
-                repeatPassword: 'Password and repeat password don\'t match!'
-            }
-        });
+        handleError(res, 'repeatPassword', 'Passwords should be same!');
+        res.render('users/register', { username, password, repeatPassword });
+        return;
     }
 
     const newUser = {
@@ -58,23 +57,15 @@ function register(req, res, next) {
             res.redirect('/login');
         })
         .catch((err) => {
-            if (err.name === 'MongoError' && err.code == 11000) {
-                res.render('users/register', {
-                    errors: {
-                        username: 'Username already taken!'
-                    }
-                });
+            err.code === 11000 ? handleError(res, 'username', 'Username is already taken!') : handleError(res, err);
 
-                return;
-            }
-
-            next(err);
+            res.render('users/register', { username, password, repeatPassword });
         });
 }
 
 function logout(req, res) {
     const token = req.cookies[authCookieName];
-   
+
     tokenBlacklistModel.create({ token })
         .then(() => {
             res.clearCookie(authCookieName).redirect('/');

@@ -1,4 +1,5 @@
-const {cubeModel, accessoryModel} = require('../models/index');
+const { cubeModel, accessoryModel } = require('../models/index');
+const { handleError } = require('../utils/index');
 
 function getCreate(req, res) {
     const user = req.user;
@@ -7,7 +8,9 @@ function getCreate(req, res) {
 }
 
 function createAccessory(req, res, next) {
-    const {name, description, imageUrl} = req.body;
+    const user = req.user;
+    const { name, description, imageUrl } = req.body;
+
     const newAccessory = {
         name,
         description,
@@ -18,7 +21,10 @@ function createAccessory(req, res, next) {
         .then(() => {
             res.redirect('/');
         })
-        .catch(next)
+        .catch(err => {
+            handleError(res, err);
+            res.render('accessories/createAccessory', { accessory: newAccessory, user });
+        })
 }
 
 function getAttachAccessory(req, res, next) {
@@ -27,7 +33,7 @@ function getAttachAccessory(req, res, next) {
 
     cubeModel.findById(cubeId)
         .then((cube) => {
-            Promise.all([cube, accessoryModel.find({cubes: {$nin: cubeId }})])
+            Promise.all([cube, accessoryModel.find({ cubes: { $nin: cubeId } })])
                 .then(([cube, accessories]) => {
                     res.render('accessories/attachAccessory', {
                         cube,
@@ -45,8 +51,8 @@ function attachAccessory(req, res, next) {
     let accessoryId = req.body.accessory;
 
     Promise.all([
-        cubeModel.update({_id: cubeId}, {$push: {accessories: accessoryId}}),
-        accessoryModel.update({_id: accessoryId}, {$push: {cubes: cubeId}})
+        cubeModel.update({ _id: cubeId }, { $push: { accessories: accessoryId } }),
+        accessoryModel.update({ _id: accessoryId }, { $push: { cubes: cubeId } })
     ])
         .then(() => {
             res.redirect('/')

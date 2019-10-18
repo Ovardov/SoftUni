@@ -7,15 +7,26 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
+        minlength: [5, 'Username should be at least 5 characters!'],
+        validate: {
+            validator: (value) => /^[a-zA-Z0-9]+$/.test(value),
+            message: 'Username should consist only with English letters and digits!'
+        }
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        minlength: [8, 'Password should be at least 8 characters!'],
+        validate: {
+            validator: (value) => /^[a-zA-Z0-9]+$/.test(value),
+            message: 'Password should consist only with English letters and digits!'
+        },
     }
 });
 
+
 userSchema.methods = {
-    matchPassword: function(password) {
+    matchPassword: function (password) {
         return bcrypt.compare(password, this.password)
     }
 };
