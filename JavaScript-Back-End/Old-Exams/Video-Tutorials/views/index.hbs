@@ -1,0 +1,94 @@
+{{!-- Admin --}}
+{{#if user.isAdmin}}
+<main>
+    <div class="row">
+        <div class="col text-center">
+            <a href="/course/add"><button type="button" class="btn btn-primary btn-lg">Create Course</button></a>
+        </div>
+    </div>
+
+    <div class="border border-light p-5">
+        {{#if courses}}
+            <h1 class="text-center">Choose Course</h1>
+        {{else}}
+            <h1 class="text-center">No courses in database. Please create one!</h1>
+        {{/if}}
+
+        <ul class="list-group">
+            {{#each courses}}
+                <li class="list-group-item">
+                    {{this.title}}
+                    <div class="float-right">
+                        <div class="btn-group" role="group">
+                            <a href="/course/edit/{{this._id}}"><button type="button" class="btn btn-warning">Edit Course</button></a>
+                            <a href="/lecture/add/{{this._id}}"><button type="button" class="btn btn-success">Add lectures</button></a>
+                        </div>
+                        Lectures in course
+                        <span class="badge badge-primary badge-pill">{{this.lectures.length}}</span>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</main>
+{{else if user.isUser}}
+<main>
+    <h1 class="text-center">Courses</h1>
+
+    <form class="search">
+        <label>Search: </label>
+        <input type="text" name="search" value="{{search}}">
+        <input type="submit" value="Search">
+    </form>
+
+    <div class="container mt-3">
+        <div class="row ">
+            <div class="card-deck d-flex justify-content-center">
+
+                {{#each courses}}
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{this.imageUrl}}" alt="{{this.title}}" width="400">
+                    <div class="card-body">
+                        <h4 class="card-title">{{this.title}}</h4>
+                        <p class="card-text">{{this.description}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/course/details/{{this._id}}"><button type="button"
+                                class="btn btn-info">Details</button></a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</main>
+{{else}}
+<main>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Video Tutorials</h1>
+            <p class="lead">Start Self-Study Today: It'll Change Your Life</p>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="text-center">Top Courses</h1>
+        <div class="container mt-3">
+            <div class="row d-flex justify-content-center">
+
+                <div class="card-deck">
+                    {{#each courses}}
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="{{this.imageUrl}}" alt="{{this.title}}" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">{{this.title}}</h4>
+                            <p class="card-text">{{this.description}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{/if}}

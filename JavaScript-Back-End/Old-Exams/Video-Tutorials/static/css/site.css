@@ -1,0 +1,17 @@
+.card{
+    min-width: 18rem; 
+    max-width: 18rem;
+}
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.btn-group{
+    margin-right: 20px;
+}
+
+.badge{
+    margin-left:10px;
+}

@@ -1,0 +1,26 @@
+<main>
+    <form class="text-center border border-light p-5" method="POST" action="/course/add">
+        <h1>Create Course</h1>
+        <div class="form-group">
+            <label for="title">Course Title</label>
+            <input type="text" class="form-control" placeholder="Course name" name="title" value="{{course.title}}">
+        </div>
+        <div class="form-group">
+            <label for="description">Course Description</label>
+            <textarea class="form-control" placeholder="Description" name="description">{{course.description}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="imageUrl">Image url</label>
+            <input type="text" class="form-control" placeholder="Image Url" name="imageUrl" value="{{course.imageUrl}}">
+        </div>
+        <div class="form-check">
+           {{#if course.isPublic}}
+            <input type="checkbox" class="form-check-input" id="check-box" name="isPublic" checked>
+            {{else}}
+            <input type="checkbox" class="form-check-input" id="check-box" name="isPublic">
+            {{/if}}
+            <label class="form-check-label" for="check-box">Public</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</main>

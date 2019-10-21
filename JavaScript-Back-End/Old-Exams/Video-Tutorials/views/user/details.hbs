@@ -1,0 +1,53 @@
+{{#if user.isEnrolled}}
+<main>
+    <div class="container">
+        <h1 class="my-4">Course title : {{course.title}}
+        </h1>
+
+        <div class="row">
+            <div class="col-md-8">
+                <img class="img-fluid" src="{{course.imageUrl}}" alt="{{course.title}}" />
+            </div>
+            <div class="col-md-4 text-center">
+                <h3 class="my-3">Course Description</h3>
+                <p>{{course.description}}</p>
+                <span class="badge badge-pill badge-success">enrolled</span>
+            </div>
+        </div>
+
+        <h3 class="text-center">Lectures List</h3>
+
+        <ul class="list-group">
+            {{#each course.lectures}}
+            <li class="list-group-item">
+                <h5 class="mb-1">{{this.title}}</h5>
+                <span class="float-right">
+                    <a href="/lecture/play/{{this._id}}"><button class="btn btn-secondary">Play</button></a>
+                </span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</main>
+{{else}}
+<main>
+    <div class="container">
+        <h1 class="my-4">Course title : {{course.title}}</h1>
+
+        <div class="row">
+            <div class="col-md-8">
+                <img class="img-fluid" src="{{course.imageUrl}}" alt="{{course.title}}" />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <h3 class="my-3">Course Description</h3>
+                <p>{{course.description}}</p>
+
+                <a href="/course/enroll/{{course._id}}"><button type="button" class="btn btn-info">Enroll</button></a>
+            </div>
+        </div>
+
+        <h4 class="text-center">To get full access please enroll the course</h4>
+    </div>
+</main>
+{{/if}}

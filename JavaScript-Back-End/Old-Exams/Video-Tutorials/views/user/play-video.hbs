@@ -1,0 +1,23 @@
+<main>
+    <div class="container">
+        <h1 class="my-4 text-center">Now playing : {{lecture.title}}</h1>
+
+        <div class="row">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{lecture.videoUrl}}"> </iframe>
+            </div>
+        </div>
+        <h3 class="text-center">Lectures List</h3>
+
+        <ul class="list-group">
+            {{#each course.lectures}}
+            <li class="list-group-item">
+                <h5 class="mb-1">{{this.title}}</h5>
+                <span class="float-right">
+                    <a href="/lecture/play/{{this._id}}"><button class="btn btn-secondary">Play</button></a>
+                </span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</main>
