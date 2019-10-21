@@ -1,0 +1,17 @@
+<main>
+  <h1>Register Form</h1>
+  <div class="form">
+    <form action='/register' method="POST">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" value="{{username}}">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" value="{{password}}">
+
+      <label for="repeatPassword">Re-Password</label>
+      <input type="password" id="repeatPassword" name="repeatPassword" value="{{repeatPassword}}">
+
+      <input type="submit" value="Register">
+    </form>
+  </div>
+</main>
