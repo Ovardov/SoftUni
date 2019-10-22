@@ -1,5 +1,5 @@
 const { homeController, userController, courseController, lectureController } = require('../controllers/index');
-const { auth } = require('../utils/index');
+const { auth, permit } = require('../utils/index');
 
 
 module.exports = (app) => {
@@ -11,20 +11,20 @@ module.exports = (app) => {
     app.get('/logout', auth(), userController.logout);
 
     // Courses
-    app.get('/course/add', auth('admin'), courseController.getCreate);
-    app.post('/course/add', auth('admin'), courseController.create);
-    app.get('/course/edit/:id', auth('admin'), courseController.getEdit);
-    app.post('/course/edit/:id', auth('admin'), courseController.edit);
-    app.get('/course/details/:id', auth('user'), courseController.getDetails);
-    app.get('/course/enroll/:id', auth('user'), courseController.enroll);
+    app.get('/course/add', auth(), permit('Admin'), courseController.getCreate);
+    app.post('/course/add', auth(), permit('Admin'), courseController.create);
+    app.get('/course/edit/:id', auth(), permit('Admin'), courseController.getEdit);
+    app.post('/course/edit/:id', auth(), permit('Admin'), courseController.edit);
+    app.get('/course/details/:id', auth(), permit('User'), courseController.getDetails);
+    app.get('/course/enroll/:id', auth(), permit('User'), courseController.enroll);
 
     // Lecture
-    app.get('/lecture/add/:id', auth('admin'), lectureController.getCreate);
-    app.post('/lecture/add/:id', auth('admin'), lectureController.create);
-    app.get('/lecture/delete/:id', auth('admin'), lectureController.deleteLecture);
-    app.get('/lecture/play/:id', auth('user'), lectureController.play);
+    app.get('/lecture/add/:id', auth(), permit('Admin'), lectureController.getCreate);
+    app.post('/lecture/add/:id', auth(), permit('Admin'), lectureController.create);
+    app.get('/lecture/delete/:id', auth(), permit('Admin'), lectureController.deleteLecture);
+    app.get('/lecture/play/:id', auth(), permit('User'), lectureController.play);
 
-    app.get('/', auth('guest'), homeController.getHome);
+    app.get('/', auth(false), homeController.getHome);
 
     app.all('*', auth(), (req, res) => res.render('errors/404', { user: req.user }));
 };

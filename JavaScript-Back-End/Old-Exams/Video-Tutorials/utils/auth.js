@@ -3,7 +3,7 @@ const handleError = require('./handleError')
 const { authCookieName } = require('../appConfig');
 const { userModel } = require('../models/index');
 
-function auth(roleCheck = 'guest') {
+function auth(isAuth = true) {
     return async function (req, res, next) {
         const token = req.cookies[authCookieName] || '';
 
@@ -11,22 +11,18 @@ function auth(roleCheck = 'guest') {
             const data = await jwt.verifyToken(token);
             const user = await userModel.findById(data.id);
 
-            if (roleCheck === 'admin' && user.role.includes('Admin')) {
-                user.isAdmin = true;
-            } else if (roleCheck === 'user' && user.role.includes('Admin')) {
-                user.isAdmin = true;
-            } else if (roleCheck === 'guest' && user.role.includes('Admin')) {
-                user.isAdmin = true;
-            } else if (roleCheck === 'user' && user.role.includes('User')) {
-                user.isUser = true;
-            } else if (roleCheck === 'guest' && user.role.includes('User')) {
-                user.isUser = true;
+            if (user) {
+                if (user.role.includes('Admin')) {
+                    user.isAdmin = true;
+                } else if (user.role.includes('User')) {
+                    user.isUser = true;
+                }
             }
 
             req.user = user;
             next();
         } catch (e) {
-            if (roleCheck === 'guest') {
+            if (!isAuth) {
                 next();
                 return;
             }
@@ -41,5 +37,6 @@ function auth(roleCheck = 'guest') {
         }
     }
 }
+
 
 module.exports = auth;

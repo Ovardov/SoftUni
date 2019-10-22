@@ -18,8 +18,8 @@ async function getHome(req, res, next) {
         }
     } else {
         courses = await courseModel.find(query)
-            .sort({ 'usersEnrolled': -1 })
-            .limit(3);
+        courses = courses.sort((a, b) => b.usersEnrolled.length - a.usersEnrolled.length)
+            .slice(0, 3);
     }
 
     res.render('index', { user, courses, search });
