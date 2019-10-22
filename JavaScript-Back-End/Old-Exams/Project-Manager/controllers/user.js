@@ -49,23 +49,23 @@ async function register(req, res, next) {
         profilePicture
     }
 
-    const users = await userModel.find({})
+    try {
+        const users = await userModel.find({});
 
-    if (users.length === 0) {
-        newUser.role = 'Admin';
-    } else {
-        newUser.role = 'User';
+        if (users.length === 0) {
+            newUser.role = 'Admin';
+        } else {
+            newUser.role = 'User';
+        }
+
+        await userModel.create(newUser)
+
+        res.redirect('/login');
+    } catch (err) {
+        err.code === 11000 ? handleError(res, 'username', 'Username is already taken!') : handleError(res, err);
+
+        res.render('guest/register', { username, password, firstName, lastName, profilePicture });
     }
-
-    return userModel.create(newUser)
-        .then(() => {
-            res.redirect('/login');
-        })
-        .catch(err => {
-            err.code === 11000 ? handleError(res, 'username', 'Username is already taken!') : handleError(res, err);
-
-            res.render('guest/register', { username, password, firstName, lastName, profilePicture });
-        });
 }
 
 async function getProfile(req, res, next) {

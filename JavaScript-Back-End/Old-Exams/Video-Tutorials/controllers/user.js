@@ -52,23 +52,24 @@ async function register(req, res, next) {
         password
     }
 
-    const users = await userModel.find({})
-    
-    if (users.length === 0) {
-        newUser.role = 'Admin';
-    } else {
-        newUser.role = 'User';
+    try {
+        const users = await userModel.find({});
+
+        if (users.length === 0) {
+            newUser.role = 'Admin';
+        } else {
+            newUser.role = 'User';
+        }
+
+        await userModel.create(newUser)
+
+        res.redirect('/login');
+    } catch (err) {
+        err.code === 11000 ? handleError(res, 'username', 'Username is already taken!') : handleError(res, err);
+
+        res.render('guest/register', { username, password, repeatPassword });
     }
 
-    return userModel.create(newUser)
-        .then(() => {
-            res.redirect('/login');
-        })
-        .catch(err => {
-            err.code === 11000 ? handleError(res, 'username', 'Username is already taken!') : handleError(res, err);
-
-            res.render('guest/register', { username, password, repeatPassword });
-        });
 }
 
 function logout(req, res) {
