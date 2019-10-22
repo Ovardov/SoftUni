@@ -1,5 +1,3 @@
-const handleError = require('./handleError');
-
 function permit(...allowed) {
 
     return function (req, res, next) {
