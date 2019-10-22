@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+div.background {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+
+header ul {
+    margin: 0;
+    padding: 15px;
+}
+
+header {
+    height: 50px;
+    background-color: #234465;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul div.right {
+    float: right;
+    color: white;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 1em;
+}
+
+div.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+header ul li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 40px 0;
+    text-decoration: underline;
+}
+
+p {
+    margin: auto;
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+
+h3 {
+    /*margin: auto;*/
+    text-align: center;
+    padding: 10px 0 1s0px 0;
+}
+
+form {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    margin-top: 5px;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+select:hover,
+textarea:hover {
+    margin-top: 5px;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(172, 171, 171);
+    background-color: rgb(251, 251, 251);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea:hover {
+    height: 100px;
+    resize: none;
+}
+
+input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: #234465;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: white;
+    border: 2px solid #234465;
+    font-size: 16px;
+    border-radius: 4px;
+    color: #234465;
+}
+
+div.projects,
+div.teams {
+    display: table;
+    width: 100%;
+}
+
+div.project,
+div.team {
+    display: table-cell;
+    width: 200px;
+}
+
+div.project h2,
+div.team h2 {
+    text-align: center;
+    background-color: #234465;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2px;
+}
+
+div.team-info {
+    position: relative;
+    top: -30px;
+    display: inline-block;
+    width: 40%;
+    margin: 20px;
+    vertical-align: text-top;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #234465;
+    color: white;
+    text-align: center;
+}
+
+div.profile {
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+div.profile form {
+    display: flex;
+    width: 350px;
+    padding-top: 25px;
+}
+
+div.profile form input,
+div.profile form p {
+    text-align: left;
+    margin: 0;
+}
+
+div.info {
+    display: flex;
+    flex-direction: column;
+}
+
+div.more-info input,
+div.more-info p {
+    text-align: left;
+    margin: 0;
+}
+
+div.more-info p {
+    padding-top: 25px;
+}
+
+div.info form input {
+    margin-left: 80px;
+}
+
+body>main>div>div:nth-child(1)>form:nth-child(3)>input[type="submit"] {
+    margin-left: 62px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+
+form.search {
+    display: flex;
+    width: 25%;
+}
+
+form.search label {
+    margin-top: 15px;
+}
+
+form.search input[type="text"] {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+form.search input[type="submit"] {
+    height: 30px;
+    margin-top: 10px;
+}
+
+div.profile-box {
+    border: 3px dashed #234465;
+    border-radius: 20px;
+    width: 50%;
+    margin: 0 auto;
+    height: 400px;
+}

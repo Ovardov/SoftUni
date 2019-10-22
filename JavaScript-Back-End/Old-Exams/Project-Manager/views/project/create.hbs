@@ -1,0 +1,12 @@
+<main>
+	<h1>Create Project</h1>
+	<div class="form">
+		<form method="POST" action="/project/create">
+			<label>Project Name</label>
+			<input type="text" name="name" value="{{project.name}}">
+			<label>Project Description</label>
+			<textarea name="description">{{project.description}}</textarea>
+			<input type="submit" value="Create">
+		</form>
+	</div>
+</main>

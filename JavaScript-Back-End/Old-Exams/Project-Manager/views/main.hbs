@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projects Manager</title>
+    <link href="/css/site.css" type="text/css" rel="stylesheet">
+    <link href="/css/notifications.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <ul>
+                <li><a href="/">Home</a></li>
+                {{#if user}}
+                    <li><a href="/project/all">Projects</a></li>
+                    <li><a href="/team/all">Teams</a></li>
+                    {{#if user.isAdmin}}
+                    <li><a href="/team/create">Create Team</a></li>
+                    <li><a href="/project/create">Create Project</a></li>
+                    {{/if}}
+                    <div class="right">
+                        <li>Welcome, {{user.username}}!</li>
+                        <li><a href="/profile/{{user._id}}">Profile</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </div>
+                {{else}}
+                    <div class="right">
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                    </div>
+                {{/if}}
+            </ul>
+        </header>
+
+        {{#if globalError}}
+        <div id="notifications">
+            {{#each globalError}}
+            <p id="notification-message">{{this}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{{body}}}
+
+        <footer>Express Exam @SoftUni</footer>
+    </div>
+</body>
+
+</html>
