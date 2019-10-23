@@ -11,4 +11,4 @@ JavaScript Applications
 
 ## JS Web
 Courses:
-JS Back-End
+JavaScript Back-End
