@@ -10,7 +10,10 @@ module.exports = (app) => {
     app.post('/login', userController.login);
     app.get('/logout', auth(), userController.logout);
 
+    // Example with role
+    // app.get('/profile/:id', auth(), permit(['Admin', 'User']), userController.getProfile);
+
     app.get('/', auth(false), homeController.getHome);
 
-    app.all('*', (req, res) => res.render('errors/404'));
+    app.all('*', auth(false), (req, res) => res.render('errors/404', { user: req.user }));
 };
