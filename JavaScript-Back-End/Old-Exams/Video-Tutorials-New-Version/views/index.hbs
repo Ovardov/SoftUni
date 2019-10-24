@@ -1,0 +1,67 @@
+{{#if user}}
+<main>
+    <h1 class="text-center">Courses</h1>
+    <section>
+        <a href="/course/create" class="btn btn-warning ">Create Course</a>
+        <form class="search float-right">
+            <label>Search: </label>
+            <input type="text" name="search" value="{{search}}">
+            <input type="submit" class="btn btn-info" value="Search">
+        </form>
+    </section>
+
+    {{#if courses}}
+    <div class="container mt-3">
+        <div class="row ">
+            <div class="card-deck d-flex justify-content-center">
+                {{#each courses}}
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{this.imageUrl}}" alt="{{this.title}}" width="400">
+                    <div class="card-body">
+                        <h4 class="card-title">{{this.title}}</h4>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/course/details/{{this._id}}"><button type="button" class="btn btn-info">Details</button></a>
+                        <small class="float-right">{{this.createdAt}}</small>
+                    </div>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <h3 class="text-center">No courses...</h3>
+    {{/if}}
+</main>
+{{else}}
+<main>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Video Tutorials</h1>
+            <p class="lead">Start Self-Study Today: It'll Change Your Life</p>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="text-center">Top Courses</h1>
+        <div class="container mt-3">
+            {{#if courses}}
+            <div class="row d-flex justify-content-center">
+                <div class="card-deck">
+                    {{#each courses}}
+                    <div class="card mb-4">
+                        <img class="card-img-top"
+                            src="{{this.imageUrl}}" alt="{{this.title}}" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">{{this.title}}</h4>
+                        </div>
+                    </div>
+                    {{/each}}
+            </div>
+            {{else}}
+            <h4 class="text-center">No courses...</h4>
+            {{/if}}
+        </div>
+    </div>
+</main>
+{{/if}}

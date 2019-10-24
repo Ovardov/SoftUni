@@ -1,0 +1,27 @@
+<main>
+    <div class="container">
+        <h1 class="my-4">Course title : {{course.title}}</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <img class="img-fluid"src="{{course.imageUrl}}" alt="{{course.title}}"/>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <h3 class="my-3">Course Description</h3>
+                <p>{{course.description}}</p>
+
+                {{#if user.isCreator}}
+                <a class="btn btn-danger" href="/course/delete/{{course._id}}">Delete</a>
+                <a class="btn btn-warning" href="/course/edit/{{course._id}}">Edit</a>
+                {{else}}
+                    {{#if user.isEnrolled}}
+                    <span class="enrolled-span">You are already enrolled</span>
+                    {{else}}
+                    <a class="btn btn-primary" href="/course/enroll/{{course._id}}">Enroll</a>
+                    {{/if}}
+                {{/if}}
+
+            </div>
+        </div>
+    </div>
+</main>
