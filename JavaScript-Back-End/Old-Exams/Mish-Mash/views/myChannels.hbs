@@ -1,0 +1,33 @@
+
+    <main class="mt-3 mb-5">
+        <h1 class="text-center text-mishmash">Following</h1>
+        <hr class="hr-2 bg-mishmash"/>
+        <table class="table w-75 mx-auto table-hover">
+            <thead>
+            <tr class="row">
+                <th class="col-md-1">#</th>
+                <th class="col-md-5">Channel</th>
+                <th class="col-md-1">Type</th>
+                <th class="col-md-2">Followers</th>
+                <th class="col-md-2">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                {{#each user.followedChannels}}
+                    <tr class="row">
+                        <th class="col-md-1">{{counter @index}}</th>
+                        <td class="col-md-5">{{this.name}}</td>
+                        <td class="col-md-1">{{this.type}}</td>
+                        <td class="col-md-2">{{this.followers.length}}</td>
+                        <td class="col-md-2">
+                            <div class="button-holder d-flex justify-content-between">
+                                <button class="btn bg-mishmash text-white" onclick="location.href='/channel/unfollow/{{this._id}}'">Unfollow</button>
+                                <button class="btn bg-mishmash text-white" onclick="location.href='/channel/details/{{this._id}}'">Details</button>
+                            </div>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </main>
+   

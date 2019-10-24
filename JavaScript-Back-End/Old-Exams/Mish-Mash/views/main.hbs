@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skeleton</title>
+    <link href="/css/notifications.css" type="text/css" rel="stylesheet">
+    <link href="/css/reset-css.css" type="text/css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-mishmash">
+                <a class="navbar-brand nav-link-white" href="/">Mish Mash</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav right-side">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white active" href="/">Home</a>
+                        </li>
+                        {{#if user}}
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white active" href="/my-channels">My Channels</a>
+                        </li>
+                            {{#if user.isAdmin}}
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-white active" href="/channel/create">Create Channel</a>
+                            </li>
+                            {{/if}}
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white active" href="/logout">Logout</a>
+                        </li>
+                        {{else}}
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white active" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white active" href="/register">Register</a>
+                        </li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        {{#if globalError}}
+        <div id="notifications">
+            {{#each globalError}}
+            <p id="notification-message">{{this}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{{body}}}
+
+        <footer>
+            <div class="bg-mishmash">
+                <div class="text-white p-2 text-center">&copy; CopyRight Sanity Web Design Studios 2018. All rights
+                    reserved.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+{{#if user}}
+<main class="mt-3">
+    {{#if user.isAdmin}}
+    <h4 class="text-mishmash text-center">Welcome, Admin-{{user.username}}!</h4>
+    {{else if user.isUser}}
+    <h4 class="text-mishmash text-center">Welcome, {{user.username}}!</h4>
+    {{/if}}
+    <h5 class="text-mishmash">Your channels</h5>
+    <hr class="hr-2 bg-mishmash">
+    <div class="followed-channels-holder">
+        <div class="channels-row row ">
+            {{#each channels}}
+            {{#if this.isFollowed}}
+            <div class="channel col mx-3 bg-mishmash rounded py-3">
+                <h6 class="channel-name text-white text-center">{{this.name}}</h6>
+                <hr class="bg-white hr-2 w-75">
+                <h6 class="channel-name text-white text-center">{{this.type}} Channel</h6>
+                <hr class="bg-white hr-2 w-75">
+                <h6 class="channel-name text-white text-center">{{this.followers.length}} Following</h6>
+                <hr class="bg-white hr-2 w-75">
+                <div class="follow-button-holder d-flex justify-content-center">
+                    <a href="">
+                        <h6 class="text-center text-white">Following</h6>
+                    </a>
+                </div>
+            </div>
+            {{/if}}
+            {{/each}}
+            <div class="channel col mx-3 bg-white rounded py-3"></div>
+            <div class="channel col mx-3 bg-white rounded py-3"></div>
+            <div class="channel col mx-3 bg-white rounded py-3"></div>
+        </div>
+    </div>
+    <h5 class="mt-4 text-mishmash">Suggested</h5>
+    <hr class="bg-mishmash hr-2">
+    <div class="suggested-channels-holder">
+        <div class="followed-channels-holder">
+            <div class="channels-row row ">
+                {{#each channels}}
+                {{#if this.isSuggested}}
+                <div class="channel col mx-3 bg-mishmash rounded py-3">
+                    <h6 class="channel-name text-white text-center">{{this.name}}</h6>
+                    <hr class="bg-white hr-2 w-75">
+                    <h6 class="channel-name text-white text-center">{{this.type}} Channel</h6>
+                    <hr class="bg-white hr-2 w-75">
+                    <h6 class="channel-name text-white text-center">{{this.followers.length}} Following</h6>
+                    <hr class="bg-white hr-2 w-75">
+                    <div class="follow-button-holder d-flex justify-content-between w-50 mx-auto">
+                        <a href="/channel/follow/{{this._id}}">
+                            <h6 class="text-center text-white">Follow</h6>
+                        </a>
+                        <a href="/channel/details/{{this._id}}">
+                            <h6 class="text-center text-white">Details</h6>
+                        </a>
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+                <div class="channel col mx-3 bg-white rounded py-3"></div>
+                <div class="channel col mx-3 bg-white rounded py-3"></div>
+                <div class="channel col mx-3 bg-white rounded py-3"></div>
+            </div>
+        </div>
+    </div>
+    <h5 class="mt-4 text-mishmash">See Other</h5>
+    <hr class="mt-4 bg-mishmash hr-2">
+    <div class="other-channels-holder mb-5">
+        <div class="channels-row row ">
+            {{#each channels}}
+            {{#if this.isOther}}
+            <div class="channel col mx-3 bg-mishmash rounded py-3">
+                <h6 class="channel-name text-white text-center">{{this.name}}</h6>
+                <hr class="bg-white hr-2 w-75">
+                <h6 class="channel-name text-white text-center">{{this.type}} Channel</h6>
+                <hr class="bg-white hr-2 w-75">
+                <h6 class="channel-name text-white text-center">{{this.followers.length}} Following</h6>
+                <hr class="bg-white hr-2 w-75">
+                <div class="follow-button-holder d-flex justify-content-between w-50 mx-auto">
+                    <a href="/channel/follow/{{this._id}}">
+                        <h6 class="text-center text-white">Follow</h6>
+                    </a>
+                    <a href="/channel/details/{{this._id}}">
+                        <h6 class="text-center text-white">Details</h6>
+                    </a>
+                </div>
+            </div>
+            {{/if}}
+            {{/each}}
+            <div class="channel col mx-3 bg-white rounded py-3"></div>
+            <div class="channel col mx-3 bg-white rounded py-3"></div>
+            <div class="channel col mx-3 bg-white rounded py-3"></div>
+        </div>
+    </div>
+</main>
+{{else}}
+<main>
+    <div class="jumbotron mt-3 bg-mishmash">
+        <h1 class="text-white">Welcome to Mish-Mash Media Channels</h1>
+        <hr class="bg-white hr-2" />
+        <h3 class="text-white"><a href="/login">Login</a> if you have an account.</h3>
+        <h3 class="text-white"><a href="/register">Register</a> if you don't.</h3>
+    </div>
+</main>
+{{/if}}
