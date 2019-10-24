@@ -10,19 +10,23 @@ async function getHome(req, res, next) {
         query = { ...query, title: { $regex: search, $options: 'i' } };
     }
 
-    if (user) {
-        if (user.isAdmin) {
-            courses = await courseModel.find({});
+    try {
+        if (user) {
+            if (user.isAdmin) {
+                courses = await courseModel.find({});
+            } else {
+                courses = await courseModel.find(query);
+            }
         } else {
-            courses = await courseModel.find(query);
+            courses = await courseModel.find(query)
+            courses = courses.sort((a, b) => b.usersEnrolled.length - a.usersEnrolled.length)
+                .slice(0, 3);
         }
-    } else {
-        courses = await courseModel.find(query)
-        courses = courses.sort((a, b) => b.usersEnrolled.length - a.usersEnrolled.length)
-            .slice(0, 3);
-    }
 
-    res.render('index', { user, courses, search });
+        res.render('index', { user, courses, search });
+    } catch(e) {
+        next(e);
+    }
 }
 
 module.exports = {
