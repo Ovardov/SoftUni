@@ -11,7 +11,7 @@
         <div class="channels-row row ">
             {{#each channels}}
             {{#if this.isFollowed}}
-            <div class="channel col mx-3 bg-mishmash rounded py-3">
+            <div class="channel col-md-2 mx-3 bg-mishmash rounded py-3">
                 <h6 class="channel-name text-white text-center">{{this.name}}</h6>
                 <hr class="bg-white hr-2 w-75">
                 <h6 class="channel-name text-white text-center">{{this.type}} Channel</h6>
@@ -26,9 +26,6 @@
             </div>
             {{/if}}
             {{/each}}
-            <div class="channel col mx-3 bg-white rounded py-3"></div>
-            <div class="channel col mx-3 bg-white rounded py-3"></div>
-            <div class="channel col mx-3 bg-white rounded py-3"></div>
         </div>
     </div>
     <h5 class="mt-4 text-mishmash">Suggested</h5>
@@ -38,7 +35,7 @@
             <div class="channels-row row ">
                 {{#each channels}}
                 {{#if this.isSuggested}}
-                <div class="channel col mx-3 bg-mishmash rounded py-3">
+                <div class="channel col-md-2 mx-3 bg-mishmash rounded py-3">
                     <h6 class="channel-name text-white text-center">{{this.name}}</h6>
                     <hr class="bg-white hr-2 w-75">
                     <h6 class="channel-name text-white text-center">{{this.type}} Channel</h6>
@@ -56,9 +53,6 @@
                 </div>
                 {{/if}}
                 {{/each}}
-                <div class="channel col mx-3 bg-white rounded py-3"></div>
-                <div class="channel col mx-3 bg-white rounded py-3"></div>
-                <div class="channel col mx-3 bg-white rounded py-3"></div>
             </div>
         </div>
     </div>
@@ -68,7 +62,7 @@
         <div class="channels-row row ">
             {{#each channels}}
             {{#if this.isOther}}
-            <div class="channel col mx-3 bg-mishmash rounded py-3">
+            <div class="channel col-md-2 mx-3 bg-mishmash rounded py-3">
                 <h6 class="channel-name text-white text-center">{{this.name}}</h6>
                 <hr class="bg-white hr-2 w-75">
                 <h6 class="channel-name text-white text-center">{{this.type}} Channel</h6>
@@ -86,9 +80,6 @@
             </div>
             {{/if}}
             {{/each}}
-            <div class="channel col mx-3 bg-white rounded py-3"></div>
-            <div class="channel col mx-3 bg-white rounded py-3"></div>
-            <div class="channel col mx-3 bg-white rounded py-3"></div>
         </div>
     </div>
 </main>

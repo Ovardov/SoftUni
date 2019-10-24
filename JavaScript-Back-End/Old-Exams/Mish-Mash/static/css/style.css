@@ -14,6 +14,10 @@
     height: 2px;
 }
 
+.channel {
+    margin-bottom: 2em;
+}
+
 footer {
     position: fixed;
     bottom: 0;
