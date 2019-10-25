@@ -1,0 +1,12 @@
+<section>
+    <h2>Edit article</h2>
+    <div class="spacer">
+        <form method="POST" action="/article/edit/{{article._id}}">
+            <label>Article title</label>
+            <h3>{{article.title}}</h3>
+            <label>Content</label>
+            <textarea name="description">{{article.description}}</textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>

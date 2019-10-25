@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki</title>
+    <link href="/css/site.css" type="text/css" rel="stylesheet">
+    <link href="/css/notifications.css" type="text/css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
+</head>
+
+<body>
+    <div>
+        <aside>
+            <div class="center">
+                <img class="logo" src="/images/logo.png" alt="logo">
+            </div>
+
+            <nav>
+                <a href="/">Main Page</a>
+                <a href="/article/all">All Articles</a>
+                <form method="POST" action="/article/search">
+                    <input type="text" name="search" value="{{search}}">
+                    <input type="submit" value="Search">
+                </form>
+                {{#if user}}
+                <a href="/article/create">Create New Article</a>
+                {{/if}}
+            </nav>
+        </aside>
+
+        <div id="container">
+            <header>
+                {{#if user}}
+                <span>Welcome, {{user.username}}!</span>
+                <a href="/logout">[Logout]</a>
+                {{else}}
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                {{/if}}
+            </header>
+
+            <main>
+                <h1>Welcome to SoftUni Wiki!</h1>
+
+                {{#if globalError}}
+                <div id="notifications">
+                    {{#each globalError}}
+                    <p id="notification-message">{{this}}</p>
+                    {{/each}}
+                </div>
+                {{/if}}
+
+                {{{body}}}
+            </main>
+
+            <footer>SoftUni Wiki &copy; 2018 - 2019</footer>
+
+        </div>
+    </div>
+</body>
+
+</html>
