@@ -1,8 +1,8 @@
 Demo/
 Resources/
-node_modules/
 REST-Services/
 Tools/
+node_modules/
 
 demo.js*
 demo.html*
