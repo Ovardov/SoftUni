@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css?family=Grenze&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Grenze', serif;
+    font-size: 24px;
+}
+
+body {
+    background-color: whitesmoke
+}
+
+header {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    background-color: #234465;
+    width: 100%;
+    height: 7vh;
+    margin: 0 auto;
+    position: fixed;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 1%;
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffa000;
+}
+
+nav ul:nth-child(1) {
+    float: left;
+    margin: 1%;
+    list-style-type: none;
+}
+
+nav ul:nth-child(2) {
+    text-align: right;
+    margin-right: 2%;
+}
+
+main {
+    padding-top: 7vh;
+    width: 100%;
+    height: 1271px;
+    background: linear-gradient( rgba(35, 68, 101, 0.7) 100%, rgba(0, 0, 0, 0.5)100%), url("../images/header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    color: white;
+    display: inline-block;
+}
+
+main p.guest-message {
+    color: white;
+    margin-top: 40vh;
+    text-align: center;
+    font-size: 44px;
+}
+
+main p.guest-message a {
+    color: white;
+    font-size: 48px;
+    color: #ffa000;
+}
+
+main p.guest-message a:hover {
+    text-decoration: none;
+}
+
+form {
+    padding-top: 10vh;
+    padding-bottom: 17vh;
+    text-align: center;
+    color: #234465;
+}
+
+label, input {
+    display: block;
+    color: white;
+    margin: 0 auto;
+}
+
+form button {
+    margin-top: 2%;
+    padding: 0.5%;
+    background-color: white;
+    color: #234465;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+form h1 {
+    font-size: 40px;
+    text-decoration: underline;
+    margin-bottom: 2%;
+    color: #ffa000;
+}
+
+form input {
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 0.2%;
+    width: 15%;
+    color: #234465;
+}
+
+form select, option {
+    color: #234465;
+}
+
+form select option {
+    font-size: 18px;
+}
+
+form p {
+    text-align: left;
+    width: 15%;
+    margin: 0 auto;
+    margin-top: 1%;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #ffa000;
+}
+
+form hr {
+    width: 15%;
+    margin: 0 auto;
+    margin-top: 2%;
+    color: white;
+}
+
+form div.form-control {
+    width: 20%;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    display: block;
+}
+
+form div.form-control label {
+    float: left;
+    width: 30%;
+}
+
+form div.form-control input, select {
+    width: 68%;
+}
+
+form div.form-control #date, #total, #vault {
+    width: 33%;
+    text-align: left;
+}
+
+form div.form-control #date {
+    margin: 0;
+}
+
+form div.form-control #total, #vault {
+    display: inline-block;
+}
+
+label[for="report"], label[for="reimbursable"] {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    ;
+    font-size: 20px;
+}
+
+#report, #reimbursable {
+    margin: 0;
+    display: inline-block;
+}
+
+.report {
+    background-color: white;
+    background-repeat: none;
+    margin: 0 auto;
+    width: 28%;
+    border-radius: 6px;
+}
+
+.report a {
+    text-decoration: none;
+    color: #234465;
+    font-size: 18px;
+}
+
+.report a:hover {
+    text-decoration: underline;
+}
+
+.expense {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid whitesmoke;
+    height: 15vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+table.expenses {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 2%;
+}
+
+table td {
+    border-bottom: 1px solid white;
+    vertical-align: bottom;
+}
+
+table th {
+    text-align: center;
+    text-decoration: underline;
+    color: #ffa000;
+}
+
+table td:first-child {
+    width: 10%;
+}
+
+table td {
+    text-align: center;
+    padding: 1%;
+}
+
+table td:first-child img {
+    margin: 0 auto;
+    display: block;
+}
+
+table tbody tr {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+section.actions {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+section.actions form {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+section.actions div {
+    display: inline-block;
+    width: 39.7%;
+    vertical-align: top;
+}
+
+hr.separator {
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+section.actions h2 {
+    color: #ffa000;
+}
+
+input#refill-amount {
+    width: 25%;
+}
+
+section.actions a {
+    color: #234465;
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    width: 33%;
+    padding: 0.5%;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 3.5%;
+}
+
+.expenses-info {
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 5%;
+}
+
+.expenses-info th {
+    color: #ffa000;
+    font-size: 32px;
+}
+
+.current-amount {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.current-amount p {
+    font-size: 28px;
+    ;
+}
+
+.current-amount p span {
+    color: #ffa000;
+    font-weight: bold;
+}
+
+.expenses-info tr {
+    margin: 0;
+    padding: 0;
+}
+
+.expenses-info td:first-child {
+    width: 50%;
+}
+
+#refill-amount {
+    width: 35%;
+    display: inline-block;
+}
+
+section.actions a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+section.expense-report {
+    width: 30%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.expense-report .report-merchant p {
+    font-size: 32px;
+}
+
+.expense-report .report-description p {
+    font-style: italic;
+}
+
+.expense-report .report-action a {
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 6px;
+    width: 50%;
+    display: block;
+    text-decoration: none;
+    color: #234465;
+    background-color: #ffa000;
+}
+
+.expense-report .report-action a:hover {
+    color: #ffa000;
+    background-color: #234465;
+    border: 1px solid white;
+}
+
+.expense-report p {
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 2px solid white;
+    margin-bottom: 3%;
+}
+
+.expense-report h1 {
+    text-align: center;
+    color: #ffa000;
+    text-decoration: underline;
+    font-size: 40px;
+    margin-bottom: 3%;
+}
+
+.expense-report img {
+    margin: 0 auto;
+    display: block;
+}
+
+.not-found {
+    text-align: center;
+    font-size: 50px;
+}
+
+img.sad-face {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.notifications {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(236, 129, 129);
+    border-radius: 6px;
+    width: 50%;
+    margin-top: 3%;
+    padding: 0.5%;
+}
+
+.no-expenses {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 42px;
+    text-decoration: underline;
+}
+
+.no-expenses span {
+    font-weight: bold;
+    color: #ffa000;
+    font-size: 42px;
+}
+
+.notifications p.notification-message {
+    color: #234465;
+    text-decoration: underline;
+    text-align: center;
+}
+
+footer {
+    padding: 1%;
+    background-color: #234465;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    color: white;
+}
+
+footer a:hover {
+    color: #ffa000;
+}
+
+footer p {
+    font-style: italic;
+    font-size: 20px;
+}
