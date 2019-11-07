@@ -1,0 +1,21 @@
+.header-container {
+    background: #282c34;
+    height: 70px;
+    color: white;
+}
+
+.header-container span {
+    display: inline-block;
+    line-height: 70px;
+    margin-left: 20px;
+}
+
+.header-container input {
+    margin-right: 20px;
+    float: right;
+    height: 40px;
+    margin-top: 15px;
+    width: 150px;
+    font-size: 19px;
+    padding: 0 5px;
+}

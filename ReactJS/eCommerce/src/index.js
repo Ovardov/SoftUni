@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import ProductList from './ProductList'
-import data from './data'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ProductList from './product-list/ProductList';
+import data from './data';
+import './index.css';
 
-ReactDOM.render(<ProductList product={data[0]} />, document.getElementById('root'));
+ReactDOM.render(<ProductList products={data} />, document.getElementById('root'));
