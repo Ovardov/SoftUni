@@ -1,0 +1,24 @@
+.post {
+    width: 100%;
+    height: auto;
+    border: 1px solid #234465;
+    margin-bottom: 3%;
+    border-radius: 4px;
+}
+
+.description {
+    word-wrap: break-word;
+    padding: 0.5%;
+    font-style: italic;
+    /* border:1px solid blue; */
+    margin-bottom: 0.5%;
+    width: 95%;
+    display: inline-block;
+    vertical-align: top;
+    ;
+}
+
+.post img {
+    width: 32px;
+    height: 32px;
+}
