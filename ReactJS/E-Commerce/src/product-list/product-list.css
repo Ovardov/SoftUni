@@ -1,0 +1,13 @@
+.container {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-top: 40px;
+}
