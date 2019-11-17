@@ -1,0 +1,11 @@
+.not-found {
+    width: 83%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.not-found img {
+    width: 30em;
+    margin: 0 auto;
+    display: block;
+}

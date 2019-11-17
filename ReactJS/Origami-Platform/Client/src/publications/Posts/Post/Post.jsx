@@ -1,5 +1,5 @@
 import React from 'react';
-import PostAuthor from '../../shared/PostAuthor/PostAuthor';
+import PostAuthor from '../../../shared/PostAuthor/PostAuthor';
 import styles from './post.module.css';
 
 function Post({ imageUrl, imageAlt, description, author }) {

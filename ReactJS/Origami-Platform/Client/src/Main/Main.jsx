@@ -1,11 +1,12 @@
 import React from 'react';
+import Posts from '../publications/Posts/Posts';
 import styles from './main.module.css';
 
-function Main({ children, title }) {
+function Main() {
     return (
         <main className={styles.main}>
-            <h1>{title}</h1>
-            {children}
+            <h1>Publications</h1>
+            <Posts />
         </main>
     )
 }

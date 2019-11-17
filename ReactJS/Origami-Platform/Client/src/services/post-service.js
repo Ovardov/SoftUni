@@ -1,9 +1,13 @@
 const postService = {
-    load: function(id) {
+    load: function(id, limit) {
         let query = '';
 
         if(id) {
             query = `/${id}`;
+        }
+
+        if(limit) {
+            query += `?limit=${limit}`;
         }
 
         return fetch(`http://localhost:9999/api/origami${query}`)
