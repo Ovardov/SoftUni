@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ProductPrice from '../product-price/ProductPrice.js';
+import ProductPrice from '../product-price/ProductPrice';
 import './product-card.css';
 
 class ProductCard extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -27,15 +28,17 @@ class ProductCard extends Component {
     }
 
     render() {
-        const { image, title, brand, price } = this.props;
+        const { image, title, brand, price, id } = this.props;
 
         return (
             <div className="product-tile" onMouseEnter={this.handleMouseOver} onMouseLeave={this.handleMouseOut}>
-                <img className="product-image" src={image} alt={title} />
+                <Link to={`/product/${id}`}>
+                    <img className="product-image" src={image} alt={title} />
+                </Link>
                 <div>
                     <span className="product-brand">{brand}</span>
                     <span className="product-title">{title}</span>
-                    <ProductPrice price={price}/>
+                    <ProductPrice price={price} />
                     <span className="product-seconds">Seconds Counter: {this.state.counter}</span>
                 </div>
             </div>
