@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Posts from '../publications/Posts/Posts';
 import utils from '../utils/index';
 import styles from './profile.module.css';
-import userService from '../services/user-service';
 
 class Profile extends Component {
     constructor(props) {
@@ -16,13 +15,6 @@ class Profile extends Component {
 
     logout = () => {
         this.props.logout(this.props.history);
-    }
-
-    getDetails = (id) => {
-        userService.details(id)
-            .then((data) => {
-                debugger;
-            })
     }
 
     getPostLength = (postsLenght) => {
