@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import ListedLinks from '../shared/ListedLinks/ListedLinks';
 import styles from './footer.module.css';
 
-function Footer() {
+function Footer({ isLogged, loggedUserId }) {
     return (
         <footer className={styles.footer}>
-            <ListedLinks />
+            <ListedLinks isLogged={isLogged} loggedUserId={loggedUserId} />
             <Link to="/">
                 <img src="blue-origami-bird-flipped.png" alt="Origami" className={styles.logo} />
             </Link>

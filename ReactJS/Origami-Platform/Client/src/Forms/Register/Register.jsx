@@ -1,32 +1,61 @@
-import React from 'react';
+import React, { Component } from 'react';
+import WithForm from '../../shared/hocs/WithForm';
+import userService from '../../services/user-service';
 import styles from '../forms.module.css';
 
-function Register() {
-    return (
-        <div className={styles.register}>
-            <h1>Register Page</h1>
-            <form action="/register" method="POST">
-                <div className={styles['form-control']}>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" />
-                </div>
+class Register extends Component {
+    usernameOnChangeHandler = this.props.controlChangeHandlerFactory('username');
+    passwordOnChangeHandler = this.props.controlChangeHandlerFactory('password');
+    rePasswordOnChangeHandler = this.props.controlChangeHandlerFactory('rePassword');
 
-                <div className={styles['form-control']}>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" />
-                </div>
+    submitHandler = (event) => {
+        event.preventDefault();
 
-                <div className={styles['form-control']}>
-                    <label htmlFor="re-password">Re-Password</label>
-                    <input type="password" name="re-password" />
-                </div>
+        const data = this.props.getFormState();
 
-                <div className={styles['form-control']}>
-                    <button type="submit">Register</button>
-                </div>
-            </form>
-        </div>
-    )
+        userService.register(data)
+            .then(() => {
+                this.props.history.push('/login');
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+
+    render() {
+        return (
+            <div className={styles.register} >
+                <h1>Register Page</h1>
+
+                <form>
+                    <div className={styles['form-control']}>
+                        <label htmlFor="username">Username</label>
+                        <input type="text" id="username" onChange={this.usernameOnChangeHandler} />
+                    </div>
+
+                    <div className={styles['form-control']}>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" onChange={this.passwordOnChangeHandler} />
+                    </div>
+
+                    <div className={styles['form-control']}>
+                        <label htmlFor="re-password">Re-Password</label>
+                        <input type="password" id="re-password" onChange={this.rePasswordOnChangeHandler} />
+                    </div>
+
+                    <div className={styles['form-control']}>
+                        <button type="submit" onClick={this.submitHandler}>Register</button>
+                    </div>
+                </form>
+            </div>
+        )
+    }
 }
 
-export default Register;
+const initialFormState = {
+    username: '',
+    password: '',
+    rePassword: '',
+}
+
+export default WithForm(Register, initialFormState);

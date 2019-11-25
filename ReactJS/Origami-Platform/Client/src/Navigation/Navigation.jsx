@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ListedLinks from '../shared/ListedLinks/ListedLinks';
 import styles from './navigation.module.css';
 
-function Navigation() {
+function Navigation({isLogged, loggedUserId}) {
     return (
         <nav className={styles.navigation}>
             <ul>
@@ -13,7 +13,7 @@ function Navigation() {
                     </Link>
                 </li>
 
-                <ListedLinks />
+                <ListedLinks isLogged={isLogged} loggedUserId={loggedUserId}/>
             </ul>
         </nav>
     )
