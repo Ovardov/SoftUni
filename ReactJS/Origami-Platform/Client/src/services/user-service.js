@@ -21,8 +21,8 @@ const userService = {
             },
             credentials: 'include'
         })
-            .then(res => res.json())
-            .catch(err => console.error(err));
+            .then(res => res.text().then(text => res.status === 200 ? text : Promise.reject(text)));
+
     },
 
     logout: function() {

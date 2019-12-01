@@ -6,22 +6,29 @@ class Login extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            error: null
+        }
     }
 
     usernameOnChangeHandler = this.props.controlChangeHandlerFactory('username');
     passwordOnChangeHandler = this.props.controlChangeHandlerFactory('password');
-
-
 
     submitHandler = (event) => {
         event.preventDefault();
 
         const data = this.props.getFormState();
 
-        this.props.login(this.props.history, data);
+        this.props.login(this.props.history, data)
+            .catch(err => {
+                this.setState({ 
+                    error: err
+                 });
+            })
     }
 
     render() {
+        const { error } = this.state;
         return (
             <div className={styles.login} >
                 <h1>Login Page</h1>
@@ -40,6 +47,8 @@ class Login extends Component {
                     <div className={styles['form-control']}>
                         <button type="submit" onClick={this.submitHandler}>Login</button>
                     </div>
+
+                    {error && <div>{error}</div>}
                 </form>
             </div>
         )
@@ -49,6 +58,6 @@ class Login extends Component {
 const initialFormState = {
     username: '',
     password: '',
-} 
+}
 
 export default WithForm(Login, initialFormState);

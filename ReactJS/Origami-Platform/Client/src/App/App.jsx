@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Navigation from '../Navigation/Navigation';
 import Aside from '../Aside/Aside';
 import Main from '../Main/Main';
@@ -12,7 +13,6 @@ import NotFound from '../errors/NotFound/NotFound';
 import utils from '../utils/index';
 import styles from './app.module.css';
 import userService from '../services/user-service';
-import { timingSafeEqual } from 'crypto';
 
 class App extends Component {
   constructor(props) {
@@ -27,15 +27,17 @@ class App extends Component {
   }
 
   login = (history, data) => {
-    userService.login(data)
+    return userService.login(data)
       .then((res) => {
+        res = JSON.parse(res);
         this.setState({
           loggedUserId: res._id,
           isLogged: true
         });
 
         history.push('/');
-      });
+      })
+      
   }
 
   logout = (history) => {
@@ -61,10 +63,10 @@ class App extends Component {
             <Aside isLogged={isLogged} loggedUserId={this.state.loggedUserId} />
             <Switch>
               <Route exact path="/" component={Main} />
-              <Route path='/create-post' component={Input} />
-              <Route path='/register' component={Register} />
-              <Route path='/login' render={(props) => <Login {...props} login={this.login} />} />
-              <Route path='/profile/:id' render={(props) => <Profile {...props} logout={this.logout} />} />
+              <ProtectedRoute path='/create-post' component={Input} isLogged={isLogged} isProtected={true} redirectTo="/login" />
+              <ProtectedRoute path='/profile/:id' render={(props) => <Profile {...props} logout={this.logout} />} isLogged={isLogged} isProtected={true} redirectTo="/login" />
+              <ProtectedRoute path='/register' component={Register} isLogged={isLogged} isProtected={false} redirectTo="/" />
+              <ProtectedRoute path='/login' render={(props) => <Login {...props} login={this.login} />} isLogged={isLogged} isProtected={false} redirectTo="/" />
               <Route path='*' component={NotFound} />
             </Switch>
           </div>
