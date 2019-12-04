@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductPrice component should render correctly if do not pass price 1`] = `
+<div>
+  <p
+    className="product-price"
+  >
+    Price:
+    <span>
+      0
+      $
+    </span>
+  </p>
+</div>
+`;
+
+exports[`ProductPrice component should render correctly if price is 5$ 1`] = `
+<div>
+  <p
+    className="product-price"
+  >
+    Price:
+    <span>
+      5
+      $
+    </span>
+  </p>
+</div>
+`;
+
+exports[`ProductPrice component should render discount message if user is authenticated 1`] = `
+<div>
+  <p
+    className="product-price"
+  >
+    Price:
+    <span>
+      5
+      $
+    </span>
+    <p>
+      You have a 10% discount
+    </p>
+  </p>
+</div>
+`;

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ProductCard from '../product-card/ProductCard';
 import Header from '../header/Header';
@@ -15,32 +15,27 @@ function renderCards(products) {
   })
 }
 
-class ProductList extends Component {
-  state = {
-    isRed: false,
+function ProductList() {
+  const [isRed, setColor] = useState(false);
+
+  const handleClick = () => {
+    setColor(!isRed);
   }
 
-  handleClick = () => {
-    this.setState({
-      isRed: !this.state.isRed
-    });
-  }
+  const themeClass = isRed ? styles.redContainer : styles.container
 
-  render() {
-    const themeClass = this.state.isRed ? styles.redContainer : styles.container
-
-    return (
-      <Fragment>
-        <Header />
-        <div className="container">
-          <button onClick={this.handleClick}>Toggle Red Theme</button>
-          <div className={themeClass}>
-            {renderCards(data)}
-          </div>
+  return (
+    <Fragment>
+      <Header />
+      <div className="container">
+        <button onClick={handleClick}>Toggle Red Theme</button>
+        <div className={themeClass}>
+          {renderCards(data)}
         </div>
-      </Fragment >
-    )
-  }
+      </div>
+    </Fragment >
+  )
+
 }
 
 ProductList.defaultProps = {

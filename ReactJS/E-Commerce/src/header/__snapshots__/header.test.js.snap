@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render correctly 1`] = `
+<div
+  className="header-container"
+>
+  <Link
+    className="home"
+    to="/"
+  >
+    SoftUni React.js course
+  </Link>
+  <Link
+    className="checkout"
+    to="/checkout"
+  >
+    Checkout
+  </Link>
+  <input
+    onChange={[Function]}
+    placeholder="Search..."
+    value=""
+  />
+</div>
+`;

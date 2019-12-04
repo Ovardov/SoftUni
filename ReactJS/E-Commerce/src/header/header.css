@@ -4,10 +4,11 @@
     color: white;
 }
 
-.header-container span {
+.header-container .home {
     display: inline-block;
     line-height: 70px;
     margin-left: 20px;
+    color: #FFFFFF;
 }
 
 .header-container input {
@@ -18,4 +19,10 @@
     width: 150px;
     font-size: 19px;
     padding: 0 5px;
+}
+
+.checkout {
+    color: #FFFFFF;
+    float: right;
+    line-height: 65px;
 }
