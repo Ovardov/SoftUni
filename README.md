@@ -6,6 +6,7 @@ JavaScript Fundamentals,
 JavaScript Advanced,
 JavaScript Applications
 
+
 ## Front-End
 Courses:
 HTML & CSS,
@@ -18,4 +19,4 @@ ReactJS
 
 ## C# DB
 Courses:
-DB Basics - MS SQL Server
+Databases Basics - MS SQL Server
