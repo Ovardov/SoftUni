@@ -6,12 +6,11 @@ JavaScript Fundamentals,
 JavaScript Advanced,
 JavaScript Applications
 
+## Front-End
+Courses:
+HTML & CSS, CSS Advanced
+
 ## JS Web
 Courses:
 JavaScript Back-End,
 ReactJS
-
-# Front-End-Software-University
-## Front-End
-Courses:
-HTML & CSS, CSS Advanced
