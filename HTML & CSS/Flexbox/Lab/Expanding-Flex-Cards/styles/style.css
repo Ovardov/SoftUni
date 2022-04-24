@@ -1,0 +1,47 @@
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60vw;
+    height: 20rem
+}
+
+.container .card {
+    display: flex;
+    flex: 0 1 6vw;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.card.large {
+    flex: 0 1 33vw;
+    background: rgb(0, 0, 0);
+}
+
+.card.large img {
+    border-radius: 0.5em;
+}
+
+.container .card img {
+    width: auto;
+    height: 100%;
+}

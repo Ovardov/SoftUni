@@ -1,0 +1,113 @@
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: Montserrat, sans-serif;
+    line-height: 1.2;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right top, #02D9DE, #FB01FF);
+}
+
+form, fieldset, legend, label, input {
+    display: block;
+}
+
+h1, li, p {
+    margin-bottom: 1.5em;
+}
+
+.container {
+    display: flex;
+    background: #FFFFFF;
+}
+
+.container, li, input {
+    border-radius: 0.5em;
+
+}
+
+form {
+    min-width: 30rem;
+    color: #696969;
+}
+
+form fieldset {
+    text-align: center;
+    border: none;
+    padding: 2.5rem 3.5rem;
+}
+
+form fieldset ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+form fieldset li {
+    flex-basis: 47%;
+    list-style: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+form fieldset li.facebook {
+    background: #3B5998;
+    color: #FFFFFF;
+}
+
+form fieldset li.google {
+    box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+form fieldset li i {
+    margin-right: 0.5rem;
+}
+
+form fieldset label {
+    text-align: left;
+}
+
+form fieldset input {
+    outline: none;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: #F9F9F9;
+    border: 1px solid #CCCCCC;
+}
+
+form fieldset input[type="submit"] {
+    cursor: pointer;
+    background: #333333;
+    color: #FFFFFF;
+    border: none;
+}
+
+form fieldset ul li:focus,
+form fieldset ul li:hover,
+form fieldset input[type="submit"]:hover,
+form fieldset input[type="submit"]:focus {
+    background: linear-gradient(to right top, #02D9DE, #FB01FF);
+    color: #FFFFFF;
+
+}
+
+form fieldset input[type="text"]:hover,
+form fieldset input[type="text"]:focus,
+form fieldset input[type="password"]:hover,
+form fieldset input[type="password"]:focus {
+    border-color: #FB01FF;
+}

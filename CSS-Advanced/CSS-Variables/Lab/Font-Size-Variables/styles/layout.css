@@ -1,0 +1,17 @@
+body {
+    width: var(--body-main-width);
+    margin: 1em auto;
+}
+
+header h1 {
+    text-align: center;
+}
+
+main h3 {
+    margin: 1.2em 0;
+    font-style: italic;
+}
+
+main p:last-child {
+    padding-bottom: 0;
+}

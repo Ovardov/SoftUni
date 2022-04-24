@@ -1,0 +1,94 @@
+main h4 {
+    position: relative;
+    margin-bottom: 1.5em;
+    font-weight: normal;
+}
+
+main h4:after {
+    display: block;
+    content: '';
+    height: 4px;
+    width: 2em;
+    background: #F05F40;
+    position: absolute;
+    left: 47%;
+    margin-top: 0.75em;
+}
+
+.find-monkey {
+    background: #F05F40;
+}
+
+.find-monkey-wrapper h4:after {
+    background: #FFFFFF;
+}
+
+.find-monkey-wrapper {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 2em 0;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.find-monkey-wrapper p {
+    opacity: 0.8;
+}
+
+.kind-monkey {
+    background: #FFFFFF;
+}
+
+.kind-monkey-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.kind-monkey-wrapper h4:after {
+    left: 48%;
+}
+
+.kind-monkey-wrapper .cards-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.kind-monkey-wrapper section.card {
+    flex: 0 0 23%;
+}
+
+.kind-monkey-wrapper section.card i {
+    font-size: 2.5em;
+    color: #F05F40;
+}
+
+.kind-monkey-wrapper section.card h6 {
+    margin: 1em;
+}
+
+.kind-monkey-wrapper section.card p {
+    opacity: 0.8;
+}
+
+.monkey-gallery {
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid #F05F40;
+    border-bottom: 2px solid #F05F40;
+    border-collapse: collapse;
+}
+
+.monkey-gallery section {
+    flex: 0 0 31%;
+    border-left: 2px solid #F05F40;
+    border-right: 2px solid #F05F40;
+}
+
+.monkey-gallery section img {
+    width: 100%;
+    display: block;
+}

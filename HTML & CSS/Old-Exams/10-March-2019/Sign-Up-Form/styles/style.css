@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+@import "typography.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background: #EEEEEE;
+}
+
+form {
+    text-align: center;
+}
+
+form h1 {
+    border-bottom: 3px solid #007ACC;
+    letter-spacing: 0.05em;
+}
+
+form p {
+    text-align: left;
+    position: relative;
+}
+
+form p label:before {
+    content: '* ';
+    color: red;
+}
+
+form p label[for="password"]:after {
+    content: '(minimum 6 character):';
+    color: #CCCCCC;
+    font-size: 0.8em;
+}
+
+form input, form button {
+    border-radius: 0.3em;
+}
+
+form p input {
+    display: block;
+    width: 100%;
+    border: 1px solid #007ACC;
+    padding: 0.3em 2.5em;
+    outline: none;
+}
+
+form p:nth-of-type(3) i {
+    padding-right: 0.8em;
+}
+
+form p i {
+    position: absolute;
+    top: 2.1em;
+    left: 0.6em;
+    border-right: 1px solid #000000;
+    padding-right: 0.5em;
+}
+
+form button {
+    border: 2px solid #007ACC;
+    background: #007ACC;
+    width: 100%;
+    color: #FFFFFF;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+form button:hover {
+    color: #007ACC;
+    background: #FFFFFF;
+}

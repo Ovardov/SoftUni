@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font: var(--font-size-body, 14px)/1.5 'Open Sans', sans-serif;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: var(--font-size-body-larger, 16px);
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: var(--font-size-body-big, 18px);
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: var(--font-size-body-huge, 20px);
+    }
+}
+
+body, input, textarea, option, select, table, form {
+    font: inherit;
+    background: var(--color-body-background, #FFFFFF);
+    color: var(--color-body-text, #000000);
+}
+
+h1, h3 {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--font-size-h1, 2.6em);
+}
+
+h3 {
+    font-size: var(--font-size-h3, 1.8em);
+}
+
+p {
+    font-size: var(--font-size-p, 1em);
+    padding-bottom: 0.8em;
+}

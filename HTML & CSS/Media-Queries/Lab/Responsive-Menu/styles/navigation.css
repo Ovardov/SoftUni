@@ -1,0 +1,88 @@
+header {
+    display: flex;
+    border-bottom: 2px solid #000000;
+    align-items: flex-start;
+}
+
+nav {
+    margin-left: auto;
+    background: #FFFFFF;
+    border-radius: 0.3em;
+}
+
+nav ul {
+    padding: 0.3em;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none outside;
+    padding: 0 0.3em;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.3em 0.8em ;
+    text-decoration: none;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 0.3em;
+}
+
+.main-nav-toggle {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.main-nav-toggle-button {
+    display: none;
+}
+
+/* Phones and Tablets */
+@media (max-width: 900px) {
+
+    header {
+        display: block;
+    }
+
+    header h1 {
+        padding-left: 2.5em;
+    }
+
+    .main-nav-toggle-button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+
+    .main-nav-toggle-button .close {
+        display: none;
+        flex-basis: 4%;
+    }
+
+   nav {
+       display: none;
+       border-top: 2px solid #000000;
+       border-radius: 0;
+   }
+
+   nav ul {
+       display: block;
+   }
+
+   nav ul li {
+       padding: 0.3em 0;
+   }
+
+   .main-nav-toggle:checked + header nav {
+       display: block;
+   }
+
+    .main-nav-toggle:checked + header .close  {
+        display: block;
+    }
+
+}

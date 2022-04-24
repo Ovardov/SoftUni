@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font: var(--font-size-body, 14px)/1.5 'Open Sans', sans-serif;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: var(--font-size-body-larger, 16px);
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: var(--font-size-body-big, 18px);
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: var(--font-size-body-huge, 20px);
+    }
+}
+
+body, input, textarea, option, select, table, form {
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+   font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+p, blockquote, ul, ol {
+    padding-bottom: 1.5em;
+}
+
+ul, ol {
+    padding-left: 2em;
+}
+
+blockquote {
+    border-left: 2px solid #CCCCCC;
+    padding-left: 2em;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+blockquote p:last-child {
+    padding-bottom: 0;
+    text-align: right;
+}
+
+.cleaner:after {
+    display: block;
+    content: '';
+    clear: both;
+}

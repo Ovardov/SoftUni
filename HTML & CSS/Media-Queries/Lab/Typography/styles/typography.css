@@ -1,0 +1,96 @@
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font: 12px/1.5 Georgia, serif;
+    box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+
+    html {
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width: 600px) {
+
+    html {
+        font-size: 16px;
+    }
+
+}
+
+@media (min-width: 800px) {
+
+    html {
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 1300px) {
+
+    html {
+        font-size: 21px;
+    }
+
+}
+
+@media (min-width: 1800px) {
+
+    html {
+        font-size: 23px;
+    }
+
+}
+
+body, input, textarea, option, select, table, form {
+    font: inherit;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    padding-bottom: 0.5em;
+    padding-top: 1.5rem;
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.1em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p, blockquote {
+    padding-bottom: 1.5em;
+}
+
+blockquote {
+    border-left: 2px solid #CCCCCC;
+    padding-left: 2em;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+blockquote p:last-child {
+    padding-bottom: 0;
+    text-align: right;
+}
+
+.cleaner:after {
+    display: block;
+    content: '';
+    clear: both;
+}

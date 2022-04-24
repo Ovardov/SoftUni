@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+@import "typography.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    color: #D0071E;
+    font-weight: 600;
+}
+
+.wrapper > section {
+    flex: 0 0 47%;
+}
+
+.wrapper .cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards-list > section {
+    flex: 0 0 47%;
+    margin-bottom: 3%;
+    border: 1px solid #000000;
+    border-radius: 0.5em;
+}
+
+.cards-list section .media {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards-list section .media img {
+    display: block;
+    width: 100%;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.cards-list section p {
+    padding: 0.8em 0.5em;
+}
+
+.best-of-london ul li {
+    list-style: none;
+}
+
+.best-of-london ul li:not(:last-of-type) {
+    margin-bottom: 0.8em;
+}
+
+.best-of-london ul li a {
+    text-decoration: none;
+    color: #D0071E;
+}
+
+.best-of-london ul li a:before {
+    display: inline-block;
+    content: '\f0a9';
+    color: #D0071E;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 0.5em;
+}

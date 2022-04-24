@@ -1,0 +1,112 @@
+section.slider {
+    background: url("../images/slider.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    color: #FFFFFF;
+}
+
+section.slider .description {
+    width: 28%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5em 1em;
+}
+
+section.slider .description p {
+    padding-bottom: 1em;
+}
+
+section.budapest-card-info {
+    background: linear-gradient(to right, #996D0E, #CDA939);;
+}
+
+.budapest-card-info-wrapper {
+    width: 35%;
+    margin: 0 auto;
+    padding: 1em 0;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.budapest-card-info-wrapper ul {
+    padding-bottom: 0.5em;
+}
+
+.budapest-card-info-wrapper ul li {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+.budapest-card-info-wrapper ul li:before {
+    display: inline-block;
+    content: '\f0a4';
+    margin-right: 0.3em;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+}
+
+.budapest-card-services {
+    background: #FFFFFF;
+}
+
+.budapest-card-services-wrapper {
+    width: 55%;
+    margin: 0 auto;
+    padding: 1em 0;
+    text-align: center;
+    color: #515772;
+}
+
+.budapest-card-services-wrapper h3 {
+    margin: 0 auto 1em auto;
+    letter-spacing: 0.2em;
+}
+
+.budapest-card-services-wrapper > p {
+    padding-bottom: 1em;
+}
+
+.budapest-card-services-wrapper .cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards li {
+    list-style: none;
+    flex: 0 0 19%;
+}
+
+.cards li img {
+    border-radius: 50%;
+    padding: 0.2em;
+    border: 2px solid #515772;
+}
+
+.cards p {
+    font-size: 0.75em;
+}
+
+section.subscribe {
+    background: #B58E0F;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+}
+
+section.subscribe p {
+    padding-bottom: 0;
+}
+
+section.subscribe .description p:first-of-type {
+    font-weight: bold;
+}
+
+section.subscribe button {
+    margin-left: auto;
+}

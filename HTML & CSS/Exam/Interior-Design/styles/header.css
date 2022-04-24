@@ -1,0 +1,47 @@
+header {
+    background: url("../images/image.jpg") no-repeat center center;
+    position: relative;
+    height: 120vh;
+}
+
+header .logo {
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.7);
+    padding: 2em 7em 2em 1em;
+    width: 27%;
+}
+
+header .logo h1 {
+    width: 100%;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+header .logo p {
+    padding-bottom: 0;
+}
+
+header .info {
+    position: absolute;
+    top: 16em;
+    right: 2em;
+    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to right, #9C928B, #CAC7C6);
+    text-align: right;
+    padding: 2em 1em 1em 1em;
+    width: 30%;
+    margin-left: auto;
+}
+
+header .info i {
+    color: #8D8682;
+    margin-bottom: 1em;
+}
+
+header .info p {
+    color: #FFFFFF;
+    padding-bottom: 0;
+}

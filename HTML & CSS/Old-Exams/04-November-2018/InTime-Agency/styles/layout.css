@@ -1,0 +1,135 @@
+.welcome-wrapper, .services-wrapper, .subscribe-wrapper, .links-wrapper {
+    max-width: 80%;
+    text-align: center;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+main h3, main h4 {
+    margin-bottom: 1em;
+}
+
+main h3:after, main h4:after {
+    display: block;
+    content: '';
+    width: 3.5em;
+    height: 4px;
+    left: 47%;
+    background: #008CBA;
+    position: absolute;
+    margin-top: 0.1em;
+}
+
+.services {
+    background: #EEF0F1;
+}
+
+.services-wrapper h3:after {
+    background: #454545;
+}
+
+.services-wrapper .cards-list, .links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services-wrapper .cards-list section {
+    flex: 0 1 30%;
+    background: #FFFFFF;
+    border-radius: 0.3em;
+}
+
+.cards-list section .media {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+
+.cards-list section .media:before {
+    display: block;
+    content: '';
+    padding-top: 56.25%;
+}
+
+.cards-list section .media img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cards-list section .info {
+    padding: 1.3em
+}
+
+.subscribe {
+    background: #393F43;
+    color: #FFFFFF;
+}
+
+.subscribe-wrapper h4:after {
+    background: #FFFFFF;
+}
+
+.subscribe-wrapper p input:first-of-type {
+    background: #545A5E;
+    border: 2px solid #545A5E;
+    width: 35%;
+    margin-right: 0.2em;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+}
+
+.subscribe-wrapper p input:last-of-type {
+    padding: 0.2em 1em;
+}
+
+.links {
+    background: #2F3539;
+}
+
+.links-wrapper {
+    text-align: left;
+}
+
+.links-wrapper section {
+    flex: 0 0 20%;
+    color: #FFFFFF;
+}
+
+.links-wrapper section p {
+    padding-bottom: 1em;
+}
+
+.links-wrapper section ul li {
+    list-style: none;
+    margin-bottom: 0.3em;
+}
+
+.links-wrapper section a {
+    color: #FFFFFF;
+    text-decoration: none;
+    outline: none;
+}
+
+.links-wrapper section a:focus,
+.links-wrapper section a:hover {
+    border-bottom: 2px solid #008CBA;
+}
+
+.links-wrapper .follow-us ul {
+    display: flex;
+}
+
+.links-wrapper .follow-us ul li:not(:last-of-type) {
+    margin-right: 1em;
+}
+
+.links-wrapper .follow-us a:focus,
+.links-wrapper .follow-us a:hover {
+    color: #008CBA;
+    border-bottom: none;
+}

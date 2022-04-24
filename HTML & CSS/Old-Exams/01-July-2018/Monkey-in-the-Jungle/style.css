@@ -1,0 +1,212 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13pt;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.65;
+    background: url(images/bg.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: #54a354;
+}
+
+h2, h3 {
+    color: #1e1f23;
+}
+
+.gallery {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.gallery > * {
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+.gallery > * {
+    width: 50%;
+}
+
+img {
+    position: relative;
+    margin: 0 !important;
+    display: block;
+    width: 100%;
+}
+
+header p {
+    position: relative;
+    color: #bbb;
+    font-size: 1.25rem;
+}
+
+.spotlight {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.spotlight > * {
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+.spotlight > * {
+    width: 50%;
+}
+
+.spotlight p:last-child {
+    margin: 0;
+}
+
+.spotlight .inner {
+    padding: 6rem;
+}
+
+.spotlight.alt {
+    background: #1e1f23;
+    color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: right;
+}
+
+.spotlight.alt > * {
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+.spotlight.alt h3 {
+    color: #FFF;
+}
+
+body {
+    background-color: #1e1f23;
+    padding-top: 8rem;
+}
+
+header {
+    color: #a6a6a6;
+    text-align: center;
+}
+
+header > .logo {
+    margin: 0 0 4rem 0;
+    padding: 0;
+}
+
+header > .logo a {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #FFF;
+    text-decoration: none;
+    line-height: 1rem;
+}
+
+header > .logo span {
+    font-weight: 300;
+    font-size: 1rem;
+    display: block;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+main > .inner {
+    width: 80rem;
+    max-width: 90%;
+    margin: 0 auto 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+}
+
+.wrapper > header {
+    text-align: center;
+    background: #FFF;
+    padding: 2rem;
+    margin: 0;
+}
+
+.wrapper > header h2 {
+    position: relative;
+    padding-bottom: .75rem;
+}
+
+.wrapper > header h2:after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.125);
+}
+
+.wrapper > header p {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .8rem;
+    letter-spacing: .25rem;
+    margin: 0;
+}
+
+.wrapper > header.special {
+    padding: 4rem 2rem;
+}
+
+.wrapper.style1 .content {
+    padding: 6rem;
+}
+
+.wrapper.style2 {
+    background: #1e1f23;
+    padding: 6rem;
+}
+
+.wrapper.style2 header {
+    background: #121315;
+    border-radius: 4px 4px 0 0;
+}
+
+.wrapper.style2 header h2 {
+    color: #FFF;
+}
+
+.wrapper.style2 header h2:after {
+    background-color: rgba(255, 255, 255, 0.125);
+}
+
+.wrapper.style2 header p {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+footer {
+    color: #bbb;
+    font-size: 0.9rem;
+    margin: 0 0 2rem 0;
+    padding: 0 1rem;
+    text-align: center;
+}

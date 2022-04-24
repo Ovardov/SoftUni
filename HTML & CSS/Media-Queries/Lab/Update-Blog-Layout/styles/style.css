@@ -1,0 +1,10 @@
+@import "typography.css";
+@import "navigation.css";
+@import "layout.css";
+
+body {
+    background: rgb(238, 238, 238);
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2em 0;
+}

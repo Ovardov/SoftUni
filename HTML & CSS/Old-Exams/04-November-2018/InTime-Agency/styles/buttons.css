@@ -1,0 +1,39 @@
+button, input.subscribe {
+    padding: 0.7em 1.5em;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    background: #454545;
+    border: 2px solid #454545;
+    border-radius: 0.3em;
+}
+
+button.round {
+    border-radius: 5em;
+}
+
+button.get-started {
+    background: #008CBA;
+    border: 2px solid #008CBA;
+    font-size: 1.05em;
+    padding: 0.4em 1.6em;
+}
+
+input.subscribe {
+    background: #6BBFFF;
+    border: 2px solid #6BBFFF;
+}
+
+button:focus,
+button:hover,
+input.subscribe:focus,
+input.subscribe:hover {
+    background: #008CBA;
+    border-color: #008CBA;
+}
+
+button.get-started:focus,
+button.get-started:hover {
+    background: #454545;
+    border-color: #454545;
+}

@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font: 16px/1.5 Verdana, sans-serif;
+    box-sizing: inherit;
+}
+
+
+section {
+    width: 250px;
+    height: 250px;
+    margin: 5rem auto;
+    border: 3px dashed lightgreen;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+}
+
+p {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    border: 5px solid blue;
+}

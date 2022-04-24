@@ -1,0 +1,81 @@
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.site-title {
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+.align-right {
+    float: right;
+    margin-left: 1.5rem;
+}
+
+.align-left {
+    float: left;
+    margin-right: 1.5rem;
+}
+
+main article img {
+    border: 3px solid #000000;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.25);
+    background: rgb(255, 255, 255);
+    padding: 0.5rem;
+}
+
+main article blockquote {
+    font-family: Georgia, serif;
+    width: 50%;
+}
+
+aside {
+    margin-left: 3rem;
+}
+
+aside li {
+    list-style: square;
+    margin-left: 3rem;
+}
+
+aside li a {
+    color: rgb(0, 153, 0);
+    font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+
+    img {
+        margin-bottom: 1em;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .site-aside {
+        flex-wrap: wrap;
+    }
+
+    .site-aside section {
+        margin-left: 2em;
+        display: block;
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    .site-main {
+        display: flex;
+    }
+
+    .site-aside {
+        flex: 1 0 25%;
+        margin-left: 2em;
+    }
+
+}

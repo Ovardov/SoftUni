@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+@import "typography.css";
+
+body {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 2em 0;
+    text-align: center;
+    background: #EEEEEE;
+}
+
+header {
+    position: relative;
+    margin-bottom: 3.5em;
+}
+
+header h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+header p {
+    color: #CB2027;
+    position: absolute;
+    left: 55%;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.card {
+    flex: 0 0 31%;
+    background: #FFFFFF;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .media {
+    position: relative;
+    overflow: hidden;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+}
+
+.card .media:before {
+    display: block;
+    content: '';
+    padding-top: 56.25%;
+}
+
+.card .media img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card .content {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .content h3 {
+    border-bottom: 1px solid #CB2027;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.card .content {
+    flex-grow: 1;
+}
+
+.card .content p:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+.card .content p:nth-of-type(2) {
+    padding-bottom: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .content i {
+    margin-left: 0.5em;
+    color: #CB2027;
+}

@@ -1,0 +1,48 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 40em;
+    height: 25em;
+    position: relative;
+    border: 1px solid #FFFFFF;
+}
+
+.container:before,
+.container:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.container:before {
+    background: linear-gradient(to bottom, #CA8635, #F3DAB9);
+}
+
+.container:after {
+    background: linear-gradient(to bottom, #8798A4, #E5EAEC);
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.container:hover:after {
+    opacity: 0;
+}

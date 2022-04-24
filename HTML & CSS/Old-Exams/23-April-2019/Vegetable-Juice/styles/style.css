@@ -1,0 +1,90 @@
+@import "typography.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EEEEEE;
+    max-width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    height: 30em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.menu > div {
+    flex: 0 0 50%;
+}
+
+.menu .recipe {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    background: url("../images/image1.png");
+    background-repeat: repeat-y;
+}
+
+.menu .recipe h3 {
+    text-align: center;
+    border-bottom: 2px dashed green;
+    margin-bottom: 0;
+}
+
+.recipe-info {
+    display: flex;
+}
+
+.recipe-info p:last-child {
+    margin-left: auto;
+}
+
+.products p:not(:last-child) {
+    padding-bottom: 0;
+}
+
+.products .quantity {
+    color: green;
+    font-weight: bold;
+}
+
+.recipe table {
+    margin-top: auto;
+    border: 0.5px solid green;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.recipe table tr {
+    display: flex;
+}
+
+.recipe table th, .recipe table td {
+    flex: 1 1 30%;
+    border-collapse: collapse;
+    border: 0.5px solid green;
+}
+
+.media {
+    overflow: hidden;
+    position: relative;
+}
+
+.media:before {
+    display: block;
+    padding-top: 177.78%;
+    content: '';
+}
+
+.media img  {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

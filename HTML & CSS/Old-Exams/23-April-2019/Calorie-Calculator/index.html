@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calorie Calculator</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="media">
+            <img src="./images/image.png" alt="Hand">
+        </div>
+
+        <div class="calculator">
+            <h5>CALORIE CALCULATOR</h5>
+
+            <div class="fields">
+                <p class="units">
+                    <a href="#">Standart units (US)</a>
+                </p>
+
+                <p class="units">
+                    <a href="#">Metric units</a>
+                </p>
+
+                <p>
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="0" placeholder="Years...">
+                </p>
+
+                <p class="weight">
+                    <label for="weight">Weight</label>
+                    <input type="number" id="weight" name="weight" min="1" placeholder="Pounds...">
+                </p>
+
+                <p>
+                    <label for="feet">Feet</label>
+                    <input type="number" id="feet" name="feet" min="1" placeholder="Feet...">
+                </p>
+
+                <p>
+                    <label for="inches">Inches</label>
+                    <input type="number" id="inches" name="inches" min="1" placeholder="Inches...">
+                </p>
+            </div>
+
+            <button>Calculate</button>
+        </div>
+    </div>
+
+</body>
+</html>

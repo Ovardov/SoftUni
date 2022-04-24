@@ -1,0 +1,63 @@
+@import "typography.css";
+
+body {
+    padding: 2em;
+    background: #EEEEEE;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border: 1px solid #CCCCCC;
+}
+
+table thead tr {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+table tbody > tr {
+    background: #F1F1F1;
+}
+
+table tbody tr:last-child {
+    background: #FFFFFF;
+}
+
+table td, table th {
+    padding-left: 0.3em;
+}
+
+@media (max-width: 600px) {
+
+    table th {
+        display: none;
+    }
+
+    table tbody td {
+        display: flex;
+    }
+
+    table tbody td:before {
+        display: block;
+        margin-right: 1em;
+        font-weight: 900;
+        font-size: 1.1em;
+    }
+
+    table tbody td:first-child:before {
+        content: 'First Name'
+    }
+
+    table tbody td:nth-child(2):before {
+        content: 'Last Name'
+    }
+
+    table tbody td:last-child:before {
+        content: 'Job Title'
+    }
+
+    table td:not(:last-child) {
+        border-bottom: 1px solid #CCCCCC;
+    }
+}

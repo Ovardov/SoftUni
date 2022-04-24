@@ -1,7 +1,5 @@
 # JavaScript-Software-University
-
 ## Software University
-### JavaScript Developer 
 
 ## JS CORE
 Courses:
@@ -13,3 +11,8 @@ JavaScript Applications
 Courses:
 JavaScript Back-End,
 ReactJS
+
+# Front-End-Software-University
+## Front-End
+Courses:
+HTML & CSS, CSS Advanced

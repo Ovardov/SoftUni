@@ -1,0 +1,7 @@
+@import "variables.css";
+@import "typography.css";
+
+body {
+    padding: 2.5em;
+}
+

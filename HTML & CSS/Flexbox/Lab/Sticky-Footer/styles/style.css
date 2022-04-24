@@ -1,0 +1,54 @@
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 16px/1.5 Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+body {
+    display: flex;
+    background: rgb(238, 238, 238);
+    height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #000000;
+}
+
+main {
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding: 2rem;
+}
+
+main h2 {
+    padding-bottom: 0.5em;
+}
+
+main p {
+    padding-bottom: 1.5em;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgb(102, 102, 102);
+    color: rgb(255, 255, 255);
+}

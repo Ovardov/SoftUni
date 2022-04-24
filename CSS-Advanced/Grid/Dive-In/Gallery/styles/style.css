@@ -1,0 +1,73 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    width: 50%;
+    margin: 2em auto;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 10em);
+    grid-gap: 0.6em;
+    grid-auto-flow: dense;
+}
+
+.gallery {
+    display: contents;
+}
+
+.gallery li,
+.gallery li:before,
+.gallery li a,
+.gallery li a img {
+    display: block;
+}
+
+.gallery li {
+    list-style: none outside;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery li.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.gallery li.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery > li > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 800px) {
+
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(17, 10em);
+    }
+
+}

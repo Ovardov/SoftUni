@@ -1,0 +1,46 @@
+html {
+    font: 16px/1.5 Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 2rem;
+}
+
+p {
+    padding-bottom: 0.5em;
+}
+
+.container {
+    padding-top: 8rem;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    padding: 2rem;
+    background: aquamarine;
+    border: 1px solid #000000;
+    opacity: 0.6;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.sticky {
+    margin-bottom: 0.5em;
+    position: sticky;
+    top: 4rem;
+    background: yellowgreen;
+    color: #FFFFFF;
+    padding: 2rem;
+}
