@@ -11,12 +11,6 @@ Courses:
 JavaScript Back-End,
 ReactJS
 
-
-
-
-
-
-
 # Front-End-Software-University
 ## Front-End
 Courses:
