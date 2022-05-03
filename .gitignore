@@ -1,6 +1,8 @@
 Demo/
 Resources/
 Homework-ZIP/
+
+# JS files and folder
 REST-Services/
 Tools/
 node_modules/
@@ -9,5 +11,12 @@ demo.js*
 demo.html*
 *demo.sql*
 
+# C# files and folders
+[Bb]in/
+[Oo]bj/
+
+
+# Cache
 *.idea
 *.vscode
+*.vs
