@@ -16,7 +16,7 @@
     "express-handlebars": "^3.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.3.3",
-    "mongoose": "^5.7.5"
+    "mongoose": "^5.13.15"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
